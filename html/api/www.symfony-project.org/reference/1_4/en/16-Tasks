@@ -1,0 +1,5111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+        <meta name="robots" content="index, follow, all" />
+        <meta name="Author" content="Extreme Sensio" />
+        <meta name="Language" content="en"/>
+        <meta name="Copyright" content="Sensio Labs" />
+        <meta name="Publisher" content="Sensio Labs" />
+        <meta name="Description" content="Symfony - Open-Source PHP web framework" />
+        <meta name="Keywords" content="symfony2, symfony, project, framework, php, php5, open-source, components, symphony, symfony framework, symfony tutorial" />
+
+        <link rel="search" type="application/opensearchdescription+xml" href="http://symfony.com/opensearch/documentation.xml" title="Symfony2 documentation" />
+
+        <title> - Symfony</title>
+        <link rel="stylesheet" href="/legacy/css/all.css">
+            <link rel="stylesheet" type="text/css" media="all" href="/legacy/css/highlight.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="/legacy/css/legacy.css" />
+
+        <script>
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', 'UA-89393-6', 'auto');
+        ga('send', 'pageview');
+        </script>
+        <script async src='https://www.google-analytics.com/analytics.js'></script>
+
+            </head>
+
+    <body>
+        <div id="content_wrapper" class="">
+            <div id="sln"></div>
+
+            <div class="content">
+                
+    
+    
+<div class="header">
+    <div class="content_header clear_fix">
+        <div class="illustration_logo_header">
+                            <a href="/"><img src="/images/common/logo/logo_symfony_header.png" alt="Symfony" class="png_fix" /></a>
+                    </div>
+        <div class="box_download clear_fix">
+            <div class="legend_download">
+                <img src="/images/en/a_sensiolabs_product.png" alt="a SensioLabs product" class="png_fix" />
+            </div>
+            <div class="download_button_wrapper">
+                <a href="/download" class="download_button">    <span class="border_l png_fix">
+        <span class="border_r png_fix">
+            <span class="btn_bg png_fix">
+                DOWNLOAD NOW
+            </span>
+        </span>
+    </span>
+</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                <div class="main_menu clear_fix" id="main_menu_id">
+                    
+    <li class="selected">
+        <a href="/what-is-symfony">What is Symfony?</a>
+    </li>
+    <li >
+        <a href="/doc/current/index.html">Documentation</a>
+    </li>
+    <li >
+        <a href="/community">Community</a>
+    </li>
+    <li >
+        <a href="/showcase/">Showcase</a>
+    </li>
+    <li >
+        <a href="/services">Business Solutions</a>
+    </li>
+    <li >
+        <a href="/blog/">News</a>
+    </li>
+                </div>
+
+                                    <div class="main_content">
+                            <div style="-moz-border-radius:8px; -webkit-border-radius:8px; border-radius:8px; background-color: #ffa; padding: 15px; margin-bottom: 20px; color: #555">
+        <strong>Caution</strong>: You are browsing the legacy <a href="/legacy"><img style="vertical-align: middle; padding-left: 3px" src="/legacy/images/symfony_button.gif" /></a> <a href="/legacy">1.x</a> part of this website.
+    </div>
+
+            <div style="-moz-border-radius:8px; -webkit-border-radius:8px; border-radius:8px; background-color: #f99; padding: 15px; margin-bottom: 20px; color: #555">
+            This version of symfony is not maintained anymore.
+            If some of your projects still use this version, consider <a href="/download">upgrading</a>.
+        </div>
+    
+                                <div class="box_columns clear_fix">
+                                                                                                            <div class="column_01">
+                                                                                                                                                                                                <div class="submenu">
+                                                        <ul class="list_submenu">
+                                                            
+    <li >
+        <a href="/at-a-glance">Symfony at a Glance</a>
+    </li>
+    <li >
+        <a href="/components">Symfony Components</a>
+    </li>
+    <li >
+        <a href="/projects">Projects using Symfony</a>
+    </li>
+    <li >
+        <a href="/blog/category/case-studies">Case Studies</a>
+    </li>
+    <li >
+        <a href="/roadmap">Symfony Roadmap</a>
+    </li>
+    <li >
+        <a href="/doc/current/contributing/code/security.html">Security Policy</a>
+    </li>
+    <li >
+        <a href="/logo">Logo &amp; Screenshots</a>
+    </li>
+    <li >
+        <a href="/license">Trademark &amp; Licenses</a>
+    </li>
+    <li >
+        <a href="/legacy">symfony1 Legacy</a>
+    </li>
+
+                                                        </ul>
+                                                    </div>
+                                                
+                                                <div class="ads m-b-30">
+            <div class="ad m-b-15" id="ad_trainings_1">
+            <h3>
+                <a href="https://training.sensiolabs.com/en/courses?q=symfony" data-tracked data-category="Ads" data-action="Ads" data-label="trainings_1">
+                    Master Symfony fundamentals
+                </a>
+            </h3>
+            <div>Be trained by SensioLabs experts (2 to 6 day sessions -- French or English).</div>
+            <div><cite>training.sensiolabs.com</cite></div>
+        </div>
+            <div class="ad m-b-15" id="ad_support_1">
+            <h3>
+                <a href="https://sensiolabs.com/en/packaged-solutions/index.html" data-tracked data-category="Ads" data-action="Ads" data-label="support_1">
+                    Discover SensioLabs&#039; Professional Business Solutions
+                </a>
+            </h3>
+            <div>Peruse our complete Symfony &amp; PHP solutions catalog for your web development needs.</div>
+            <div><cite>sensiolabs.com</cite></div>
+        </div>
+    </div>
+
+<div class="ads">
+    <a href="https://blackfire.io/24-days" data-tracked data-category="Ads" data-action="sidebar" data-label="blackfire">
+        <img src="/images/blackfire-profiler.png" class="m-b-15 img-responsive" alt="Blackfire Profiler Fire up your PHP Apps Performance" />
+    </a>
+    <a href="https://insight.sensiolabs.com" data-tracked data-category="Ads" data-action="sidebar" data-label="insight">
+        <img src="/images/sensiolabsinsight.png" class="img-responsive" alt="PHP Project Quality Done Right" />
+    </a>
+</div>
+                                                                                                                                                                                    </div>
+                                                                        <div class="column_02">
+                                                                                    <div class="breadcrumb">
+                                                <a href="/">Home</a> &raquo;
+                                                            symfony 1.x &raquo;
+        Legacy Documentation &raquo; The Reference Book
+                                            </div>
+
+                                                                                                <div class="box_title">
+                                                        <div class="box_version_wrapper">
+        <div class="version_wrapper">
+            <div class="version">
+                1.4
+                <span class="arrow">
+                    <img src="/images/common/picto/down_arrow_white.png" alt="" />
+                </span>
+            </div>
+            <div class="other_version">
+                                    <ul>
+                                                                                    <li>
+                                    <a href="/legacy/doc/reference/1_2/en/16-tasks">1.2 version</a>
+                                </li>
+                                                                        </ul>
+                                                                            <hr />
+                                        <ul>
+                                                                                    <li>
+                                    <a href="/legacy/doc/reference/1_4/fr/16-tasks">French</a>
+                                </li>
+                                                                                                                <li>
+                                    <a href="/legacy/doc/reference/1_4/it/16-tasks">Italian</a>
+                                </li>
+                                                                                                                <li>
+                                    <a href="/legacy/doc/reference/1_4/ja/16-tasks">Japanese</a>
+                                </li>
+                                                                        </ul>
+                                            </div>
+        </div>
+    </div>
+                                                    <h1 class="title_01"></h1>
+                                                </div>
+                                            
+        
+                                                            
+    <div style="float: right; padding: 10px 0 20px 20px; background-color: #fff; text-align: right">
+    <img style="width: 120px" src="/images/covers/9782918390145-3d.jpg" alt="The Reference Book" />
+</div>
+
+
+        <div class="box_article doc_page">
+                    <p>The symfony framework comes bundled with a command line interface tool.
+Built-in tasks allow the developer to perform a lot of fastidious and
+recurrent tasks in the life of a project.</p>
+
+<p>If you execute the <code>symfony</code> CLI without any arguments, a list of available
+tasks is displayed:</p>
+
+<pre class="command-line"><code>$ php symfony
+</code></pre>
+
+<p>By passing the <code>-V</code> option, you get some information about the version of
+symfony and the path of the symfony libraries used by the CLI:</p>
+
+<pre class="command-line"><code>$ php symfony -V
+</code></pre>
+
+<p>The CLI tool takes a task name as its first argument:</p>
+
+<pre class="command-line"><code>$ php symfony list
+</code></pre>
+
+<p>A task name can be composed of an optional namespace and a name, separated by
+a colon (<code>:</code>):</p>
+
+<pre class="command-line"><code>$ php symfony cache:clear
+</code></pre>
+
+<p>After the task name, arguments and options can be passed:</p>
+
+<pre class="command-line"><code>$ php symfony cache:clear --type=template
+</code></pre>
+
+<p>The CLI tool supports both long options and short ones, with or without
+values.</p>
+
+<p>The <code>-t</code> option is a global option to ask any task to output more debugging
+information.</p>
+
+<div class="pagebreak"></div>
+
+<h2><a name="chapter_16_available_tasks">Available Tasks</a></h2>
+
+<ul>
+<li>Global tasks
+
+<ul>
+<li><a href="16-Tasks#chapter_16_sub_help"><code>help</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_list"><code>list</code></a></li>
+</ul></li>
+<li><a href="16-Tasks#chapter_16_app"><code>app</code></a>
+
+<ul>
+<li><a href="16-Tasks#chapter_16_sub_app_routes"><code>app::routes</code></a></li>
+</ul></li>
+<li><a href="16-Tasks#chapter_16_cache"><code>cache</code></a>
+
+<ul>
+<li><a href="16-Tasks#chapter_16_sub_cache_clear"><code>cache::clear</code></a></li>
+</ul></li>
+<li><a href="16-Tasks#chapter_16_configure"><code>configure</code></a>
+
+<ul>
+<li><a href="16-Tasks#chapter_16_sub_configure_author"><code>configure::author</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_configure_database"><code>configure::database</code></a></li>
+</ul></li>
+<li><a href="16-Tasks#chapter_16_doctrine"><code>doctrine</code></a>
+
+<ul>
+<li><a href="16-Tasks#chapter_16_sub_doctrine_build"><code>doctrine::build</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_doctrine_build_db"><code>doctrine::build-db</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_doctrine_build_filters"><code>doctrine::build-filters</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_doctrine_build_forms"><code>doctrine::build-forms</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_doctrine_build_model"><code>doctrine::build-model</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_doctrine_build_schema"><code>doctrine::build-schema</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_doctrine_build_sql"><code>doctrine::build-sql</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_doctrine_clean_model_files"><code>doctrine::clean-model-files</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_doctrine_create_model_tables"><code>doctrine::create-model-tables</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_doctrine_data_dump"><code>doctrine::data-dump</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_doctrine_data_load"><code>doctrine::data-load</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_doctrine_delete_model_files"><code>doctrine::delete-model-files</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_doctrine_dql"><code>doctrine::dql</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_doctrine_drop_db"><code>doctrine::drop-db</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_doctrine_generate_admin"><code>doctrine::generate-admin</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_doctrine_generate_migration"><code>doctrine::generate-migration</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_doctrine_generate_migrations_db"><code>doctrine::generate-migrations-db</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_doctrine_generate_migrations_diff"><code>doctrine::generate-migrations-diff</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_doctrine_generate_migrations_models"><code>doctrine::generate-migrations-models</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_doctrine_generate_module"><code>doctrine::generate-module</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_doctrine_generate_module_for_route"><code>doctrine::generate-module-for-route</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_doctrine_insert_sql"><code>doctrine::insert-sql</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_doctrine_migrate"><code>doctrine::migrate</code></a></li>
+</ul></li>
+<li><a href="16-Tasks#chapter_16_generate"><code>generate</code></a>
+
+<ul>
+<li><a href="16-Tasks#chapter_16_sub_generate_app"><code>generate::app</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_generate_module"><code>generate::module</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_generate_project"><code>generate::project</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_generate_task"><code>generate::task</code></a></li>
+</ul></li>
+<li><a href="16-Tasks#chapter_16_i18n"><code>i18n</code></a>
+
+<ul>
+<li><a href="16-Tasks#chapter_16_sub_i18n_extract"><code>i18n::extract</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_i18n_find"><code>i18n::find</code></a></li>
+</ul></li>
+<li><a href="16-Tasks#chapter_16_log"><code>log</code></a>
+
+<ul>
+<li><a href="16-Tasks#chapter_16_sub_log_clear"><code>log::clear</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_log_rotate"><code>log::rotate</code></a></li>
+</ul></li>
+<li><a href="16-Tasks#chapter_16_plugin"><code>plugin</code></a>
+
+<ul>
+<li><a href="16-Tasks#chapter_16_sub_plugin_add_channel"><code>plugin::add-channel</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_plugin_install"><code>plugin::install</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_plugin_list"><code>plugin::list</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_plugin_publish_assets"><code>plugin::publish-assets</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_plugin_uninstall"><code>plugin::uninstall</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_plugin_upgrade"><code>plugin::upgrade</code></a></li>
+</ul></li>
+<li><a href="16-Tasks#chapter_16_project"><code>project</code></a>
+
+<ul>
+<li><a href="16-Tasks#chapter_16_sub_project_clear_controllers"><code>project::clear-controllers</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_project_deploy"><code>project::deploy</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_project_disable"><code>project::disable</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_project_enable"><code>project::enable</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_project_optimize"><code>project::optimize</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_project_permissions"><code>project::permissions</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_project_send_emails"><code>project::send-emails</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_project_validate"><code>project::validate</code></a></li>
+</ul></li>
+<li><a href="16-Tasks#chapter_16_propel"><code>propel</code></a>
+
+<ul>
+<li><a href="16-Tasks#chapter_16_sub_propel_build"><code>propel::build</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_propel_build_all"><code>propel::build-all</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_propel_build_all_load"><code>propel::build-all-load</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_propel_build_filters"><code>propel::build-filters</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_propel_build_forms"><code>propel::build-forms</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_propel_build_model"><code>propel::build-model</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_propel_build_schema"><code>propel::build-schema</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_propel_build_sql"><code>propel::build-sql</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_propel_data_dump"><code>propel::data-dump</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_propel_data_load"><code>propel::data-load</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_propel_generate_admin"><code>propel::generate-admin</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_propel_generate_module"><code>propel::generate-module</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_propel_generate_module_for_route"><code>propel::generate-module-for-route</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_propel_graphviz"><code>propel::graphviz</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_propel_insert_sql"><code>propel::insert-sql</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_propel_schema_to_xml"><code>propel::schema-to-xml</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_propel_schema_to_yml"><code>propel::schema-to-yml</code></a></li>
+</ul></li>
+<li><a href="16-Tasks#chapter_16_symfony"><code>symfony</code></a>
+
+<ul>
+<li><a href="16-Tasks#chapter_16_sub_symfony_test"><code>symfony::test</code></a></li>
+</ul></li>
+<li><a href="16-Tasks#chapter_16_test"><code>test</code></a>
+
+<ul>
+<li><a href="16-Tasks#chapter_16_sub_test_all"><code>test::all</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_test_coverage"><code>test::coverage</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_test_functional"><code>test::functional</code></a></li>
+<li><a href="16-Tasks#chapter_16_sub_test_unit"><code>test::unit</code></a></li>
+</ul></li>
+</ul>
+
+<div class="pagebreak"></div>
+
+<h3><a name="chapter_16_sub_help"><code>help</code></a></h3>
+
+<p>The <code>help</code> task displays help for a task:</p>
+
+<pre class="command-line"><code>$ php symfony help [--xml] [task_name]
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>task_name</code></td>
+  <td><code>help</code></td>
+  <td>The task name</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--xml</code></td>
+  <td><code>-</code></td>
+  <td>To output help as XML</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>help</code> task displays help for a given task:</p>
+
+<pre><code>./symfony help test:all
+</code></pre>
+
+<p>You can also output the help as XML by using the <code>--xml</code> option:</p>
+
+<pre><code>./symfony help test:all --xml
+</code></pre>
+
+<h3><a name="chapter_16_sub_list"><code>list</code></a></h3>
+
+<p>The <code>list</code> task lists tasks:</p>
+
+<pre class="command-line"><code>$ php symfony list [--xml] [namespace]
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>namespace</code></td>
+  <td><code>-</code></td>
+  <td>The namespace name</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--xml</code></td>
+  <td><code>-</code></td>
+  <td>To output help as XML</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>list</code> task lists all tasks:</p>
+
+<pre><code>./symfony list
+</code></pre>
+
+<p>You can also display the tasks for a specific namespace:</p>
+
+<pre><code>./symfony list test
+</code></pre>
+
+<p>You can also output the information as XML by using the <code>--xml</code> option:</p>
+
+<pre><code>./symfony list --xml
+</code></pre>
+
+<h2><a name="chapter_16_app"><code>app</code></a></h2>
+
+<h3><a name="chapter_16_sub_app_routes"><code>app::routes</code></a></h3>
+
+<p>The <code>app::routes</code> task displays current routes for an application:</p>
+
+<pre class="command-line"><code>$ php symfony app:routes  application [name]
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>application</code></td>
+  <td><code>-</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>name</code></td>
+  <td><code>-</code></td>
+  <td>A route name</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>app:routes</code> displays the current routes for a given application:</p>
+
+<pre><code>./symfony app:routes frontend
+</code></pre>
+
+<h2><a name="chapter_16_cache"><code>cache</code></a></h2>
+
+<h3><a name="chapter_16_sub_cache_clear"><code>cache::clear</code></a></h3>
+
+<p>The <code>cache::clear</code> task clears the cache:</p>
+
+<pre class="command-line"><code>$ php symfony cache:clear [--app[="..."]] [--env[="..."]] [--type[="..."]] 
+</code></pre>
+
+<p><em>Alias(es)</em>: <code>cc</code></p>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--app</code></td>
+  <td><code>-</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>-</code></td>
+  <td>The environment</td>
+</tr>
+<tr>
+  <td><code>--type</code></td>
+  <td><code>all</code></td>
+  <td>The type</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>cache:clear</code> task clears the symfony cache.</p>
+
+<p>By default, it removes the cache for all available types, all applications,
+and all environments.</p>
+
+<p>You can restrict by type, application, or environment:</p>
+
+<p>For example, to clear the <code>frontend</code> application cache:</p>
+
+<pre><code>./symfony cache:clear --app=frontend
+</code></pre>
+
+<p>To clear the cache for the <code>prod</code> environment for the <code>frontend</code> application:</p>
+
+<pre><code>./symfony cache:clear --app=frontend --env=prod
+</code></pre>
+
+<p>To clear the cache for all <code>prod</code> environments:</p>
+
+<pre><code>./symfony cache:clear --env=prod
+</code></pre>
+
+<p>To clear the <code>config</code> cache for all <code>prod</code> environments:</p>
+
+<pre><code>./symfony cache:clear --type=config --env=prod
+</code></pre>
+
+<p>The built-in types are: <code>config</code>, <code>i18n</code>, <code>routing</code>, <code>module</code>
+and <code>template</code>.</p>
+
+<h2><a name="chapter_16_configure"><code>configure</code></a></h2>
+
+<h3><a name="chapter_16_sub_configure_author"><code>configure::author</code></a></h3>
+
+<p>The <code>configure::author</code> task configure project author:</p>
+
+<pre class="command-line"><code>$ php symfony configure:author  author
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>author</code></td>
+  <td><code>-</code></td>
+  <td>The project author</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>configure:author</code> task configures the author for a project:</p>
+
+<pre><code>./symfony configure:author "Fabien Potencier &lt;fabien.potencier@symfony-project.com&gt;"
+</code></pre>
+
+<p>The author is used by the generates to pre-configure the PHPDoc header for each generated file.</p>
+
+<p>The value is stored in [config/properties.ini].</p>
+
+<h3><a name="chapter_16_sub_configure_database"><code>configure::database</code></a></h3>
+
+<p>The <code>configure::database</code> task configure database DSN:</p>
+
+<pre class="command-line"><code>$ php symfony configure:database [--env[="..."]] [--name[="..."]] [--class[="..."]] [--app[="..."]] dsn [username] [password]
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>dsn</code></td>
+  <td><code>-</code></td>
+  <td>The database dsn</td>
+</tr>
+<tr>
+  <td><code>username</code></td>
+  <td><code>root</code></td>
+  <td>The database username</td>
+</tr>
+<tr>
+  <td><code>password</code></td>
+  <td><code>-</code></td>
+  <td>The database password</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>all</code></td>
+  <td>The environment</td>
+</tr>
+<tr>
+  <td><code>--name</code></td>
+  <td><code>propel</code></td>
+  <td>The connection name</td>
+</tr>
+<tr>
+  <td><code>--class</code></td>
+  <td><code>sfPropelDatabase</code></td>
+  <td>The database class name</td>
+</tr>
+<tr>
+  <td><code>--app</code></td>
+  <td><code>-</code></td>
+  <td>The application name</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>configure:database</code> task configures the database DSN
+for a project:</p>
+
+<pre><code>./symfony configure:database mysql:host=localhost;dbname=example root mYsEcret
+</code></pre>
+
+<p>By default, the task change the configuration for all environment. If you want
+to change the dsn for a specific environment, use the <code>env</code> option:</p>
+
+<pre><code>./symfony configure:database --env=dev mysql:host=localhost;dbname=example_dev root mYsEcret
+</code></pre>
+
+<p>To change the configuration for a specific application, use the <code>app</code> option:</p>
+
+<pre><code>./symfony configure:database --app=frontend mysql:host=localhost;dbname=example root mYsEcret
+</code></pre>
+
+<p>You can also specify the connection name and the database class name:</p>
+
+<pre><code>./symfony configure:database --name=main --class=ProjectDatabase mysql:host=localhost;dbname=example root mYsEcret
+</code></pre>
+
+<p>WARNING: The <code>propel.ini</code> file is also updated when you use a <code>Propel</code> database
+and configure for <code>all</code> environments with no <code>app</code>.</p>
+
+<h2><a name="chapter_16_doctrine"><code>doctrine</code></a></h2>
+
+<h3><a name="chapter_16_sub_doctrine_build"><code>doctrine::build</code></a></h3>
+
+<p>The <code>doctrine::build</code> task generate code based on your schema:</p>
+
+<pre class="command-line"><code>$ php symfony doctrine:build [--application[="..."]] [--env="..."] [--no-confirmation] [--all] [--all-classes] [--model] [--forms] [--filters] [--sql] [--db] [--and-migrate] [--and-load[="..."]] [--and-append[="..."]] 
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>1</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+<tr>
+  <td><code>--no-confirmation</code></td>
+  <td><code>-</code></td>
+  <td>Whether to force dropping of the database</td>
+</tr>
+<tr>
+  <td><code>--all</code></td>
+  <td><code>-</code></td>
+  <td>Build everything and reset the database</td>
+</tr>
+<tr>
+  <td><code>--all-classes</code></td>
+  <td><code>-</code></td>
+  <td>Build all classes</td>
+</tr>
+<tr>
+  <td><code>--model</code></td>
+  <td><code>-</code></td>
+  <td>Build model classes</td>
+</tr>
+<tr>
+  <td><code>--forms</code></td>
+  <td><code>-</code></td>
+  <td>Build form classes</td>
+</tr>
+<tr>
+  <td><code>--filters</code></td>
+  <td><code>-</code></td>
+  <td>Build filter classes</td>
+</tr>
+<tr>
+  <td><code>--sql</code></td>
+  <td><code>-</code></td>
+  <td>Build SQL</td>
+</tr>
+<tr>
+  <td><code>--db</code></td>
+  <td><code>-</code></td>
+  <td>Drop, create, and either insert SQL or migrate the database</td>
+</tr>
+<tr>
+  <td><code>--and-migrate</code></td>
+  <td><code>-</code></td>
+  <td>Migrate the database</td>
+</tr>
+<tr>
+  <td><code>--and-load</code></td>
+  <td><code>-</code></td>
+  <td>Load fixture data (multiple values allowed)</td>
+</tr>
+<tr>
+  <td><code>--and-append</code></td>
+  <td><code>-</code></td>
+  <td>Append fixture data (multiple values allowed)</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>doctrine:build</code> task generates code based on your schema:</p>
+
+<pre><code>./symfony doctrine:build
+</code></pre>
+
+<p>You must specify what you would like built. For instance, if you want model
+and form classes built use the <code>--model</code> and <code>--forms</code> options:</p>
+
+<pre><code>./symfony doctrine:build --model --forms
+</code></pre>
+
+<p>You can use the <code>--all</code> shortcut option if you would like all classes and
+SQL files generated and the database rebuilt:</p>
+
+<pre><code>./symfony doctrine:build --all
+</code></pre>
+
+<p>This is equivalent to running the following tasks:</p>
+
+<pre><code>./symfony doctrine:drop-db
+./symfony doctrine:build-db
+./symfony doctrine:build-model
+./symfony doctrine:build-forms
+./symfony doctrine:build-filters
+./symfony doctrine:build-sql
+./symfony doctrine:insert-sql
+</code></pre>
+
+<p>You can also generate only class files by using the <code>--all-classes</code> shortcut
+option. When this option is used alone, the database will not be modified.</p>
+
+<pre><code>./symfony doctrine:build --all-classes
+</code></pre>
+
+<p>The <code>--and-migrate</code> option will run any pending migrations once the builds
+are complete:</p>
+
+<pre><code>./symfony doctrine:build --db --and-migrate
+</code></pre>
+
+<p>The <code>--and-load</code> option will load data from the project and plugin
+<code>data/fixtures/</code> directories:</p>
+
+<pre><code>./symfony doctrine:build --db --and-migrate --and-load
+</code></pre>
+
+<p>To specify what fixtures are loaded, add a parameter to the <code>--and-load</code> option:</p>
+
+<pre><code>./symfony doctrine:build --all --and-load="data/fixtures/dev/"
+</code></pre>
+
+<p>To append fixture data without erasing any records from the database, include
+the <code>--and-append</code> option:</p>
+
+<pre><code>./symfony doctrine:build --all --and-append
+</code></pre>
+
+<h3><a name="chapter_16_sub_doctrine_build_db"><code>doctrine::build-db</code></a></h3>
+
+<p>The <code>doctrine::build-db</code> task creates database for current model:</p>
+
+<pre class="command-line"><code>$ php symfony doctrine:build-db [--application[="..."]] [--env="..."] [database1] ... [databaseN]
+</code></pre>
+
+<p><em>Alias(es)</em>: <code>doctrine:create-db</code></p>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>database</code></td>
+  <td><code>-</code></td>
+  <td>A specific database</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>1</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>doctrine:build-db</code> task creates one or more databases based on
+configuration in <code>config/databases.yml</code>:</p>
+
+<pre><code>./symfony doctrine:build-db
+</code></pre>
+
+<p>You can specify what databases to create by providing their names:</p>
+
+<pre><code>./symfony doctrine:build-db slave1 slave2
+</code></pre>
+
+<h3><a name="chapter_16_sub_doctrine_build_filters"><code>doctrine::build-filters</code></a></h3>
+
+<p>The <code>doctrine::build-filters</code> task creates filter form classes for the current model:</p>
+
+<pre class="command-line"><code>$ php symfony doctrine:build-filters [--application[="..."]] [--env="..."] [--model-dir-name="..."] [--filter-dir-name="..."] [--generator-class="..."] 
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>1</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+<tr>
+  <td><code>--model-dir-name</code></td>
+  <td><code>model</code></td>
+  <td>The model dir name</td>
+</tr>
+<tr>
+  <td><code>--filter-dir-name</code></td>
+  <td><code>filter</code></td>
+  <td>The filter form dir name</td>
+</tr>
+<tr>
+  <td><code>--generator-class</code></td>
+  <td><code>sfDoctrineFormFilterGenerator</code></td>
+  <td>The generator class</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>doctrine:build-filters</code> task creates form filter classes from the schema:</p>
+
+<pre><code>./symfony doctrine:build-filters
+</code></pre>
+
+<p>This task creates form filter classes based on the model. The classes are
+created in <code>lib/doctrine/filter</code>.</p>
+
+<p>This task never overrides custom classes in <code>lib/doctrine/filter</code>.
+It only replaces base classes generated in <code>lib/doctrine/filter/base</code>.</p>
+
+<h3><a name="chapter_16_sub_doctrine_build_forms"><code>doctrine::build-forms</code></a></h3>
+
+<p>The <code>doctrine::build-forms</code> task creates form classes for the current model:</p>
+
+<pre class="command-line"><code>$ php symfony doctrine:build-forms [--application[="..."]] [--env="..."] [--model-dir-name="..."] [--form-dir-name="..."] [--generator-class="..."] 
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>1</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+<tr>
+  <td><code>--model-dir-name</code></td>
+  <td><code>model</code></td>
+  <td>The model dir name</td>
+</tr>
+<tr>
+  <td><code>--form-dir-name</code></td>
+  <td><code>form</code></td>
+  <td>The form dir name</td>
+</tr>
+<tr>
+  <td><code>--generator-class</code></td>
+  <td><code>sfDoctrineFormGenerator</code></td>
+  <td>The generator class</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>doctrine:build-forms</code> task creates form classes from the schema:</p>
+
+<pre><code>./symfony doctrine:build-forms
+</code></pre>
+
+<p>This task creates form classes based on the model. The classes are created
+in <code>lib/doctrine/form</code>.</p>
+
+<p>This task never overrides custom classes in <code>lib/doctrine/form</code>.
+It only replaces base classes generated in <code>lib/doctrine/form/base</code>.</p>
+
+<h3><a name="chapter_16_sub_doctrine_build_model"><code>doctrine::build-model</code></a></h3>
+
+<p>The <code>doctrine::build-model</code> task creates classes for the current model:</p>
+
+<pre class="command-line"><code>$ php symfony doctrine:build-model [--application[="..."]] [--env="..."] 
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>1</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>doctrine:build-model</code> task creates model classes from the schema:</p>
+
+<pre><code>./symfony doctrine:build-model
+</code></pre>
+
+<p>The task read the schema information in <code>config/doctrine/*.yml</code>
+from the project and all enabled plugins.</p>
+
+<p>The model classes files are created in <code>lib/model/doctrine</code>.</p>
+
+<p>This task never overrides custom classes in <code>lib/model/doctrine</code>.
+It only replaces files in <code>lib/model/doctrine/base</code>.</p>
+
+<h3><a name="chapter_16_sub_doctrine_build_schema"><code>doctrine::build-schema</code></a></h3>
+
+<p>The <code>doctrine::build-schema</code> task creates a schema from an existing database:</p>
+
+<pre class="command-line"><code>$ php symfony doctrine:build-schema [--application[="..."]] [--env="..."] 
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>1</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>doctrine:build-schema</code> task introspects a database to create a schema:</p>
+
+<pre><code>./symfony doctrine:build-schema
+</code></pre>
+
+<p>The task creates a yml file in <code>config/doctrine</code></p>
+
+<h3><a name="chapter_16_sub_doctrine_build_sql"><code>doctrine::build-sql</code></a></h3>
+
+<p>The <code>doctrine::build-sql</code> task creates SQL for the current model:</p>
+
+<pre class="command-line"><code>$ php symfony doctrine:build-sql [--application[="..."]] [--env="..."] 
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>1</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>doctrine:build-sql</code> task creates SQL statements for table creation:</p>
+
+<pre><code>./symfony doctrine:build-sql
+</code></pre>
+
+<p>The generated SQL is optimized for the database configured in <code>config/databases.yml</code>:</p>
+
+<pre><code>doctrine.database = mysql
+</code></pre>
+
+<h3><a name="chapter_16_sub_doctrine_clean_model_files"><code>doctrine::clean-model-files</code></a></h3>
+
+<p>The <code>doctrine::clean-model-files</code> task delete all generated model classes for models which no longer exist in your YAML schema:</p>
+
+<pre class="command-line"><code>$ php symfony doctrine:clean-model-files [--no-confirmation] 
+</code></pre>
+
+<p><em>Alias(es)</em>: <code>doctrine:clean</code></p>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--no-confirmation</code></td>
+  <td><code>-</code></td>
+  <td>Do not ask for confirmation</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>doctrine:clean-model-files</code> task deletes model classes that are not
+represented in project or plugin schema.yml files:</p>
+
+<pre><code>./symfony doctrine:clean-model-files
+</code></pre>
+
+<h3><a name="chapter_16_sub_doctrine_create_model_tables"><code>doctrine::create-model-tables</code></a></h3>
+
+<p>The <code>doctrine::create-model-tables</code> task drop and recreate tables for specified models.:</p>
+
+<pre class="command-line"><code>$ php symfony doctrine:create-model-tables [--application[="..."]] [--env="..."] [models1] ... [modelsN]
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>models</code></td>
+  <td><code>-</code></td>
+  <td>The list of models</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>frontend</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>doctrine:create-model-tables</code> Drop and recreate tables for specified models:</p>
+
+<pre><code>./symfony doctrine:create-model-tables User
+</code></pre>
+
+<h3><a name="chapter_16_sub_doctrine_data_dump"><code>doctrine::data-dump</code></a></h3>
+
+<p>The <code>doctrine::data-dump</code> task dumps data to the fixtures directory:</p>
+
+<pre class="command-line"><code>$ php symfony doctrine:data-dump [--application[="..."]] [--env="..."] [target]
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>target</code></td>
+  <td><code>-</code></td>
+  <td>The target filename</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>1</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>doctrine:data-dump</code> task dumps database data:</p>
+
+<pre><code>./symfony doctrine:data-dump
+</code></pre>
+
+<p>The task dumps the database data in <code>data/fixtures/%target%</code>.</p>
+
+<p>The dump file is in the YML format and can be reimported by using
+the <code>doctrine:data-load</code> task.</p>
+
+<pre><code>./symfony doctrine:data-load
+</code></pre>
+
+<h3><a name="chapter_16_sub_doctrine_data_load"><code>doctrine::data-load</code></a></h3>
+
+<p>The <code>doctrine::data-load</code> task loads YAML fixture data:</p>
+
+<pre class="command-line"><code>$ php symfony doctrine:data-load [--application[="..."]] [--env="..."] [--append] [dir_or_file1] ... [dir_or_fileN]
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>dir_or_file</code></td>
+  <td><code>-</code></td>
+  <td>Directory or file to load</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>1</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+<tr>
+  <td><code>--append</code></td>
+  <td><code>-</code></td>
+  <td>Don't delete current data in the database</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>doctrine:data-load</code> task loads data fixtures into the database:</p>
+
+<pre><code>./symfony doctrine:data-load
+</code></pre>
+
+<p>The task loads data from all the files found in <code>data/fixtures/</code>.</p>
+
+<p>If you want to load data from specific files or directories, you can append
+them as arguments:</p>
+
+<pre><code>./symfony doctrine:data-load data/fixtures/dev data/fixtures/users.yml
+</code></pre>
+
+<p>If you don't want the task to remove existing data in the database,
+use the <code>--append</code> option:</p>
+
+<pre><code>./symfony doctrine:data-load --append
+</code></pre>
+
+<h3><a name="chapter_16_sub_doctrine_delete_model_files"><code>doctrine::delete-model-files</code></a></h3>
+
+<p>The <code>doctrine::delete-model-files</code> task delete all the related auto generated files for a given model name.:</p>
+
+<pre class="command-line"><code>$ php symfony doctrine:delete-model-files [--no-confirmation] name1 ... [nameN]
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>name</code></td>
+  <td><code>-</code></td>
+  <td>The name of the model you wish to delete all related files for.</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--no-confirmation</code></td>
+  <td><code>-</code></td>
+  <td>Do not ask for confirmation</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>doctrine:delete-model-files</code> task deletes all files associated with certain
+models:</p>
+
+<pre><code>./symfony doctrine:delete-model-files Article Author
+</code></pre>
+
+<h3><a name="chapter_16_sub_doctrine_dql"><code>doctrine::dql</code></a></h3>
+
+<p>The <code>doctrine::dql</code> task execute a DQL query and view the results:</p>
+
+<pre class="command-line"><code>$ php symfony doctrine:dql [--application[="..."]] [--env="..."] [--show-sql] [--table] dql_query [parameter1] ... [parameterN]
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>dql_query</code></td>
+  <td><code>-</code></td>
+  <td>The DQL query to execute</td>
+</tr>
+<tr>
+  <td><code>parameter</code></td>
+  <td><code>-</code></td>
+  <td>Query parameter</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>1</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+<tr>
+  <td><code>--show-sql</code></td>
+  <td><code>-</code></td>
+  <td>Show the sql that would be executed</td>
+</tr>
+<tr>
+  <td><code>--table</code></td>
+  <td><code>-</code></td>
+  <td>Return results in table format</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>doctrine:dql</code> task executes a DQL query and displays the formatted
+results:</p>
+
+<pre><code>./symfony doctrine:dql "FROM User"
+</code></pre>
+
+<p>You can show the SQL that would be executed by using the <code>--show-sql</code> option:</p>
+
+<pre><code>./symfony doctrine:dql --show-sql "FROM User"
+</code></pre>
+
+<p>Provide query parameters as additional arguments:</p>
+
+<pre><code>./symfony doctrine:dql "FROM User WHERE email LIKE ?" "%symfony-project.com"
+</code></pre>
+
+<h3><a name="chapter_16_sub_doctrine_drop_db"><code>doctrine::drop-db</code></a></h3>
+
+<p>The <code>doctrine::drop-db</code> task drops database for current model:</p>
+
+<pre class="command-line"><code>$ php symfony doctrine:drop-db [--application[="..."]] [--env="..."] [--no-confirmation] [database1] ... [databaseN]
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>database</code></td>
+  <td><code>-</code></td>
+  <td>A specific database</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>1</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+<tr>
+  <td><code>--no-confirmation</code></td>
+  <td><code>-</code></td>
+  <td>Whether to force dropping of the database</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>doctrine:drop-db</code> task drops one or more databases based on
+configuration in <code>config/databases.yml</code>:</p>
+
+<pre><code>./symfony doctrine:drop-db
+</code></pre>
+
+<p>You will be prompted for confirmation before any databases are dropped unless
+you provide the <code>--no-confirmation</code> option:</p>
+
+<pre><code>./symfony doctrine:drop-db --no-confirmation
+</code></pre>
+
+<p>You can specify what databases to drop by providing their names:</p>
+
+<pre><code>./symfony doctrine:drop-db slave1 slave2
+</code></pre>
+
+<h3><a name="chapter_16_sub_doctrine_generate_admin"><code>doctrine::generate-admin</code></a></h3>
+
+<p>The <code>doctrine::generate-admin</code> task generates a Doctrine admin module:</p>
+
+<pre class="command-line"><code>$ php symfony doctrine:generate-admin [--module="..."] [--theme="..."] [--singular="..."] [--plural="..."] [--env="..."] [--actions-base-class="..."] application route_or_model
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>application</code></td>
+  <td><code>-</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>route_or_model</code></td>
+  <td><code>-</code></td>
+  <td>The route name or the model class</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--module</code></td>
+  <td><code>-</code></td>
+  <td>The module name</td>
+</tr>
+<tr>
+  <td><code>--theme</code></td>
+  <td><code>admin</code></td>
+  <td>The theme name</td>
+</tr>
+<tr>
+  <td><code>--singular</code></td>
+  <td><code>-</code></td>
+  <td>The singular name</td>
+</tr>
+<tr>
+  <td><code>--plural</code></td>
+  <td><code>-</code></td>
+  <td>The plural name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+<tr>
+  <td><code>--actions-base-class</code></td>
+  <td><code>sfActions</code></td>
+  <td>The base class for the actions</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>doctrine:generate-admin</code> task generates a Doctrine admin module:</p>
+
+<pre><code>./symfony doctrine:generate-admin frontend Article
+</code></pre>
+
+<p>The task creates a module in the <code>%frontend%</code> application for the
+<code>%Article%</code> model.</p>
+
+<p>The task creates a route for you in the application <code>routing.yml</code>.</p>
+
+<p>You can also generate a Doctrine admin module by passing a route name:</p>
+
+<pre><code>./symfony doctrine:generate-admin frontend article
+</code></pre>
+
+<p>The task creates a module in the <code>%frontend%</code> application for the
+<code>%article%</code> route definition found in <code>routing.yml</code>.</p>
+
+<p>For the filters and batch actions to work properly, you need to add
+the <code>with_wildcard_routes</code> option to the route:</p>
+
+<pre><code>article:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Article
+    with_wildcard_routes: true
+</code></pre>
+
+<h3><a name="chapter_16_sub_doctrine_generate_migration"><code>doctrine::generate-migration</code></a></h3>
+
+<p>The <code>doctrine::generate-migration</code> task generate migration class:</p>
+
+<pre class="command-line"><code>$ php symfony doctrine:generate-migration [--application[="..."]] [--env="..."] [--editor-cmd="..."] name
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>name</code></td>
+  <td><code>-</code></td>
+  <td>The name of the migration</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>1</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+<tr>
+  <td><code>--editor-cmd</code></td>
+  <td><code>-</code></td>
+  <td>Open script with this command upon creation</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>doctrine:generate-migration</code> task generates migration template</p>
+
+<pre><code>./symfony doctrine:generate-migration AddUserEmailColumn
+</code></pre>
+
+<p>You can provide an <code>--editor-cmd</code> option to open the new migration class in your
+editor of choice upon creation:</p>
+
+<pre><code>./symfony doctrine:generate-migration AddUserEmailColumn --editor-cmd=mate
+</code></pre>
+
+<h3><a name="chapter_16_sub_doctrine_generate_migrations_db"><code>doctrine::generate-migrations-db</code></a></h3>
+
+<p>The <code>doctrine::generate-migrations-db</code> task generate migration classes from existing database connections:</p>
+
+<pre class="command-line"><code>$ php symfony doctrine:generate-migrations-db [--application[="..."]] [--env="..."] 
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>1</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>doctrine:generate-migrations-db</code> task generates migration classes from
+existing database connections:</p>
+
+<pre><code>./symfony doctrine:generate-migrations-db
+</code></pre>
+
+<h3><a name="chapter_16_sub_doctrine_generate_migrations_diff"><code>doctrine::generate-migrations-diff</code></a></h3>
+
+<p>The <code>doctrine::generate-migrations-diff</code> task generate migration classes by producing a diff between your old and new schema.:</p>
+
+<pre class="command-line"><code>$ php symfony doctrine:generate-migrations-diff [--application[="..."]] [--env="..."] 
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>1</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>doctrine:generate-migrations-diff</code> task generates migration classes by
+producing a diff between your old and new schema.</p>
+
+<pre><code>./symfony doctrine:generate-migrations-diff
+</code></pre>
+
+<h3><a name="chapter_16_sub_doctrine_generate_migrations_models"><code>doctrine::generate-migrations-models</code></a></h3>
+
+<p>The <code>doctrine::generate-migrations-models</code> task generate migration classes from an existing set of models:</p>
+
+<pre class="command-line"><code>$ php symfony doctrine:generate-migrations-models [--application[="..."]] [--env="..."] 
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>1</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>doctrine:generate-migrations-models</code> task generates migration classes
+from an existing set of models:</p>
+
+<pre><code>./symfony doctrine:generate-migrations-models
+</code></pre>
+
+<h3><a name="chapter_16_sub_doctrine_generate_module"><code>doctrine::generate-module</code></a></h3>
+
+<p>The <code>doctrine::generate-module</code> task generates a Doctrine module:</p>
+
+<pre class="command-line"><code>$ php symfony doctrine:generate-module [--theme="..."] [--generate-in-cache] [--non-verbose-templates] [--with-show] [--singular="..."] [--plural="..."] [--route-prefix="..."] [--with-doctrine-route] [--env="..."] [--actions-base-class="..."] application module model
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>application</code></td>
+  <td><code>-</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>module</code></td>
+  <td><code>-</code></td>
+  <td>The module name</td>
+</tr>
+<tr>
+  <td><code>model</code></td>
+  <td><code>-</code></td>
+  <td>The model class name</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--theme</code></td>
+  <td><code>default</code></td>
+  <td>The theme name</td>
+</tr>
+<tr>
+  <td><code>--generate-in-cache</code></td>
+  <td><code>-</code></td>
+  <td>Generate the module in cache</td>
+</tr>
+<tr>
+  <td><code>--non-verbose-templates</code></td>
+  <td><code>-</code></td>
+  <td>Generate non verbose templates</td>
+</tr>
+<tr>
+  <td><code>--with-show</code></td>
+  <td><code>-</code></td>
+  <td>Generate a show method</td>
+</tr>
+<tr>
+  <td><code>--singular</code></td>
+  <td><code>-</code></td>
+  <td>The singular name</td>
+</tr>
+<tr>
+  <td><code>--plural</code></td>
+  <td><code>-</code></td>
+  <td>The plural name</td>
+</tr>
+<tr>
+  <td><code>--route-prefix</code></td>
+  <td><code>-</code></td>
+  <td>The route prefix</td>
+</tr>
+<tr>
+  <td><code>--with-doctrine-route</code></td>
+  <td><code>-</code></td>
+  <td>Whether you will use a Doctrine route</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+<tr>
+  <td><code>--actions-base-class</code></td>
+  <td><code>sfActions</code></td>
+  <td>The base class for the actions</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>doctrine:generate-module</code> task generates a Doctrine module:</p>
+
+<pre><code>./symfony doctrine:generate-module frontend article Article
+</code></pre>
+
+<p>The task creates a <code>%module%</code> module in the <code>%application%</code> application
+for the model class <code>%model%</code>.</p>
+
+<p>You can also create an empty module that inherits its actions and templates from
+a runtime generated module in <code>%sf_app_cache_dir%/modules/auto%module%</code> by
+using the <code>--generate-in-cache</code> option:</p>
+
+<pre><code>./symfony doctrine:generate-module --generate-in-cache frontend article Article
+</code></pre>
+
+<p>The generator can use a customized theme by using the <code>--theme</code> option:</p>
+
+<pre><code>./symfony doctrine:generate-module --theme="custom" frontend article Article
+</code></pre>
+
+<p>This way, you can create your very own module generator with your own conventions.</p>
+
+<p>You can also change the default actions base class (default to sfActions) of
+the generated modules:</p>
+
+<pre><code>./symfony doctrine:generate-module --actions-base-class="ProjectActions" frontend article Article
+</code></pre>
+
+<h3><a name="chapter_16_sub_doctrine_generate_module_for_route"><code>doctrine::generate-module-for-route</code></a></h3>
+
+<p>The <code>doctrine::generate-module-for-route</code> task generates a Doctrine module for a route definition:</p>
+
+<pre class="command-line"><code>$ php symfony doctrine:generate-module-for-route [--theme="..."] [--non-verbose-templates] [--singular="..."] [--plural="..."] [--env="..."] [--actions-base-class="..."] application route
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>application</code></td>
+  <td><code>-</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>route</code></td>
+  <td><code>-</code></td>
+  <td>The route name</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--theme</code></td>
+  <td><code>default</code></td>
+  <td>The theme name</td>
+</tr>
+<tr>
+  <td><code>--non-verbose-templates</code></td>
+  <td><code>-</code></td>
+  <td>Generate non verbose templates</td>
+</tr>
+<tr>
+  <td><code>--singular</code></td>
+  <td><code>-</code></td>
+  <td>The singular name</td>
+</tr>
+<tr>
+  <td><code>--plural</code></td>
+  <td><code>-</code></td>
+  <td>The plural name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+<tr>
+  <td><code>--actions-base-class</code></td>
+  <td><code>sfActions</code></td>
+  <td>The base class for the actions</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>doctrine:generate-module-for-route</code> task generates a Doctrine module for a route definition:</p>
+
+<pre><code>./symfony doctrine:generate-module-for-route frontend article
+</code></pre>
+
+<p>The task creates a module in the <code>%frontend%</code> application for the
+<code>%article%</code> route definition found in <code>routing.yml</code>.</p>
+
+<h3><a name="chapter_16_sub_doctrine_insert_sql"><code>doctrine::insert-sql</code></a></h3>
+
+<p>The <code>doctrine::insert-sql</code> task inserts SQL for current model:</p>
+
+<pre class="command-line"><code>$ php symfony doctrine:insert-sql [--application[="..."]] [--env="..."] 
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>1</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>doctrine:insert-sql</code> task creates database tables:</p>
+
+<pre><code>./symfony doctrine:insert-sql
+</code></pre>
+
+<p>The task connects to the database and creates tables for all the
+<code>lib/model/doctrine/*.class.php</code> files.</p>
+
+<h3><a name="chapter_16_sub_doctrine_migrate"><code>doctrine::migrate</code></a></h3>
+
+<p>The <code>doctrine::migrate</code> task migrates database to current/specified version:</p>
+
+<pre class="command-line"><code>$ php symfony doctrine:migrate [--application[="..."]] [--env="..."] [--up] [--down] [--dry-run] [version]
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>version</code></td>
+  <td><code>-</code></td>
+  <td>The version to migrate to</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>1</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+<tr>
+  <td><code>--up</code></td>
+  <td><code>-</code></td>
+  <td>Migrate up one version</td>
+</tr>
+<tr>
+  <td><code>--down</code></td>
+  <td><code>-</code></td>
+  <td>Migrate down one version</td>
+</tr>
+<tr>
+  <td><code>--dry-run</code></td>
+  <td><code>-</code></td>
+  <td>Do not persist migrations</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>doctrine:migrate</code> task migrates the database:</p>
+
+<pre><code>./symfony doctrine:migrate
+</code></pre>
+
+<p>Provide a version argument to migrate to a specific version:</p>
+
+<pre><code>./symfony doctrine:migrate 10
+</code></pre>
+
+<p>To migration up or down one migration, use the <code>--up</code> or <code>--down</code> options:</p>
+
+<pre><code>./symfony doctrine:migrate --down
+</code></pre>
+
+<p>If your database supports rolling back DDL statements, you can run migrations
+in dry-run mode using the <code>--dry-run</code> option:</p>
+
+<pre><code>./symfony doctrine:migrate --dry-run
+</code></pre>
+
+<h2><a name="chapter_16_generate"><code>generate</code></a></h2>
+
+<h3><a name="chapter_16_sub_generate_app"><code>generate::app</code></a></h3>
+
+<p>The <code>generate::app</code> task generates a new application:</p>
+
+<pre class="command-line"><code>$ php symfony generate:app [--escaping-strategy="..."] [--csrf-secret="..."] app
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>app</code></td>
+  <td><code>-</code></td>
+  <td>The application name</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--escaping-strategy</code></td>
+  <td><code>1</code></td>
+  <td>Output escaping strategy</td>
+</tr>
+<tr>
+  <td><code>--csrf-secret</code></td>
+  <td><code>1</code></td>
+  <td>Secret to use for CSRF protection</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>generate:app</code> task creates the basic directory structure
+for a new application in the current project:</p>
+
+<pre><code>./symfony generate:app frontend
+</code></pre>
+
+<p>This task also creates two front controller scripts in the
+<code>web/</code> directory:</p>
+
+<pre><code>web/%application%.php     for the production environment
+web/%application%_dev.php for the development environment
+</code></pre>
+
+<p>For the first application, the production environment script is named
+<code>index.php</code>.</p>
+
+<p>If an application with the same name already exists,
+it throws a <code>sfCommandException</code>.</p>
+
+<p>By default, the output escaping is enabled (to prevent XSS), and a random
+secret is also generated to prevent CSRF.</p>
+
+<p>You can disable output escaping by using the <code>escaping-strategy</code>
+option:</p>
+
+<pre><code>./symfony generate:app frontend --escaping-strategy=false
+</code></pre>
+
+<p>You can enable session token in forms (to prevent CSRF) by defining
+a secret with the <code>csrf-secret</code> option:</p>
+
+<pre><code>./symfony generate:app frontend --csrf-secret=UniqueSecret
+</code></pre>
+
+<p>You can customize the default skeleton used by the task by creating a
+<code>%sf_data_dir%/skeleton/app</code> directory.</p>
+
+<h3><a name="chapter_16_sub_generate_module"><code>generate::module</code></a></h3>
+
+<p>The <code>generate::module</code> task generates a new module:</p>
+
+<pre class="command-line"><code>$ php symfony generate:module  application module
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>application</code></td>
+  <td><code>-</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>module</code></td>
+  <td><code>-</code></td>
+  <td>The module name</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>generate:module</code> task creates the basic directory structure
+for a new module in an existing application:</p>
+
+<pre><code>./symfony generate:module frontend article
+</code></pre>
+
+<p>The task can also change the author name found in the <code>actions.class.php</code>
+if you have configure it in <code>config/properties.ini</code>:</p>
+
+<pre>name=blog
+  author=Fabien Potencier &lt;fabien.potencier@sensio.com&gt;</pre>
+
+<p>You can customize the default skeleton used by the task by creating a
+<code>%sf_data_dir%/skeleton/module</code> directory.</p>
+
+<p>The task also creates a functional test stub named
+<code>%sf_test_dir%/functional/%application%/%module%ActionsTest.class.php</code>
+that does not pass by default.</p>
+
+<p>If a module with the same name already exists in the application,
+it throws a <code>sfCommandException</code>.</p>
+
+<h3><a name="chapter_16_sub_generate_project"><code>generate::project</code></a></h3>
+
+<p>The <code>generate::project</code> task generates a new project:</p>
+
+<pre class="command-line"><code>$ php symfony generate:project [--orm="..."] [--installer="..."] name [author]
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>name</code></td>
+  <td><code>-</code></td>
+  <td>The project name</td>
+</tr>
+<tr>
+  <td><code>author</code></td>
+  <td><code>Your name here</code></td>
+  <td>The project author</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--orm</code></td>
+  <td><code>Doctrine</code></td>
+  <td>The ORM to use by default</td>
+</tr>
+<tr>
+  <td><code>--installer</code></td>
+  <td><code>-</code></td>
+  <td>An installer script to execute</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>generate:project</code> task creates the basic directory structure
+for a new project in the current directory:</p>
+
+<pre><code>./symfony generate:project blog
+</code></pre>
+
+<p>If the current directory already contains a symfony project,
+it throws a <code>sfCommandException</code>.</p>
+
+<p>By default, the task configures Doctrine as the ORM. If you want to use
+Propel, use the <code>--orm</code> option:</p>
+
+<pre><code>./symfony generate:project blog --orm=Propel
+</code></pre>
+
+<p>If you don't want to use an ORM, pass <code>none</code> to <code>--orm</code> option:</p>
+
+<pre><code>./symfony generate:project blog --orm=none
+</code></pre>
+
+<p>You can also pass the <code>--installer</code> option to further customize the
+project:</p>
+
+<pre><code>./symfony generate:project blog --installer=./installer.php
+</code></pre>
+
+<p>You can optionally include a second <code>author</code> argument to specify what name to
+use as author when symfony generates new classes:</p>
+
+<pre><code>./symfony generate:project blog "Jack Doe"
+</code></pre>
+
+<h3><a name="chapter_16_sub_generate_task"><code>generate::task</code></a></h3>
+
+<p>The <code>generate::task</code> task creates a skeleton class for a new task:</p>
+
+<pre class="command-line"><code>$ php symfony generate:task [--dir="..."] [--use-database="..."] [--brief-description="..."] task_name
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>task_name</code></td>
+  <td><code>-</code></td>
+  <td>The task name (can contain namespace)</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--dir</code></td>
+  <td><code>lib/task</code></td>
+  <td>The directory to create the task in</td>
+</tr>
+<tr>
+  <td><code>--use-database</code></td>
+  <td><code>doctrine</code></td>
+  <td>Whether the task needs model initialization to access database</td>
+</tr>
+<tr>
+  <td><code>--brief-description</code></td>
+  <td><code>-</code></td>
+  <td>A brief task description (appears in task list)</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>generate:task</code> creates a new sfTask class based on the name passed as
+argument:</p>
+
+<pre><code>./symfony generate:task namespace:name
+</code></pre>
+
+<p>The <code>namespaceNameTask.class.php</code> skeleton task is created under the <code>lib/task/</code>
+directory. Note that the namespace is optional.</p>
+
+<p>If you want to create the file in another directory (relative to the project
+root folder), pass it in the <code>--dir</code> option. This directory will be created
+if it does not already exist.</p>
+
+<pre><code>./symfony generate:task namespace:name --dir=plugins/myPlugin/lib/task
+</code></pre>
+
+<p>If you want the task to default to a connection other than <code>doctrine</code>, provide
+the name of this connection with the <code>--use-database</code> option:</p>
+
+<pre><code>./symfony generate:task namespace:name --use-database=main
+</code></pre>
+
+<p>The <code>--use-database</code> option can also be used to disable database
+initialization in the generated task:</p>
+
+<pre><code>./symfony generate:task namespace:name --use-database=false
+</code></pre>
+
+<p>You can also specify a description:</p>
+
+<pre><code>./symfony generate:task namespace:name --brief-description="Does interesting things"
+</code></pre>
+
+<h2><a name="chapter_16_i18n"><code>i18n</code></a></h2>
+
+<h3><a name="chapter_16_sub_i18n_extract"><code>i18n::extract</code></a></h3>
+
+<p>The <code>i18n::extract</code> task extracts i18n strings from php files:</p>
+
+<pre class="command-line"><code>$ php symfony i18n:extract [--display-new] [--display-old] [--auto-save] [--auto-delete] application culture
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>application</code></td>
+  <td><code>-</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>culture</code></td>
+  <td><code>-</code></td>
+  <td>The target culture</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--display-new</code></td>
+  <td><code>-</code></td>
+  <td>Output all new found strings</td>
+</tr>
+<tr>
+  <td><code>--display-old</code></td>
+  <td><code>-</code></td>
+  <td>Output all old strings</td>
+</tr>
+<tr>
+  <td><code>--auto-save</code></td>
+  <td><code>-</code></td>
+  <td>Save the new strings</td>
+</tr>
+<tr>
+  <td><code>--auto-delete</code></td>
+  <td><code>-</code></td>
+  <td>Delete old strings</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>i18n:extract</code> task extracts i18n strings from your project files
+for the given application and target culture:</p>
+
+<pre><code>./symfony i18n:extract frontend fr
+</code></pre>
+
+<p>By default, the task only displays the number of new and old strings
+it found in the current project.</p>
+
+<p>If you want to display the new strings, use the <code>--display-new</code> option:</p>
+
+<pre><code>./symfony i18n:extract --display-new frontend fr
+</code></pre>
+
+<p>To save them in the i18n message catalogue, use the <code>--auto-save</code> option:</p>
+
+<pre><code>./symfony i18n:extract --auto-save frontend fr
+</code></pre>
+
+<p>If you want to display strings that are present in the i18n messages
+catalogue but are not found in the application, use the 
+<code>--display-old</code> option:</p>
+
+<pre><code>./symfony i18n:extract --display-old frontend fr
+</code></pre>
+
+<p>To automatically delete old strings, use the <code>--auto-delete</code> but
+be careful, especially if you have translations for plugins as they will
+appear as old strings but they are not:</p>
+
+<pre><code>./symfony i18n:extract --auto-delete frontend fr
+</code></pre>
+
+<h3><a name="chapter_16_sub_i18n_find"><code>i18n::find</code></a></h3>
+
+<p>The <code>i18n::find</code> task finds non "i18n ready" strings in an application:</p>
+
+<pre class="command-line"><code>$ php symfony i18n:find [--env="..."] application
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>application</code></td>
+  <td><code>-</code></td>
+  <td>The application name</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>i18n:find</code> task finds non internationalized strings embedded in templates:</p>
+
+<pre><code>./symfony i18n:find frontend
+</code></pre>
+
+<p>This task is able to find non internationalized strings in pure HTML and in PHP code:</p>
+
+<pre><code>&lt;p&gt;Non i18n text&lt;/p&gt;
+&lt;p&gt;&lt;?php echo 'Test' ?&gt;&lt;/p&gt;
+</code></pre>
+
+<p>As the task returns all strings embedded in PHP, you can have some false positive (especially
+if you use the string syntax for helper arguments).</p>
+
+<h2><a name="chapter_16_log"><code>log</code></a></h2>
+
+<h3><a name="chapter_16_sub_log_clear"><code>log::clear</code></a></h3>
+
+<p>The <code>log::clear</code> task clears log files:</p>
+
+<pre class="command-line"><code>$ php symfony log:clear  
+</code></pre>
+
+<p>The <code>log:clear</code> task clears all symfony log files:</p>
+
+<pre><code>./symfony log:clear
+</code></pre>
+
+<h3><a name="chapter_16_sub_log_rotate"><code>log::rotate</code></a></h3>
+
+<p>The <code>log::rotate</code> task rotates an application's log files:</p>
+
+<pre class="command-line"><code>$ php symfony log:rotate [--history="..."] [--period="..."] application env
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>application</code></td>
+  <td><code>-</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>env</code></td>
+  <td><code>-</code></td>
+  <td>The environment name</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--history</code></td>
+  <td><code>10</code></td>
+  <td>The maximum number of old log files to keep</td>
+</tr>
+<tr>
+  <td><code>--period</code></td>
+  <td><code>7</code></td>
+  <td>The period in days</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>log:rotate</code> task rotates application log files for a given
+environment:</p>
+
+<pre><code>./symfony log:rotate frontend dev
+</code></pre>
+
+<p>You can specify a <code>period</code> or a <code>history</code> option:</p>
+
+<pre><code>./symfony log:rotate frontend dev --history=10 --period=7
+</code></pre>
+
+<h2><a name="chapter_16_plugin"><code>plugin</code></a></h2>
+
+<h3><a name="chapter_16_sub_plugin_add_channel"><code>plugin::add-channel</code></a></h3>
+
+<p>The <code>plugin::add-channel</code> task add a new PEAR channel:</p>
+
+<pre class="command-line"><code>$ php symfony plugin:add-channel  name
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>name</code></td>
+  <td><code>-</code></td>
+  <td>The channel name</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>plugin:add-channel</code> task adds a new PEAR channel:</p>
+
+<pre><code>./symfony plugin:add-channel symfony.plugins.pear.example.com
+</code></pre>
+
+<h3><a name="chapter_16_sub_plugin_install"><code>plugin::install</code></a></h3>
+
+<p>The <code>plugin::install</code> task installs a plugin:</p>
+
+<pre class="command-line"><code>$ php symfony plugin:install [-s|--stability="..."] [-r|--release="..."] [-c|--channel="..."] [-d|--install_deps] [--force-license] name
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>name</code></td>
+  <td><code>-</code></td>
+  <td>The plugin name</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--stability</code><br /><code>(-s)</code></td>
+  <td><code>-</code></td>
+  <td>The preferred stability (stable, beta, alpha)</td>
+</tr>
+<tr>
+  <td><code>--release</code><br /><code>(-r)</code></td>
+  <td><code>-</code></td>
+  <td>The preferred version</td>
+</tr>
+<tr>
+  <td><code>--channel</code><br /><code>(-c)</code></td>
+  <td><code>-</code></td>
+  <td>The PEAR channel name</td>
+</tr>
+<tr>
+  <td><code>--install_deps</code><br /><code>(-d)</code></td>
+  <td><code>-</code></td>
+  <td>Whether to force installation of required dependencies</td>
+</tr>
+<tr>
+  <td><code>--force-license</code></td>
+  <td><code>-</code></td>
+  <td>Whether to force installation even if the license is not MIT like</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>plugin:install</code> task installs a plugin:</p>
+
+<pre><code>./symfony plugin:install sfGuardPlugin
+</code></pre>
+
+<p>By default, it installs the latest <code>stable</code> release.</p>
+
+<p>If you want to install a plugin that is not stable yet,
+use the <code>stability</code> option:</p>
+
+<pre><code>./symfony plugin:install --stability=beta sfGuardPlugin
+./symfony plugin:install -s beta sfGuardPlugin
+</code></pre>
+
+<p>You can also force the installation of a specific version:</p>
+
+<pre><code>./symfony plugin:install --release=1.0.0 sfGuardPlugin
+./symfony plugin:install -r 1.0.0 sfGuardPlugin
+</code></pre>
+
+<p>To force installation of all required dependencies, use the <code>install_deps</code> flag:</p>
+
+<pre><code>./symfony plugin:install --install-deps sfGuardPlugin
+./symfony plugin:install -d sfGuardPlugin
+</code></pre>
+
+<p>By default, the PEAR channel used is <code>symfony-plugins</code>
+(plugins.symfony-project.org).</p>
+
+<p>You can specify another channel with the <code>channel</code> option:</p>
+
+<pre><code>./symfony plugin:install --channel=mypearchannel sfGuardPlugin
+./symfony plugin:install -c mypearchannel sfGuardPlugin
+</code></pre>
+
+<p>You can also install PEAR packages hosted on a website:</p>
+
+<pre><code>./symfony plugin:install http://somewhere.example.com/sfGuardPlugin-1.0.0.tgz
+</code></pre>
+
+<p>Or local PEAR packages:</p>
+
+<pre><code>./symfony plugin:install /home/fabien/plugins/sfGuardPlugin-1.0.0.tgz
+</code></pre>
+
+<p>If the plugin contains some web content (images, stylesheets or javascripts),
+the task creates a <code>%name%</code> symbolic link for those assets under <code>web/</code>.
+On Windows, the task copy all the files to the <code>web/%name%</code> directory.</p>
+
+<h3><a name="chapter_16_sub_plugin_list"><code>plugin::list</code></a></h3>
+
+<p>The <code>plugin::list</code> task lists installed plugins:</p>
+
+<pre class="command-line"><code>$ php symfony plugin:list  
+</code></pre>
+
+<p>The <code>plugin:list</code> task lists all installed plugins:</p>
+
+<pre><code>./symfony plugin:list
+</code></pre>
+
+<p>It also gives the channel and version for each plugin.</p>
+
+<h3><a name="chapter_16_sub_plugin_publish_assets"><code>plugin::publish-assets</code></a></h3>
+
+<p>The <code>plugin::publish-assets</code> task publishes web assets for all plugins:</p>
+
+<pre class="command-line"><code>$ php symfony plugin:publish-assets [--core-only] [plugins1] ... [pluginsN]
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>plugins</code></td>
+  <td><code>-</code></td>
+  <td>Publish this plugin's assets</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--core-only</code></td>
+  <td><code>-</code></td>
+  <td>If set only core plugins will publish their assets</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>plugin:publish-assets</code> task will publish web assets from all plugins.</p>
+
+<pre><code>./symfony plugin:publish-assets
+</code></pre>
+
+<p>In fact this will send the <code>plugin.post_install</code> event to each plugin.</p>
+
+<p>You can specify which plugin or plugins should install their assets by passing
+those plugins' names as arguments:</p>
+
+<pre><code>./symfony plugin:publish-assets sfDoctrinePlugin
+</code></pre>
+
+<h3><a name="chapter_16_sub_plugin_uninstall"><code>plugin::uninstall</code></a></h3>
+
+<p>The <code>plugin::uninstall</code> task uninstalls a plugin:</p>
+
+<pre class="command-line"><code>$ php symfony plugin:uninstall [-c|--channel="..."] [-d|--install_deps] name
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>name</code></td>
+  <td><code>-</code></td>
+  <td>The plugin name</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--channel</code><br /><code>(-c)</code></td>
+  <td><code>-</code></td>
+  <td>The PEAR channel name</td>
+</tr>
+<tr>
+  <td><code>--install_deps</code><br /><code>(-d)</code></td>
+  <td><code>-</code></td>
+  <td>Whether to force installation of dependencies</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>plugin:uninstall</code> task uninstalls a plugin:</p>
+
+<pre><code>./symfony plugin:uninstall sfGuardPlugin
+</code></pre>
+
+<p>The default channel is <code>symfony</code>.</p>
+
+<p>You can also uninstall a plugin which has a different channel:</p>
+
+<pre><code>./symfony plugin:uninstall --channel=mypearchannel sfGuardPlugin
+
+./symfony plugin:uninstall -c mypearchannel sfGuardPlugin
+</code></pre>
+
+<p>Or you can use the <code>channel/package</code> notation:</p>
+
+<pre><code>./symfony plugin:uninstall mypearchannel/sfGuardPlugin
+</code></pre>
+
+<p>You can get the PEAR channel name of a plugin by launching the
+<code>plugin:list</code> task.</p>
+
+<p>If the plugin contains some web content (images, stylesheets or javascripts),
+the task also removes the <code>web/%name%</code> symbolic link (on *nix)
+or directory (on Windows).</p>
+
+<h3><a name="chapter_16_sub_plugin_upgrade"><code>plugin::upgrade</code></a></h3>
+
+<p>The <code>plugin::upgrade</code> task upgrades a plugin:</p>
+
+<pre class="command-line"><code>$ php symfony plugin:upgrade [-s|--stability="..."] [-r|--release="..."] [-c|--channel="..."] name
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>name</code></td>
+  <td><code>-</code></td>
+  <td>The plugin name</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--stability</code><br /><code>(-s)</code></td>
+  <td><code>-</code></td>
+  <td>The preferred stability (stable, beta, alpha)</td>
+</tr>
+<tr>
+  <td><code>--release</code><br /><code>(-r)</code></td>
+  <td><code>-</code></td>
+  <td>The preferred version</td>
+</tr>
+<tr>
+  <td><code>--channel</code><br /><code>(-c)</code></td>
+  <td><code>-</code></td>
+  <td>The PEAR channel name</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>plugin:upgrade</code> task tries to upgrade a plugin:</p>
+
+<pre><code>./symfony plugin:upgrade sfGuardPlugin
+</code></pre>
+
+<p>The default channel is <code>symfony</code>.</p>
+
+<p>If the plugin contains some web content (images, stylesheets or javascripts),
+the task also updates the <code>web/%name%</code> directory content on Windows.</p>
+
+<p>See <code>plugin:install</code> for more information about the format of the plugin name and options.</p>
+
+<h2><a name="chapter_16_project"><code>project</code></a></h2>
+
+<h3><a name="chapter_16_sub_project_clear_controllers"><code>project::clear-controllers</code></a></h3>
+
+<p>The <code>project::clear-controllers</code> task clears all non production environment controllers:</p>
+
+<pre class="command-line"><code>$ php symfony project:clear-controllers  
+</code></pre>
+
+<p>The <code>project:clear-controllers</code> task clears all non production environment
+controllers:</p>
+
+<pre><code>./symfony project:clear-controllers
+</code></pre>
+
+<p>You can use this task on a production server to remove all front
+controller scripts except the production ones.</p>
+
+<p>If you have two applications named <code>frontend</code> and <code>backend</code>,
+you have four default controller scripts in <code>web/</code>:</p>
+
+<pre><code>index.php
+frontend_dev.php
+backend.php
+backend_dev.php
+</code></pre>
+
+<p>After executing the <code>project:clear-controllers</code> task, two front
+controller scripts are left in <code>web/</code>:</p>
+
+<pre><code>index.php
+backend.php
+</code></pre>
+
+<p>Those two controllers are safe because debug mode and the web debug
+toolbar are disabled.</p>
+
+<h3><a name="chapter_16_sub_project_deploy"><code>project::deploy</code></a></h3>
+
+<p>The <code>project::deploy</code> task deploys a project to another server:</p>
+
+<pre class="command-line"><code>$ php symfony project:deploy [--go] [--rsync-dir="..."] [--rsync-options[="..."]] server
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>server</code></td>
+  <td><code>-</code></td>
+  <td>The server name</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--go</code></td>
+  <td><code>-</code></td>
+  <td>Do the deployment</td>
+</tr>
+<tr>
+  <td><code>--rsync-dir</code></td>
+  <td><code>config</code></td>
+  <td>The directory where to look for rsync*.txt files</td>
+</tr>
+<tr>
+  <td><code>--rsync-options</code></td>
+  <td><code>-azC --force --delete --progress</code></td>
+  <td>To options to pass to the rsync executable</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>project:deploy</code> task deploys a project on a server:</p>
+
+<pre><code>./symfony project:deploy production
+</code></pre>
+
+<p>The server must be configured in <code>config/properties.ini</code>:</p>
+
+<pre>host=www.example.com
+  port=22
+  user=fabien
+  dir=/var/www/sfblog/
+  type=rsync</pre>
+
+<p>To automate the deployment, the task uses rsync over SSH.
+You must configure SSH access with a key or configure the password
+in <code>config/properties.ini</code>.</p>
+
+<p>By default, the task is in dry-mode. To do a real deployment, you
+must pass the <code>--go</code> option:</p>
+
+<pre><code>./symfony project:deploy --go production
+</code></pre>
+
+<p>Files and directories configured in <code>config/rsync_exclude.txt</code> are
+not deployed:</p>
+
+<pre><code>.svn
+/web/uploads/*
+/cache/*
+/log/*
+</code></pre>
+
+<p>You can also create a <code>rsync.txt</code> and <code>rsync_include.txt</code> files.</p>
+
+<p>If you need to customize the <code>rsync*.txt</code> files based on the server,
+you can pass a <code>rsync-dir</code> option:</p>
+
+<pre><code>./symfony project:deploy --go --rsync-dir=config/production production
+</code></pre>
+
+<p>Last, you can specify the options passed to the rsync executable, using the
+<code>rsync-options</code> option (defaults are <code>-azC --force --delete --progress</code>):</p>
+
+<pre><code>./symfony project:deploy --go --rsync-options=-avz
+</code></pre>
+
+<h3><a name="chapter_16_sub_project_disable"><code>project::disable</code></a></h3>
+
+<p>The <code>project::disable</code> task disables an application in a given environment:</p>
+
+<pre class="command-line"><code>$ php symfony project:disable  env [app1] ... [appN]
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>env</code></td>
+  <td><code>-</code></td>
+  <td>The environment name</td>
+</tr>
+<tr>
+  <td><code>app</code></td>
+  <td><code>-</code></td>
+  <td>The application name</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>project:disable</code> task disables an environment:</p>
+
+<pre><code>./symfony project:disable prod
+</code></pre>
+
+<p>You can also specify individual applications to be disabled in that
+environment:</p>
+
+<pre><code>./symfony project:disable prod frontend backend
+</code></pre>
+
+<h3><a name="chapter_16_sub_project_enable"><code>project::enable</code></a></h3>
+
+<p>The <code>project::enable</code> task enables an application in a given environment:</p>
+
+<pre class="command-line"><code>$ php symfony project:enable  env [app1] ... [appN]
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>env</code></td>
+  <td><code>-</code></td>
+  <td>The environment name</td>
+</tr>
+<tr>
+  <td><code>app</code></td>
+  <td><code>-</code></td>
+  <td>The application name</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>project:enable</code> task enables a specific environment:</p>
+
+<pre><code>./symfony project:enable frontend prod
+</code></pre>
+
+<p>You can also specify individual applications to be enabled in that
+environment:</p>
+
+<pre><code>./symfony project:enable prod frontend backend
+</code></pre>
+
+<h3><a name="chapter_16_sub_project_optimize"><code>project::optimize</code></a></h3>
+
+<p>The <code>project::optimize</code> task optimizes a project for better performance:</p>
+
+<pre class="command-line"><code>$ php symfony project:optimize  application [env]
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>application</code></td>
+  <td><code>-</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>env</code></td>
+  <td><code>prod</code></td>
+  <td>The environment name</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>project:optimize</code> optimizes a project for better performance:</p>
+
+<pre><code>./symfony project:optimize frontend prod
+</code></pre>
+
+<p>This task should only be used on a production server. Don't forget to re-run
+the task each time the project changes.</p>
+
+<h3><a name="chapter_16_sub_project_permissions"><code>project::permissions</code></a></h3>
+
+<p>The <code>project::permissions</code> task fixes symfony directory permissions:</p>
+
+<pre class="command-line"><code>$ php symfony project:permissions  
+</code></pre>
+
+<p>The <code>project:permissions</code> task fixes directory permissions:</p>
+
+<pre><code>./symfony project:permissions
+</code></pre>
+
+<h3><a name="chapter_16_sub_project_send_emails"><code>project::send-emails</code></a></h3>
+
+<p>The <code>project::send-emails</code> task sends emails stored in a queue:</p>
+
+<pre class="command-line"><code>$ php symfony project:send-emails [--application[="..."]] [--env="..."] [--message-limit[="..."]] [--time-limit[="..."]] 
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>1</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+<tr>
+  <td><code>--message-limit</code></td>
+  <td><code>0</code></td>
+  <td>The maximum number of messages to send</td>
+</tr>
+<tr>
+  <td><code>--time-limit</code></td>
+  <td><code>0</code></td>
+  <td>The time limit for sending messages (in seconds)</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>project:send-emails</code> sends emails stored in a queue:</p>
+
+<pre><code>php symfony project:send-emails
+</code></pre>
+
+<p>You can limit the number of messages to send:</p>
+
+<pre><code>php symfony project:send-emails --message-limit=10
+</code></pre>
+
+<p>Or limit to time (in seconds):</p>
+
+<pre><code>php symfony project:send-emails --time-limit=10
+</code></pre>
+
+<h3><a name="chapter_16_sub_project_validate"><code>project::validate</code></a></h3>
+
+<p>The <code>project::validate</code> task finds deprecated usage in a project:</p>
+
+<pre class="command-line"><code>$ php symfony project:validate  
+</code></pre>
+
+<p>The <code>project:validate</code> task detects deprecated usage in your project.</p>
+
+<pre><code>./symfony project:validate
+</code></pre>
+
+<p>The task lists all the files you need to change before switching to
+symfony 1.4.</p>
+
+<h2><a name="chapter_16_propel"><code>propel</code></a></h2>
+
+<h3><a name="chapter_16_sub_propel_build"><code>propel::build</code></a></h3>
+
+<p>The <code>propel::build</code> task generate code based on your schema:</p>
+
+<pre class="command-line"><code>$ php symfony propel:build [--application[="..."]] [--env="..."] [--no-confirmation] [--all] [--all-classes] [--model] [--forms] [--filters] [--sql] [--db] [--and-load[="..."]] [--and-append[="..."]] 
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>1</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+<tr>
+  <td><code>--no-confirmation</code></td>
+  <td><code>-</code></td>
+  <td>Whether to force dropping of the database</td>
+</tr>
+<tr>
+  <td><code>--all</code></td>
+  <td><code>-</code></td>
+  <td>Build everything and reset the database</td>
+</tr>
+<tr>
+  <td><code>--all-classes</code></td>
+  <td><code>-</code></td>
+  <td>Build all classes</td>
+</tr>
+<tr>
+  <td><code>--model</code></td>
+  <td><code>-</code></td>
+  <td>Build model classes</td>
+</tr>
+<tr>
+  <td><code>--forms</code></td>
+  <td><code>-</code></td>
+  <td>Build form classes</td>
+</tr>
+<tr>
+  <td><code>--filters</code></td>
+  <td><code>-</code></td>
+  <td>Build filter classes</td>
+</tr>
+<tr>
+  <td><code>--sql</code></td>
+  <td><code>-</code></td>
+  <td>Build SQL</td>
+</tr>
+<tr>
+  <td><code>--db</code></td>
+  <td><code>-</code></td>
+  <td>Drop, create, and insert SQL</td>
+</tr>
+<tr>
+  <td><code>--and-load</code></td>
+  <td><code>-</code></td>
+  <td>Load fixture data (multiple values allowed)</td>
+</tr>
+<tr>
+  <td><code>--and-append</code></td>
+  <td><code>-</code></td>
+  <td>Append fixture data (multiple values allowed)</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>propel:build</code> task generates code based on your schema:</p>
+
+<pre><code>./symfony propel:build
+</code></pre>
+
+<p>You must specify what you would like built. For instance, if you want model
+and form classes built use the <code>--model</code> and <code>--forms</code> options:</p>
+
+<pre><code>./symfony propel:build --model --forms
+</code></pre>
+
+<p>You can use the <code>--all</code> shortcut option if you would like all classes and
+SQL files generated and the database rebuilt:</p>
+
+<pre><code>./symfony propel:build --all
+</code></pre>
+
+<p>This is equivalent to running the following tasks:</p>
+
+<pre><code>./symfony propel:build-model
+./symfony propel:build-forms
+./symfony propel:build-filters
+./symfony propel:build-sql
+./symfony propel:insert-sql
+</code></pre>
+
+<p>You can also generate only class files by using the <code>--all-classes</code> shortcut
+option. When this option is used alone, the database will not be modified.</p>
+
+<pre><code>./symfony propel:build --all-classes
+</code></pre>
+
+<p>The <code>--and-load</code> option will load data from the project and plugin
+<code>data/fixtures/</code> directories:</p>
+
+<pre><code>./symfony propel:build --db --and-load
+</code></pre>
+
+<p>To specify what fixtures are loaded, add a parameter to the <code>--and-load</code> option:</p>
+
+<pre><code>./symfony propel:build --all --and-load="data/fixtures/dev/"
+</code></pre>
+
+<p>To append fixture data without erasing any records from the database, include
+the <code>--and-append</code> option:</p>
+
+<pre><code>./symfony propel:build --all --and-append
+</code></pre>
+
+<h3><a name="chapter_16_sub_propel_build_all"><code>propel::build-all</code></a></h3>
+
+<p>The <code>propel::build-all</code> task generates Propel model and form classes, SQL and initializes the database:</p>
+
+<pre class="command-line"><code>$ php symfony propel:build-all [--application[="..."]] [--env="..."] [--connection="..."] [--no-confirmation] [-F|--skip-forms] [-C|--classes-only] [--phing-arg="..."] 
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>1</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+<tr>
+  <td><code>--connection</code></td>
+  <td><code>propel</code></td>
+  <td>The connection name</td>
+</tr>
+<tr>
+  <td><code>--no-confirmation</code></td>
+  <td><code>-</code></td>
+  <td>Do not ask for confirmation</td>
+</tr>
+<tr>
+  <td><code>--skip-forms</code><br /><code>(-F)</code></td>
+  <td><code>-</code></td>
+  <td>Skip generating forms</td>
+</tr>
+<tr>
+  <td><code>--classes-only</code><br /><code>(-C)</code></td>
+  <td><code>-</code></td>
+  <td>Do not initialize the database</td>
+</tr>
+<tr>
+  <td><code>--phing-arg</code></td>
+  <td><code>-</code></td>
+  <td>Arbitrary phing argument (multiple values allowed)</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>propel:build-all</code> task is a shortcut for five other tasks:</p>
+
+<pre><code>./symfony propel:build-all
+</code></pre>
+
+<p>The task is equivalent to:</p>
+
+<pre><code>./symfony propel:build-model
+./symfony propel:build-forms
+./symfony propel:build-filters
+./symfony propel:build-sql
+./symfony propel:insert-sql
+</code></pre>
+
+<p>See those tasks' help pages for more information.</p>
+
+<p>To bypass confirmation prompts, you can pass the <code>no-confirmation</code> option:</p>
+
+<pre><code>./symfony propel:buil-all --no-confirmation
+</code></pre>
+
+<p>To build all classes but skip initializing the database, use the <code>classes-only</code>
+option:</p>
+
+<pre><code>./symfony propel:build-all --classes-only
+</code></pre>
+
+<h3><a name="chapter_16_sub_propel_build_all_load"><code>propel::build-all-load</code></a></h3>
+
+<p>The <code>propel::build-all-load</code> task generates Propel model and form classes, SQL, initializes the database, and loads data:</p>
+
+<pre class="command-line"><code>$ php symfony propel:build-all-load [--application[="..."]] [--env="..."] [--connection="..."] [--no-confirmation] [-F|--skip-forms] [-C|--classes-only] [--phing-arg="..."] [--append] [--dir="..."] 
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>1</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+<tr>
+  <td><code>--connection</code></td>
+  <td><code>propel</code></td>
+  <td>The connection name</td>
+</tr>
+<tr>
+  <td><code>--no-confirmation</code></td>
+  <td><code>-</code></td>
+  <td>Do not ask for confirmation</td>
+</tr>
+<tr>
+  <td><code>--skip-forms</code><br /><code>(-F)</code></td>
+  <td><code>-</code></td>
+  <td>Skip generating forms</td>
+</tr>
+<tr>
+  <td><code>--classes-only</code><br /><code>(-C)</code></td>
+  <td><code>-</code></td>
+  <td>Do not initialize the database</td>
+</tr>
+<tr>
+  <td><code>--phing-arg</code></td>
+  <td><code>-</code></td>
+  <td>Arbitrary phing argument (multiple values allowed)</td>
+</tr>
+<tr>
+  <td><code>--append</code></td>
+  <td><code>-</code></td>
+  <td>Don't delete current data in the database</td>
+</tr>
+<tr>
+  <td><code>--dir</code></td>
+  <td><code>-</code></td>
+  <td>The directories to look for fixtures (multiple values allowed)</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>propel:build-all-load</code> task is a shortcut for two other tasks:</p>
+
+<pre><code>./symfony propel:build-all-load
+</code></pre>
+
+<p>The task is equivalent to:</p>
+
+<pre><code>./symfony propel:build-all
+./symfony propel:data-load
+</code></pre>
+
+<p>See those tasks' help pages for more information.</p>
+
+<p>To bypass the confirmation, you can pass the <code>no-confirmation</code>
+option:</p>
+
+<pre><code>./symfony propel:buil-all-load --no-confirmation
+</code></pre>
+
+<h3><a name="chapter_16_sub_propel_build_filters"><code>propel::build-filters</code></a></h3>
+
+<p>The <code>propel::build-filters</code> task creates filter form classes for the current model:</p>
+
+<pre class="command-line"><code>$ php symfony propel:build-filters [--connection="..."] [--model-dir-name="..."] [--filter-dir-name="..."] [--application[="..."]] [--generator-class="..."] 
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--connection</code></td>
+  <td><code>propel</code></td>
+  <td>The connection name</td>
+</tr>
+<tr>
+  <td><code>--model-dir-name</code></td>
+  <td><code>model</code></td>
+  <td>The model dir name</td>
+</tr>
+<tr>
+  <td><code>--filter-dir-name</code></td>
+  <td><code>filter</code></td>
+  <td>The filter form dir name</td>
+</tr>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>1</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--generator-class</code></td>
+  <td><code>sfPropelFormFilterGenerator</code></td>
+  <td>The generator class</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>propel:build-filters</code> task creates filter form classes from the schema:</p>
+
+<pre><code>./symfony propel:build-filters
+</code></pre>
+
+<p>The task read the schema information in <code>config/*schema.xml</code> and/or
+<code>config/*schema.yml</code> from the project and all installed plugins.</p>
+
+<p>The task use the <code>propel</code> connection as defined in <code>config/databases.yml</code>.
+You can use another connection by using the <code>--connection</code> option:</p>
+
+<pre><code>./symfony propel:build-filters --connection="name"
+</code></pre>
+
+<p>The model filter form classes files are created in <code>lib/filter</code>.</p>
+
+<p>This task never overrides custom classes in <code>lib/filter</code>.
+It only replaces base classes generated in <code>lib/filter/base</code>.</p>
+
+<h3><a name="chapter_16_sub_propel_build_forms"><code>propel::build-forms</code></a></h3>
+
+<p>The <code>propel::build-forms</code> task creates form classes for the current model:</p>
+
+<pre class="command-line"><code>$ php symfony propel:build-forms [--connection="..."] [--model-dir-name="..."] [--form-dir-name="..."] [--application[="..."]] [--generator-class="..."] 
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--connection</code></td>
+  <td><code>propel</code></td>
+  <td>The connection name</td>
+</tr>
+<tr>
+  <td><code>--model-dir-name</code></td>
+  <td><code>model</code></td>
+  <td>The model dir name</td>
+</tr>
+<tr>
+  <td><code>--form-dir-name</code></td>
+  <td><code>form</code></td>
+  <td>The form dir name</td>
+</tr>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>1</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--generator-class</code></td>
+  <td><code>sfPropelFormGenerator</code></td>
+  <td>The generator class</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>propel:build-forms</code> task creates form classes from the schema:</p>
+
+<pre><code>./symfony propel:build-forms
+</code></pre>
+
+<p>The task read the schema information in <code>config/*schema.xml</code> and/or
+<code>config/*schema.yml</code> from the project and all installed plugins.</p>
+
+<p>The task use the <code>propel</code> connection as defined in <code>config/databases.yml</code>.
+You can use another connection by using the <code>--connection</code> option:</p>
+
+<pre><code>./symfony propel:build-forms --connection="name"
+</code></pre>
+
+<p>The model form classes files are created in <code>lib/form</code>.</p>
+
+<p>This task never overrides custom classes in <code>lib/form</code>.
+It only replaces base classes generated in <code>lib/form/base</code>.</p>
+
+<h3><a name="chapter_16_sub_propel_build_model"><code>propel::build-model</code></a></h3>
+
+<p>The <code>propel::build-model</code> task creates classes for the current model:</p>
+
+<pre class="command-line"><code>$ php symfony propel:build-model [--phing-arg="..."] 
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--phing-arg</code></td>
+  <td><code>-</code></td>
+  <td>Arbitrary phing argument (multiple values allowed)</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>propel:build-model</code> task creates model classes from the schema:</p>
+
+<pre><code>./symfony propel:build-model
+</code></pre>
+
+<p>The task read the schema information in <code>config/*schema.xml</code> and/or
+<code>config/*schema.yml</code> from the project and all installed plugins.</p>
+
+<p>You mix and match YML and XML schema files. The task will convert
+YML ones to XML before calling the Propel task.</p>
+
+<p>The model classes files are created in <code>lib/model</code>.</p>
+
+<p>This task never overrides custom classes in <code>lib/model</code>.
+It only replaces files in <code>lib/model/om</code> and <code>lib/model/map</code>.</p>
+
+<h3><a name="chapter_16_sub_propel_build_schema"><code>propel::build-schema</code></a></h3>
+
+<p>The <code>propel::build-schema</code> task creates a schema from an existing database:</p>
+
+<pre class="command-line"><code>$ php symfony propel:build-schema [--application[="..."]] [--env="..."] [--connection="..."] [--xml] [--phing-arg="..."] 
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>1</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>cli</code></td>
+  <td>The environment</td>
+</tr>
+<tr>
+  <td><code>--connection</code></td>
+  <td><code>-</code></td>
+  <td>The connection name</td>
+</tr>
+<tr>
+  <td><code>--xml</code></td>
+  <td><code>-</code></td>
+  <td>Creates an XML schema instead of a YML one</td>
+</tr>
+<tr>
+  <td><code>--phing-arg</code></td>
+  <td><code>-</code></td>
+  <td>Arbitrary phing argument (multiple values allowed)</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>propel:build-schema</code> task introspects a database to create a schema:</p>
+
+<pre><code>./symfony propel:build-schema
+</code></pre>
+
+<p>By default, the task creates a YML file, but you can also create a XML file:</p>
+
+<pre><code>./symfony --xml propel:build-schema
+</code></pre>
+
+<p>The XML format contains more information than the YML one.</p>
+
+<h3><a name="chapter_16_sub_propel_build_sql"><code>propel::build-sql</code></a></h3>
+
+<p>The <code>propel::build-sql</code> task creates SQL for the current model:</p>
+
+<pre class="command-line"><code>$ php symfony propel:build-sql [--phing-arg="..."] 
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--phing-arg</code></td>
+  <td><code>-</code></td>
+  <td>Arbitrary phing argument (multiple values allowed)</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>propel:build-sql</code> task creates SQL statements for table creation:</p>
+
+<pre><code>./symfony propel:build-sql
+</code></pre>
+
+<p>The generated SQL is optimized for the database configured in <code>config/propel.ini</code>:</p>
+
+<pre><code>propel.database = mysql
+</code></pre>
+
+<h3><a name="chapter_16_sub_propel_data_dump"><code>propel::data-dump</code></a></h3>
+
+<p>The <code>propel::data-dump</code> task dumps data to the fixtures directory:</p>
+
+<pre class="command-line"><code>$ php symfony propel:data-dump [--application[="..."]] [--env="..."] [--connection="..."] [--classes="..."] [target]
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>target</code></td>
+  <td><code>-</code></td>
+  <td>The target filename</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>1</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>cli</code></td>
+  <td>The environement</td>
+</tr>
+<tr>
+  <td><code>--connection</code></td>
+  <td><code>propel</code></td>
+  <td>The connection name</td>
+</tr>
+<tr>
+  <td><code>--classes</code></td>
+  <td><code>-</code></td>
+  <td>The class names to dump (separated by a colon)</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>propel:data-dump</code> task dumps database data:</p>
+
+<pre><code>./symfony propel:data-dump &gt; data/fixtures/dump.yml
+</code></pre>
+
+<p>By default, the task outputs the data to the standard output,
+but you can also pass a filename as a second argument:</p>
+
+<pre><code>./symfony propel:data-dump dump.yml
+</code></pre>
+
+<p>The task will dump data in <code>data/fixtures/%target%</code>
+(data/fixtures/dump.yml in the example).</p>
+
+<p>The dump file is in the YML format and can be re-imported by using
+the <code>propel:data-load</code> task.</p>
+
+<p>By default, the task use the <code>propel</code> connection as defined in <code>config/databases.yml</code>.
+You can use another connection by using the <code>connection</code> option:</p>
+
+<pre><code>./symfony propel:data-dump --connection="name"
+</code></pre>
+
+<p>If you only want to dump some classes, use the <code>classes</code> option:</p>
+
+<pre><code>./symfony propel:data-dump --classes="Article,Category"
+</code></pre>
+
+<p>If you want to use a specific database configuration from an application, you can use
+the <code>application</code> option:</p>
+
+<pre><code>./symfony propel:data-dump --application=frontend
+</code></pre>
+
+<h3><a name="chapter_16_sub_propel_data_load"><code>propel::data-load</code></a></h3>
+
+<p>The <code>propel::data-load</code> task loads YAML fixture data:</p>
+
+<pre class="command-line"><code>$ php symfony propel:data-load [--application[="..."]] [--env="..."] [--append] [--connection="..."] [dir_or_file1] ... [dir_or_fileN]
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>dir_or_file</code></td>
+  <td><code>-</code></td>
+  <td>Directory or file to load</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>1</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>cli</code></td>
+  <td>The environment</td>
+</tr>
+<tr>
+  <td><code>--append</code></td>
+  <td><code>-</code></td>
+  <td>Don't delete current data in the database</td>
+</tr>
+<tr>
+  <td><code>--connection</code></td>
+  <td><code>propel</code></td>
+  <td>The connection name</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>propel:data-load</code> task loads data fixtures into the database:</p>
+
+<pre><code>./symfony propel:data-load
+</code></pre>
+
+<p>The task loads data from all the files found in <code>data/fixtures/</code>.</p>
+
+<p>If you want to load data from specific files or directories, you can append
+them as arguments:</p>
+
+<pre><code>./symfony propel:data-load data/fixtures/dev data/fixtures/users.yml
+</code></pre>
+
+<p>The task use the <code>propel</code> connection as defined in <code>config/databases.yml</code>.
+You can use another connection by using the <code>--connection</code> option:</p>
+
+<pre><code>./symfony propel:data-load --connection="name"
+</code></pre>
+
+<p>If you don't want the task to remove existing data in the database,
+use the <code>--append</code> option:</p>
+
+<pre><code>./symfony propel:data-load --append
+</code></pre>
+
+<p>If you want to use a specific database configuration from an application, you can use
+the <code>application</code> option:</p>
+
+<pre><code>./symfony propel:data-load --application=frontend
+</code></pre>
+
+<h3><a name="chapter_16_sub_propel_generate_admin"><code>propel::generate-admin</code></a></h3>
+
+<p>The <code>propel::generate-admin</code> task generates a Propel admin module:</p>
+
+<pre class="command-line"><code>$ php symfony propel:generate-admin [--module="..."] [--theme="..."] [--singular="..."] [--plural="..."] [--env="..."] [--actions-base-class="..."] application route_or_model
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>application</code></td>
+  <td><code>-</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>route_or_model</code></td>
+  <td><code>-</code></td>
+  <td>The route name or the model class</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--module</code></td>
+  <td><code>-</code></td>
+  <td>The module name</td>
+</tr>
+<tr>
+  <td><code>--theme</code></td>
+  <td><code>admin</code></td>
+  <td>The theme name</td>
+</tr>
+<tr>
+  <td><code>--singular</code></td>
+  <td><code>-</code></td>
+  <td>The singular name</td>
+</tr>
+<tr>
+  <td><code>--plural</code></td>
+  <td><code>-</code></td>
+  <td>The plural name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+<tr>
+  <td><code>--actions-base-class</code></td>
+  <td><code>sfActions</code></td>
+  <td>The base class for the actions</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>propel:generate-admin</code> task generates a Propel admin module:</p>
+
+<pre><code>./symfony propel:generate-admin frontend Article
+</code></pre>
+
+<p>The task creates a module in the <code>%frontend%</code> application for the
+<code>%Article%</code> model.</p>
+
+<p>The task creates a route for you in the application <code>routing.yml</code>.</p>
+
+<p>You can also generate a Propel admin module by passing a route name:</p>
+
+<pre><code>./symfony propel:generate-admin frontend article
+</code></pre>
+
+<p>The task creates a module in the <code>%frontend%</code> application for the
+<code>%article%</code> route definition found in <code>routing.yml</code>.</p>
+
+<p>For the filters and batch actions to work properly, you need to add
+the <code>with_wildcard_routes</code> option to the route:</p>
+
+<pre><code>article:
+  class: sfPropelRouteCollection
+  options:
+    model:                Article
+    with_wildcard_routes: true
+</code></pre>
+
+<h3><a name="chapter_16_sub_propel_generate_module"><code>propel::generate-module</code></a></h3>
+
+<p>The <code>propel::generate-module</code> task generates a Propel module:</p>
+
+<pre class="command-line"><code>$ php symfony propel:generate-module [--theme="..."] [--generate-in-cache] [--non-verbose-templates] [--with-show] [--singular="..."] [--plural="..."] [--route-prefix="..."] [--with-propel-route] [--env="..."] [--actions-base-class="..."] application module model
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>application</code></td>
+  <td><code>-</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>module</code></td>
+  <td><code>-</code></td>
+  <td>The module name</td>
+</tr>
+<tr>
+  <td><code>model</code></td>
+  <td><code>-</code></td>
+  <td>The model class name</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--theme</code></td>
+  <td><code>default</code></td>
+  <td>The theme name</td>
+</tr>
+<tr>
+  <td><code>--generate-in-cache</code></td>
+  <td><code>-</code></td>
+  <td>Generate the module in cache</td>
+</tr>
+<tr>
+  <td><code>--non-verbose-templates</code></td>
+  <td><code>-</code></td>
+  <td>Generate non verbose templates</td>
+</tr>
+<tr>
+  <td><code>--with-show</code></td>
+  <td><code>-</code></td>
+  <td>Generate a show method</td>
+</tr>
+<tr>
+  <td><code>--singular</code></td>
+  <td><code>-</code></td>
+  <td>The singular name</td>
+</tr>
+<tr>
+  <td><code>--plural</code></td>
+  <td><code>-</code></td>
+  <td>The plural name</td>
+</tr>
+<tr>
+  <td><code>--route-prefix</code></td>
+  <td><code>-</code></td>
+  <td>The route prefix</td>
+</tr>
+<tr>
+  <td><code>--with-propel-route</code></td>
+  <td><code>-</code></td>
+  <td>Whether you will use a Propel route</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+<tr>
+  <td><code>--actions-base-class</code></td>
+  <td><code>sfActions</code></td>
+  <td>The base class for the actions</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>propel:generate-module</code> task generates a Propel module:</p>
+
+<pre><code>./symfony propel:generate-module frontend article Article
+</code></pre>
+
+<p>The task creates a <code>%module%</code> module in the <code>%application%</code> application
+for the model class <code>%model%</code>.</p>
+
+<p>You can also create an empty module that inherits its actions and templates from
+a runtime generated module in <code>%sf_app_cache_dir%/modules/auto%module%</code> by
+using the <code>--generate-in-cache</code> option:</p>
+
+<pre><code>./symfony propel:generate-module --generate-in-cache frontend article Article
+</code></pre>
+
+<p>The generator can use a customized theme by using the <code>--theme</code> option:</p>
+
+<pre><code>./symfony propel:generate-module --theme="custom" frontend article Article
+</code></pre>
+
+<p>This way, you can create your very own module generator with your own conventions.</p>
+
+<p>You can also change the default actions base class (default to sfActions) of
+the generated modules:</p>
+
+<pre><code>./symfony propel:generate-module --actions-base-class="ProjectActions" frontend article Article
+</code></pre>
+
+<h3><a name="chapter_16_sub_propel_generate_module_for_route"><code>propel::generate-module-for-route</code></a></h3>
+
+<p>The <code>propel::generate-module-for-route</code> task generates a Propel module for a route definition:</p>
+
+<pre class="command-line"><code>$ php symfony propel:generate-module-for-route [--theme="..."] [--non-verbose-templates] [--singular="..."] [--plural="..."] [--env="..."] [--actions-base-class="..."] application route
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>application</code></td>
+  <td><code>-</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>route</code></td>
+  <td><code>-</code></td>
+  <td>The route name</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--theme</code></td>
+  <td><code>default</code></td>
+  <td>The theme name</td>
+</tr>
+<tr>
+  <td><code>--non-verbose-templates</code></td>
+  <td><code>-</code></td>
+  <td>Generate non verbose templates</td>
+</tr>
+<tr>
+  <td><code>--singular</code></td>
+  <td><code>-</code></td>
+  <td>The singular name</td>
+</tr>
+<tr>
+  <td><code>--plural</code></td>
+  <td><code>-</code></td>
+  <td>The plural name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>dev</code></td>
+  <td>The environment</td>
+</tr>
+<tr>
+  <td><code>--actions-base-class</code></td>
+  <td><code>sfActions</code></td>
+  <td>The base class for the actions</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>propel:generate-module-for-route</code> task generates a Propel module for a route definition:</p>
+
+<pre><code>./symfony propel:generate-module-for-route frontend article
+</code></pre>
+
+<p>The task creates a module in the <code>%frontend%</code> application for the
+<code>%article%</code> route definition found in <code>routing.yml</code>.</p>
+
+<h3><a name="chapter_16_sub_propel_graphviz"><code>propel::graphviz</code></a></h3>
+
+<p>The <code>propel::graphviz</code> task generates a graphviz chart of current object model:</p>
+
+<pre class="command-line"><code>$ php symfony propel:graphviz [--phing-arg="..."] 
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--phing-arg</code></td>
+  <td><code>-</code></td>
+  <td>Arbitrary phing argument (multiple values allowed)</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>propel:graphviz</code> task creates a graphviz DOT
+visualization for automatic graph drawing of object model:</p>
+
+<pre><code>./symfony propel:graphviz
+</code></pre>
+
+<h3><a name="chapter_16_sub_propel_insert_sql"><code>propel::insert-sql</code></a></h3>
+
+<p>The <code>propel::insert-sql</code> task inserts SQL for current model:</p>
+
+<pre class="command-line"><code>$ php symfony propel:insert-sql [--application[="..."]] [--env="..."] [--connection="..."] [--no-confirmation] [--phing-arg="..."] 
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--application</code></td>
+  <td><code>1</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>--env</code></td>
+  <td><code>cli</code></td>
+  <td>The environment</td>
+</tr>
+<tr>
+  <td><code>--connection</code></td>
+  <td><code>-</code></td>
+  <td>The connection name</td>
+</tr>
+<tr>
+  <td><code>--no-confirmation</code></td>
+  <td><code>-</code></td>
+  <td>Do not ask for confirmation</td>
+</tr>
+<tr>
+  <td><code>--phing-arg</code></td>
+  <td><code>-</code></td>
+  <td>Arbitrary phing argument (multiple values allowed)</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>propel:insert-sql</code> task creates database tables:</p>
+
+<pre><code>./symfony propel:insert-sql
+</code></pre>
+
+<p>The task connects to the database and executes all SQL statements
+found in <code>config/sql/*schema.sql</code> files.</p>
+
+<p>Before execution, the task will ask you to confirm the execution
+as it deletes all data in your database.</p>
+
+<p>To bypass the confirmation, you can pass the <code>--no-confirmation</code>
+option:</p>
+
+<pre><code>./symfony propel:insert-sql --no-confirmation
+</code></pre>
+
+<p>The task read the database configuration from <code>databases.yml</code>.
+You can use a specific application/environment by passing
+an <code>--application</code> or <code>--env</code> option.</p>
+
+<p>You can also use the <code>--connection</code> option if you want to
+only load SQL statements for a given connection.</p>
+
+<h3><a name="chapter_16_sub_propel_schema_to_xml"><code>propel::schema-to-xml</code></a></h3>
+
+<p>The <code>propel::schema-to-xml</code> task creates schema.xml from schema.yml:</p>
+
+<pre class="command-line"><code>$ php symfony propel:schema-to-xml  
+</code></pre>
+
+<p>The <code>propel:schema-to-xml</code> task converts YML schemas to XML:</p>
+
+<pre><code>./symfony propel:schema-to-xml
+</code></pre>
+
+<h3><a name="chapter_16_sub_propel_schema_to_yml"><code>propel::schema-to-yml</code></a></h3>
+
+<p>The <code>propel::schema-to-yml</code> task creates schema.yml from schema.xml:</p>
+
+<pre class="command-line"><code>$ php symfony propel:schema-to-yml  
+</code></pre>
+
+<p>The <code>propel:schema-to-yml</code> task converts XML schemas to YML:</p>
+
+<pre><code>./symfony propel:schema-to-yml
+</code></pre>
+
+<h2><a name="chapter_16_symfony"><code>symfony</code></a></h2>
+
+<h3><a name="chapter_16_sub_symfony_test"><code>symfony::test</code></a></h3>
+
+<p>The <code>symfony::test</code> task launches the symfony test suite:</p>
+
+<pre class="command-line"><code>$ php symfony symfony:test [-u|--update-autoloader] [-f|--only-failed] [--xml="..."] [--rebuild-all] 
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--update-autoloader</code><br /><code>(-u)</code></td>
+  <td><code>-</code></td>
+  <td>Update the sfCoreAutoload class</td>
+</tr>
+<tr>
+  <td><code>--only-failed</code><br /><code>(-f)</code></td>
+  <td><code>-</code></td>
+  <td>Only run tests that failed last time</td>
+</tr>
+<tr>
+  <td><code>--xml</code></td>
+  <td><code>-</code></td>
+  <td>The file name for the JUnit compatible XML log file</td>
+</tr>
+<tr>
+  <td><code>--rebuild-all</code></td>
+  <td><code>-</code></td>
+  <td>Rebuild all generated fixture files</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>test:all</code> task launches the symfony test suite:</p>
+
+<pre><code>./symfony symfony:test
+</code></pre>
+
+<h2><a name="chapter_16_test"><code>test</code></a></h2>
+
+<h3><a name="chapter_16_sub_test_all"><code>test::all</code></a></h3>
+
+<p>The <code>test::all</code> task launches all tests:</p>
+
+<pre class="command-line"><code>$ php symfony test:all [-f|--only-failed] [--xml="..."] 
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--only-failed</code><br /><code>(-f)</code></td>
+  <td><code>-</code></td>
+  <td>Only run tests that failed last time</td>
+</tr>
+<tr>
+  <td><code>--xml</code></td>
+  <td><code>-</code></td>
+  <td>The file name for the JUnit compatible XML log file</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>test:all</code> task launches all unit and functional tests:</p>
+
+<pre><code>./symfony test:all
+</code></pre>
+
+<p>The task launches all tests found in <code>test/</code>.</p>
+
+<p>If some tests fail, you can use the <code>--trace</code> option to have more
+information about the failures:</p>
+
+<pre><code>./symfony test:all -t
+</code></pre>
+
+<p>Or you can also try to fix the problem by launching them by hand or with the
+<code>test:unit</code> and <code>test:functional</code> task.</p>
+
+<p>Use the <code>--only-failed</code> option to force the task to only execute tests
+that failed during the previous run:</p>
+
+<pre><code>./symfony test:all --only-failed
+</code></pre>
+
+<p>Here is how it works: the first time, all tests are run as usual. But for
+subsequent test runs, only tests that failed last time are executed. As you
+fix your code, some tests will pass, and will be removed from subsequent runs.
+When all tests pass again, the full test suite is run... you can then rinse
+and repeat.</p>
+
+<p>The task can output a JUnit compatible XML log file with the <code>--xml</code>
+options:</p>
+
+<pre><code>./symfony test:all --xml=log.xml
+</code></pre>
+
+<h3><a name="chapter_16_sub_test_coverage"><code>test::coverage</code></a></h3>
+
+<p>The <code>test::coverage</code> task outputs test code coverage:</p>
+
+<pre class="command-line"><code>$ php symfony test:coverage [--detailed] test_name lib_name
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>test_name</code></td>
+  <td><code>-</code></td>
+  <td>A test file name or a test directory</td>
+</tr>
+<tr>
+  <td><code>lib_name</code></td>
+  <td><code>-</code></td>
+  <td>A lib file name or a lib directory for wich you want to know the coverage</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--detailed</code></td>
+  <td><code>-</code></td>
+  <td>Output detailed information</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>test:coverage</code> task outputs the code coverage
+given a test file or test directory
+and a lib file or lib directory for which you want code
+coverage:</p>
+
+<pre><code>./symfony test:coverage test/unit/model lib/model
+</code></pre>
+
+<p>To output the lines not covered, pass the <code>--detailed</code> option:</p>
+
+<pre><code>./symfony test:coverage --detailed test/unit/model lib/model
+</code></pre>
+
+<h3><a name="chapter_16_sub_test_functional"><code>test::functional</code></a></h3>
+
+<p>The <code>test::functional</code> task launches functional tests:</p>
+
+<pre class="command-line"><code>$ php symfony test:functional [--xml="..."] application [controller1] ... [controllerN]
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>application</code></td>
+  <td><code>-</code></td>
+  <td>The application name</td>
+</tr>
+<tr>
+  <td><code>controller</code></td>
+  <td><code>-</code></td>
+  <td>The controller name</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--xml</code></td>
+  <td><code>-</code></td>
+  <td>The file name for the JUnit compatible XML log file</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>test:functional</code> task launches functional tests for a
+given application:</p>
+
+<pre><code>./symfony test:functional frontend
+</code></pre>
+
+<p>The task launches all tests found in <code>test/functional/%application%</code>.</p>
+
+<p>If some tests fail, you can use the <code>--trace</code> option to have more
+information about the failures:</p>
+
+<pre><code>./symfony test:functional frontend -t
+</code></pre>
+
+<p>You can launch all functional tests for a specific controller by
+giving a controller name:</p>
+
+<pre><code>./symfony test:functional frontend article
+</code></pre>
+
+<p>You can also launch all functional tests for several controllers:</p>
+
+<pre><code>./symfony test:functional frontend article comment
+</code></pre>
+
+<p>The task can output a JUnit compatible XML log file with the <code>--xml</code>
+options:</p>
+
+<pre><code>./symfony test:functional --xml=log.xml
+</code></pre>
+
+<h3><a name="chapter_16_sub_test_unit"><code>test::unit</code></a></h3>
+
+<p>The <code>test::unit</code> task launches unit tests:</p>
+
+<pre class="command-line"><code>$ php symfony test:unit [--xml="..."] [name1] ... [nameN]
+</code></pre>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>name</code></td>
+  <td><code>-</code></td>
+  <td>The test name</td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing="0" class="doc_table">
+<thead>
+<tr>
+  <th>Option (Shortcut)</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--xml</code></td>
+  <td><code>-</code></td>
+  <td>The file name for the JUnit compatible XML log file</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>test:unit</code> task launches unit tests:</p>
+
+<pre><code>./symfony test:unit
+</code></pre>
+
+<p>The task launches all tests found in <code>test/unit</code>.</p>
+
+<p>If some tests fail, you can use the <code>--trace</code> option to have more
+information about the failures:</p>
+
+<pre><code>./symfony test:unit -t
+</code></pre>
+
+<p>You can launch unit tests for a specific name:</p>
+
+<pre><code>./symfony test:unit strtolower
+</code></pre>
+
+<p>You can also launch unit tests for several names:</p>
+
+<pre><code>./symfony test:unit strtolower strtoupper
+</code></pre>
+
+<p>The task can output a JUnit compatible XML log file with the <code>--xml</code>
+options:</p>
+
+<pre><code>./symfony test:unit --xml=log.xml
+</code></pre>
+
+            </div>
+
+            <div class="navigation">
+                            <a accesskey="P" title="Events" href="/legacy/doc/reference/1_4/en/15-Events">
+                    &laquo;&nbsp;Events
+                </a>
+                                            </div>
+
+            <div class="box_hr"><hr /></div>
+
+    
+                                                                            </div>
+                                                            </div>
+                        
+
+                        
+                                                    <div class="box_relative_content">
+    <div class="relative_content_box_columns clear_fix">
+        <div class="column_01">
+            <h4 class="text-accent">News from the Symfony blog</h4>
+
+<ul class="list--unstyled list--border">
+            <li>
+            <a href="/blog/new-in-symfony-3-4-bootstrap-4-form-theme">New in Symfony 3.4: Bootstrap 4 form theme</a>
+            <span class="metadata block m-b-0">October 3, 2017</span>
+        </li>
+            <li>
+            <a href="/blog/new-in-symfony-3-4-argon2i-password-hasher">New in Symfony 3.4: Argon2i password hasher</a>
+            <span class="metadata block m-b-0">October 2, 2017</span>
+        </li>
+            <li>
+            <a href="/blog/a-week-of-symfony-561-25-september-1-october-2017">A week of symfony #561 (25 September - 1 October 2017)</a>
+            <span class="metadata block m-b-0">October 1, 2017</span>
+        </li>
+    </ul>
+
+<p><a class="read-more" href="/blog/">Visit The Symfony Blog</a></p>
+
+        </div>
+
+        <div class="column_02">
+                        <h4 class="text-accent">In the news</h4>
+
+<div class="upcoming_event">
+    <div>
+        <a href="https://sensiolabs.com/symfony-certification" target="_blank">
+            <img class="m-b-15" width="100" src="/images/certification-big.png" alt="The Symfony Certification by SensioLabs" />
+        </a>
+        <p class="m-b-5">Symfony 3 Certification now available in 4,000 centers around the world!</p>
+        <p><a class="read-more" href="https://sensiolabs.com/en/symfony/certification/order">Get certified</a></p>
+    </div>
+</div>
+
+                    </div>
+
+        <div class="column_03">
+            <h2 class="title_05">Upcoming training sessions</h2>
+            <ul class="list--unstyled list--border">
+            <li>
+            <a href="http://training.sensiolabs.com/en/courses?q=SF3C4&amp;from=10/09/2017&amp;to=10/12/2017">Web Development with Symfony 3</a>
+            <span class="metadata block m-b-0">Paris - October 9, 2017</span>
+        </li>
+            <li>
+            <a href="http://training.sensiolabs.com/en/courses?q=SF3C1&amp;from=10/09/2017&amp;to=10/10/2017">Getting Started with Symfony 3</a>
+            <span class="metadata block m-b-0">Paris - October 9, 2017</span>
+        </li>
+            <li>
+            <a href="http://training.sensiolabs.com/en/courses?q=SF3C4&amp;from=10/09/2017&amp;to=10/12/2017">Web Development with Symfony 3</a>
+            <span class="metadata block m-b-0">Lyon - October 9, 2017</span>
+        </li>
+    </ul>
+
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Event","name":"Web Development with Symfony 3","startDate":"2017-10-09T00:00:00+00:00","endDate":"2017-10-12T00:00:00+00:00","location":{"@type":"Place","name":"SensioLabs Offices","address":{"@type":"PostalAddress","addressLocality":"Paris","addressCountry":"France"}},"offers":{"@type":"Offer","url":"http://training.sensiolabs.com/en/courses?q=SF3C4&from=10/09/2017&to=10/12/2017","availability":"https://schema.org/InStock"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Event","name":"Getting Started with Symfony 3","startDate":"2017-10-09T00:00:00+00:00","endDate":"2017-10-10T00:00:00+00:00","location":{"@type":"Place","name":"SensioLabs Offices","address":{"@type":"PostalAddress","addressLocality":"Paris","addressCountry":"France"}},"offers":{"@type":"Offer","url":"http://training.sensiolabs.com/en/courses?q=SF3C1&from=10/09/2017&to=10/10/2017","availability":"https://schema.org/InStock"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Event","name":"Web Development with Symfony 3","startDate":"2017-10-09T00:00:00+00:00","endDate":"2017-10-12T00:00:00+00:00","location":{"@type":"Place","name":"SensioLabs Offices","address":{"@type":"PostalAddress","addressLocality":"Lyon","addressCountry":"France"}},"offers":{"@type":"Offer","url":"http://training.sensiolabs.com/en/courses?q=SF3C4&from=10/09/2017&to=10/12/2017","availability":"https://schema.org/InStock"}}</script>
+
+            <div class="link_01">
+                <a href="https://training.sensiolabs.com/" class="png_fix">View all sessions</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+                        
+                    </div>
+                            </div>
+
+            
+<div class="footer">
+    <div class="content">
+        <h2 class="title_02">
+            <img src="/images/common/logo/logo_sf.png" alt="sf - Symfony" class="illustration_logo_footer png_fix"/> is a trademark of Fabien Potencier. All rights reserved.
+        </h2>
+
+        <ul class="sitemap ">
+    <li>
+        <h6><a href="/what-is-symfony">What is Symfony?</a></h6>
+        <ul class="list_menu_footer list-unstyled">
+            
+    <li >
+        <a href="/at-a-glance">Symfony at a Glance</a>
+    </li>
+    <li >
+        <a href="/components">Symfony Components</a>
+    </li>
+    <li >
+        <a href="/projects">Projects using Symfony</a>
+    </li>
+    <li >
+        <a href="/blog/category/case-studies">Case Studies</a>
+    </li>
+    <li >
+        <a href="/roadmap">Symfony Roadmap</a>
+    </li>
+    <li >
+        <a href="/doc/current/contributing/code/security.html">Security Policy</a>
+    </li>
+    <li >
+        <a href="/logo">Logo &amp; Screenshots</a>
+    </li>
+    <li >
+        <a href="/license">Trademark &amp; Licenses</a>
+    </li>
+    <li >
+        <a href="/legacy">symfony1 Legacy</a>
+    </li>
+
+        </ul>
+    </li>
+
+    <li>
+        <h6><a href="/doc/current/index.html">Learn Symfony</a></h6>
+        <ul class="list_menu_footer list-unstyled">
+                
+    
+
+
+    <li class="">
+        <a href="/doc/current/setup.html">Getting Started</a>
+    </li>
+    <li class="">
+        <a href="/doc/current/components/index.html">Components</a>
+    </li>
+    <li class="">
+        <a href="/doc/current/best_practices/index.html">Best Practices</a>
+    </li>
+    <li class="">
+        <a href="/doc/bundles/">Bundles</a>
+    </li>
+    <li class="selected">
+        <a href="/doc/current/reference/index.html">Reference</a>
+    </li>
+    <li class="">
+        <a href="https://training.sensiolabs.com/en/courses?q=symfony">Training</a>
+    </li>
+    <li class="">
+        <a href="https://sensiolabs.com/certification">Certification</a>
+    </li>
+
+        </ul>
+    </li>
+
+    <li>
+        <h6><a href="/community">Community</a></h6>
+        <ul class="list_menu_footer list-unstyled">
+            
+    <li >
+        <a href="https://connect.sensiolabs.com/">SensioLabs Connect</a>
+    </li>
+    <li >
+        <a href="/support">Support</a>
+    </li>
+    <li >
+        <a href="/doc/current/contributing/index.html">How to be Involved</a>
+    </li>
+    <li >
+        <a href="/stats/code">Code Stats</a>
+    </li>
+    <li >
+        <a href="/stats/downloads">Downloads Stats</a>
+    </li>
+    <li >
+        <a href="/contributors">Contributors</a>
+    </li>
+
+        </ul>
+    </li>
+
+    <li>
+        <h6><a href="/blog/">Blog</a></h6>
+        <ul class="list_menu_footer list-unstyled">
+            
+    <li class="">
+        <a href="/blog/category/a-week-of-symfony">A week of symfony</a>
+    </li>
+    <li class="">
+        <a href="/blog/category/case-studies">Case studies</a>
+    </li>
+    <li class="">
+        <a href="/blog/category/community">Community</a>
+    </li>
+    <li class="">
+        <a href="/blog/category/documentation">Documentation</a>
+    </li>
+    <li class="">
+        <a href="/blog/category/living-on-the-edge">Living on the edge</a>
+    </li>
+    <li class="">
+        <a href="/blog/category/meet-the-bundle">Meet the Bundle</a>
+    </li>
+    <li class="">
+        <a href="/blog/category/releases">Releases</a>
+    </li>
+    <li class="">
+        <a href="/blog/category/security-advisories">Security Advisories</a>
+    </li>
+    <li class="">
+        <a href="/blog/category/symfony-cmf">Symfony CMF</a>
+    </li>
+
+<li><a href="/events/"><em>Community Events</em></a></li>
+
+        </ul>
+    </li>
+
+    <li>
+        <h6><a href="/services">Services</a></h6>
+        <ul class="list_menu_footer list-unstyled">
+            <li><a href="/services">Our services</a></li>
+            <li><a href="https://training.sensiolabs.com/en">Train developers</a></li>
+            <li><a href="/services#before">Start a project</a></li>
+            <li><a href="https://insight.sensiolabs.com/">Manage your project quality</a></li>
+            <li><a href="https://blackfire.io/">Improve your project performance</a></li>
+            <li><a href="/services">Struggling with your project</a></li>
+            <li><a href="https://sensiolabs.com/en/packaged-solutions/index.html">Support</a></li>
+            <li><a href="/services">Contact us</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <h6><a href="/about">About</a></h6>
+        <ul class="list_menu_footer list-unstyled">
+            
+    <li >
+        <a href="https://sensiolabs.com/en/join_us/join_us.html">SensioLabs</a>
+    </li>
+    <li >
+        <a href="/contributors">Contributors</a>
+    </li>
+    <li >
+        <a href="https://sensiolabs.com/en/join_us/join_us.html">Careers</a>
+    </li>
+    <li >
+        <a href="/support">Support</a>
+    </li>
+
+        </ul>
+    </li>
+</ul>
+
+    </div>
+</div>
+
+        </div>
+
+                <script type="text/javascript" src="//static.criteo.net/js/ld/ld.js" async="true"></script>
+<script type="text/javascript">
+    window.criteo_q = window.criteo_q || [];
+    window.criteo_q.push (
+        { event: "setAccount", account: 14086 },
+        { event: "viewHome"}
+    );
+</script>
+
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                (function(w, d, s) {
+                    function go() {
+                        var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
+                            if (d.getElementById(id)) {return;}
+                            js = d.createElement(s); js.src = url; js.id = id;
+                            fjs.parentNode.insertBefore(js, fjs);
+                        };
+                        load('https://connect.sensiolabs.com/sln.js?customize_url=http://symfony.com/sln_customiser.js', 'sln_bar');
+                    }
+                    if (w.addEventListener) { w.addEventListener("load", go, false); }
+                    else if (w.attachEvent) { w.attachEvent("onload",go); }
+                } (window, document, 'script'));
+
+               (function () {
+                   var s = document.createElement('link');
+                   s.rel = 'stylesheet';
+                   s.href = 'https://connect.sensiolabs.com/css/sln.css';
+                   var x = document.getElementsByTagName('title')[0];
+                   x.parentNode.insertBefore(s, x);
+               })();
+           });
+       </script>
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b10765e88c","applicationID":"3535762","transactionName":"ZVVSYEdRWkACVEJRC1wfcVdBWVtdTHZGSDhxX15AR19YXwZFanoIXVdzW1tERlwPW1NKXghdVVpAcVdHClhY","queueTime":0,"applicationTime":130,"atts":"SRJRFg9LSU4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

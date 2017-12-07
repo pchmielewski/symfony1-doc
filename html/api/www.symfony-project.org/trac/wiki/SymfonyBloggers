@@ -1,0 +1,463 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>SymfonyBloggers - symfony - Trac</title><link rel="start" href="/wiki" /><link rel="search" href="/search" /><link rel="help" href="/wiki/TracGuide" /><link rel="stylesheet" href="/chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="/chrome/common/css/wiki.css" type="text/css" /><link rel="icon" href="/chrome/site/favicon.ico" type="image/x-icon" /><link rel="shortcut icon" href="/chrome/site/favicon.ico" type="image/x-icon" /><link rel="alternate" href="/wiki/SymfonyBloggers?format=txt" title="Plain Text" type="text/x-trac-wiki" /><style type="text/css"></style>
+<link rel="stylesheet" type="text/css" media="all" href="http://www.symfony-project.com/css/trac.css" />
+<style type="text/css">
+</style>
+ <script type="text/javascript" src="/chrome/common/js/trac.js"></script>
+     <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+     <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="sln"></div>
+
+<table id="topbar" cellspacing="0" cellpadding="0" width="100%">
+  <tr>
+    <td width="176" height="37" bgcolor="#000"><a href="http://www.symfony-project.com" style="border-bottom:none;"><img src="http://www.symfony-project.com/images/symfony_logo.gif" width="176" height="37" border="0"></a></td>
+    <td width="100%" id="navig" align="right" valign="middle" height="37">
+        <ul>
+          <li><a href="http://www.symfony-project.org/about">About</a></li>
+          <li><a href="http://www.symfony-project.org/installation">Installation</a></li>
+          <li><a href="http://www.symfony-project.org/doc">Documentation</a></li>
+          <li><a href="http://www.symfony-project.org/plugins/">Plugins</a></li>
+          <li><a href="http://www.symfony-project.org/community">Community</a></li>
+          <li><a href="http://www.symfony-project.org/blog">Blog</a></li>
+          <li class="last"><a href="http://trac.symfony-project.com/timeline">Development</a></li>
+        </ul>
+    </td>
+  </tr>
+  <tr><td id="topseparator" colspan="2"></td></tr>
+  <tr>
+    <td colspan="2">
+      <h1>Development</h1>
+      
+        <h2>SymfonyBloggers</h2>
+      
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" style="background: #fdf2ab">
+      <center><p><strong>
+You must first <a href="http://www.symfony-project.com/user/new">sign up</a> to be able to contribute.
+</strong></p></center>
+    </td>
+  </tr>
+
+</table>
+
+
+
+<div id="banner">
+
+<form id="search" action="/search" method="get">
+ 
+</form>
+
+
+
+<div id="metanav" class="nav"><ul><li class="first"><a href="/login">Login</a></li><li><a href="/settings">Settings</a></li><li><a accesskey="6" href="/wiki/TracGuide">Help/Guide</a></li><li class="last"><a href="/about">About Trac</a></li></ul></div>
+</div>
+
+<div id="mainnav" class="nav"><ul><li class="active first last"><a accesskey="1" href="/wiki">Wiki</a></li></ul></div>
+<div id="main">
+
+
+
+
+<div id="ctxtnav" class="nav">
+ <h2>Wiki Navigation</h2>
+ <ul>
+   <li><a href="/wiki">Start Page</a></li>
+   <li><a href="/wiki/TitleIndex">Index by Title</a></li>
+   <li><a href="/wiki/RecentChanges">Index by Date</a></li>
+   <li class="last"><a href="/wiki/SymfonyBloggers?action=diff&amp;version=2">Last Change</a></li>
+ </ul>
+ <hr />
+</div>
+
+<div id="content" class="wiki">
+
+ 
+  
+  
+   
+   <div class="wikipage">
+    <div id="searchable"><h1 id="SymfonyBloggers">Symfony Bloggers</h1>
+<div style="float:right; border: solid 1px #C6CDDE; padding:10px; margin:5px; width:250px">
+<p>
+<strong>Have your blog appear in the community page</strong>
+</p>
+<p>
+If your blog is listed here, and if it proposes a link to a RSS or Atom feed named 'feed', then an extract of your blog posts will appear in the <a class="ext-link" href="http://www.symfony-project.com/content/support.html"><span class="icon">community page</span></a> of the symfony project website which is regularly updated. Please only include feeds to symfony-related content and do not add twitter feeds. You can take example on the first blogs in the list.
+</p>
+</div>
+<p>
+All the blog feeds on this page are syndicated in the <a class="ext-link" href="http://feeds.feedburner.com/symfony/planet"><span class="icon">symfony planet feed</span></a>.
+</p>
+<p>
+They often talk about symfony:
+</p>
+<ul><li><a class="ext-link" href="http://www.2cool4school.fr/"><span class="icon">2cool4school</span></a> (<a class="ext-link" href="http://www.2cool4school.fr/tag/symfony/feed/"><span class="icon">feed</span></a>) Weblog about web development, PHP programming, Symfony tips and tricks and Mac (English|French)
+</li><li><a class="ext-link" href="http://www.2nci.com"><span class="icon">2nci Blog</span></a> (<a class="ext-link" href="http://feeds.feedburner.com/2nci/main"><span class="icon">feed</span></a>) - Yılmaz Uğurlu's blog, about web application development, (Turkish)
+</li><li><a class="ext-link" href="http://www.foolbirds.com"><span class="icon">4's symfony blog</span></a> (<a class="ext-link" href="http://www.foolbirds.com/feed"><span class="icon">feed</span></a>) - 4's symfony blog (Chinese)
+</li><li><a class="ext-link" href="http://blog.codingspree.net/"><span class="icon">A Clean, Well-Lighted Place</span></a> (<a class="ext-link" href="http://feeds.feedburner.com/codingspreeblog"><span class="icon">feed</span></a>) - Krasimir Angelov's blog for php, symfony, rails and ruby development
+</li><li><a class="ext-link" href="http://israelwebdev.wordpress.com/"><span class="icon">A Web Developer from Israel</span></a> (<a class="ext-link" href="http://israelwebdev.wordpress.com/category/symfony/feed/"><span class="icon">feed</span></a>) - Just another tech blog about Symfony, PHP, Drupal, and Wordpress
+</li><li><a class="ext-link" href="http://www.agence-shape.fr/blog"><span class="icon">Agence Shape</span></a> Blog about web development, symfony, webservices... (English|French)
+</li><li><a class="ext-link" href="http://www.aide-de-camp.org/"><span class="icon">Aide de Camp</span></a> (<a class="ext-link" href="http://feeds.aide-de-camp.org/aidedecamp"><span class="icon">feed</span></a>) - Fabien Potencier's technical blog about symfony
+</li><li><a class="ext-link" href="http://akinas.com/pages/en/blog/tag/symfony/"><span class="icon">Akinas</span></a> (<a class="ext-link" href="http://akinas.com/feed/en/atom/tag/symfony"><span class="icon">feed</span></a>) - Symfony tutorials and other topics by a web developer based in Israel. (English)
+</li><li><a class="ext-link" href="http://451f.com.ua/"><span class="icon">Alex Demchenko - 451 degrees Fahrenheit</span></a> (<a class="ext-link" href="http://451f.com.ua/rss/"><span class="icon">feed</span></a>) - blog about symfony on Russian
+</li><li><a class="ext-link" href="http://www.amicalement-web.net/tag/symfony/"><span class="icon">Amicalement-Web</span></a> (<a class="ext-link" href="http://feeds.feedburner.com/AmicalementWebSymfony"><span class="icon">feed</span></a>) - Tips and tricks about Web 
+</li></ul><p>
+development and Symfony  - (French) 
+</p>
+<ul><li><a class="ext-link" href="http://symfonyandy.wordpress.com/"><span class="icon">Andy's symfony blog</span></a> (<a class="ext-link" href="http://symfonyandy.wordpress.com/feed/"><span class="icon">feed</span></a>) - andy's symfony musings
+</li><li><a class="ext-link" href="http://wilman.wordpress.com/"><span class="icon">Aprendiendo Symfony</span></a> (<a class="ext-link" href="http://wilman.wordpress.com/feed/"><span class="icon">feed</span></a>) - Learning Symfony - (Spanish)
+</li><li><a class="ext-link" href="http://archivemati.ca/category/symfony"><span class="icon">archivematica</span></a> (<a class="ext-link" href="http://archivemati.ca/category/symfony/feed/"><span class="icon">feed</span></a>) - weblog of developer using Symfony to develop archival cataloging software
+</li><li><a class="ext-link" href="http://arthurkoziel.com/"><span class="icon">Arthur Koziel</span></a> (<a class="ext-link" href="http://arthurkoziel.com/feeds/tag/symfony/"><span class="icon">feed</span></a>)
+</li><li><a class="ext-link" href="http://www.ausgebloggt.de/category/it/symfony/"><span class="icon">ausgebloggt.de</span></a> (<a class="ext-link" href="http://www.ausgebloggt.de/category/it/symfony/feed/"><span class="icon">feed</span></a>) - weblog about Web Development and symfony (German)
+</li><li><a class="ext-link" href="http://halestock.wordpress.com"><span class="icon">Battling (My Own) Idiocy</span></a> (<a class="ext-link" href="http://halestock.wordpress.com/feed/"><span class="icon">feed</span></a>) A PHP developer's blog about solutions to common problems in Symfony(English)
+</li><li><a class="ext-link" href="http://blog.symfony.jp"><span class="icon">Blog Symfony Japan</span></a> (<a class="ext-link" href="http://blog.symfony.jp/feed/atom/"><span class="icon">feed</span></a>) (Japanese)
+</li><li><a class="ext-link" href="http://blog.barros.ws/category/programming/php/symfony/"><span class="icon">blog.barros.ws</span></a> (<a class="ext-link" href="http://blog.barros.ws/category/programming/php/symfony/feed"><span class="icon">feed</span></a>) - Symfony tips and tricks and general programming
+</li><li><a class="ext-link" href="http://blog.donax.ch"><span class="icon">blog.donax.ch</span></a> (<a class="ext-link" href="http://blog.donax.ch/category/prog/symfony/feed"><span class="icon">feed</span></a>) - Donax's blog (French)
+</li><li><a class="ext-link" href="http://blog.t8d.de"><span class="icon">blog.t8d.de</span></a> (<a class="ext-link" href="http://blog.t8d.de/tags/symfony/feed/"><span class="icon">feed</span></a>) (German)
+</li><li><a class="ext-link" href="http://vhc.com.vn/blog/"><span class="icon">blog.vhc.com.vn</span></a> (<a class="ext-link" href="http://vhc.com.vn/blog/?feed=rss2"><span class="icon">feed</span></a>) (Vietnamese)
+</li><li><a class="ext-link" href="http://www.blogafab.com/"><span class="icon">Blogafab.com</span></a> (<a class="ext-link" href="http://www.blogafab.com/tag/symfony/feed/"><span class="icon">feed</span></a>) - Fabien Pennequin's blog (French)
+</li><li><a class="ext-link" href="http://brentertainment.com"><span class="icon">Brentertainment.com</span></a> (<a class="ext-link" href="http://brentertainment.com/feed/"><span class="icon">feed</span></a>) - Brent Shaffer's Symfony Development Blog (English)
+</li><li><a class="ext-link" href="http://broderix.blogspot.com/search/label/symfony"><span class="icon">broderix blog</span></a> (<a class="ext-link" href="http://feeds2.feedburner.com/web-development-notes"><span class="icon">feed</span></a>) - web-development notes (Заметки разработчика) (Russian)
+</li><li><a class="ext-link" href="http://blog.bugfeatures.com"><span class="icon">BugFeatures.com Blog</span></a> (<a class="ext-link" href="http://bugfeatures.com/blog/rss.php"><span class="icon">feed</span></a>) - PHP, Symfony and other important things!
+</li><li><a class="ext-link" href="http://www.burgiblog.com"><span class="icon">burgiblog</span></a> (<a class="ext-link" href="http://burgiblog.com/category/symfony/feed/atom/"><span class="icon">feed</span></a>) - A PHP developer's blog on symfony 
+</li><li><a class="ext-link" href="http://www.sadai.net/tag/symfony"><span class="icon">Cedric Sadai</span></a> (<a class="ext-link" href="http://www.sadai.net/feed/tag/symfony"><span class="icon">feed</span></a>) (French)
+</li><li><a class="ext-link" href="http://blog.lombardot.fr"><span class="icon">Cédric Lombardot - snippets</span></a>(<a class="ext-link" href="http://blog.lombardot.fr/feed/"><span class="icon">feed</span></a>) (French)
+</li><li><a class="ext-link" href="http://blog.hautzinger.info"><span class="icon">Christoph Hautzinger's Blog</span></a> (<a class="ext-link" href="http://blog.hautzinger.info/feeds/categories/7-Symfony.rss"><span class="icon">feed</span></a>) (German)
+</li><li><a class="ext-link" href="http://www.chrisshennan.com"><span class="icon">Christopher Shennan's Blog</span></a> (<a class="ext-link" href="http://feeds2.feedburner.com/ChristopherShennansBlog"><span class="icon">feed</span></a>) - Personal blog of a PHP developer using Symfony
+</li><li><a class="ext-link" href="http://blog.chylek.pl/tag/symfony/"><span class="icon">Chylek Marcin Blog</span></a> (<a class="ext-link" href="http://blog.chylek.pl/tag/symfony/feed/"><span class="icon">feed</span></a>) (Polish)
+</li><li><a class="ext-link" href="http://www.clear-cache.fr/"><span class="icon">Clear Cache</span></a> (<a class="ext-link" href="http://clear-cache.fr/?feed/category/Symfony/atom"><span class="icon">feed</span></a>) - French blog about symfony (French)
+</li><li><a class="ext-link" href="http://www.clever-age.com/veille/blog/tags/symfony/"><span class="icon">Clever Age</span></a> (<a class="ext-link" href="http://www.clever-age.com/rss/tags/symfony/45.xml"><span class="icon">feed</span></a>) (French)
+</li><li><a class="ext-link" href="http://www.codemassacre.com/"><span class="icon">Code Massacre</span></a> - Richtermeister's blog on Spaghetti-Coding in a Series of Tubes (<a class="ext-link" href="http://www.codemassacre.com/tag/symfony/feed/"><span class="icon">feed</span></a>) (English)
+</li><li><a class="ext-link" href="http://laurent.bachelier.name/"><span class="icon">Code Penguin</span></a> - Laurent Bachelier's blog on Symfony, PHP and other cool technologies (<a class="ext-link" href="http://laurent.bachelier.name/category/symfony/feed/"><span class="icon">feed</span></a>) (English)
+</li><li><a class="ext-link" href="http://www.strangebuzz.com/index.php/tag/symfony"><span class="icon">COil's Blog</span></a> (<a class="ext-link" href="http://www.strangebuzz.com/rss.php?cat=symfony"><span class="icon">feed</span></a>) - Blog of COil (Vernet Loïc), symfony, php &amp; snippets repository (English &amp; French)
+</li><li><a class="ext-link" href="http://colordeaf.blogspot.com/search/label/symfony"><span class="icon">colordeaf.net blog</span></a> (<a class="ext-link" href="feed://colordeaf.blogspot.com/feeds/posts/default/-/symfony"><span class="icon">feed</span></a>) - new-tech blog including symfony guides (English)
+</li><li><a class="ext-link" href="http://www.coolkeums.org"><span class="icon">coolkeums.org</span></a> (<a class="ext-link" href="feed://www.coolkeums.org/search.rss?expression=symfony"><span class="icon">feed</span></a>) - News about symfony, computing and more (English &amp; French)
+</li><li><a class="ext-link" href="http://www.cryptonet.be/blog/tag/symfony"><span class="icon">CryptoNet Blog</span></a> (<a class="ext-link" href="http://www.cryptonet.be/blog/tag/symfony/feed"><span class="icon">feed</span></a>) - Dutch Blog of <a class="missing wiki" href="/wiki/CryptoNet" rel="nofollow">CryptoNet?</a>, a Webdesign &amp; Development Company
+</li><li><a class="ext-link" href="http://blog.damienalexandre.fr/index.php?category/symfony"><span class="icon">Damien ALEXANDRE</span></a> (<a class="ext-link" href="http://blog.damienalexandre.fr/index.php?feed/category/symfony/rss2"><span class="icon">feed</span></a>) - Entries on Symfony (French)
+</li><li><a class="ext-link" href="http://blog.whisnet.pl/"><span class="icon">Daniel Ancuta - Whisller</span></a> (<a class="ext-link" href="http://blog.whisnet.pl/tag/symfony/feed/"><span class="icon">feed</span></a>)
+</li><li><a class="ext-link" href="http://bealers.com/"><span class="icon">Darren Beale's Blog</span></a> (<a class="ext-link" href="http://bealers.com/tag/symfony/feed/atom"><span class="icon">feed</span></a>) - a UK freelance PHP programmer
+</li><li><a class="ext-link" href="http://blog.inspiredthinking.co.uk/"><span class="icon">Dasher's Dev Den</span></a> (<a class="ext-link" href="http://blog.inspiredthinking.co.uk/rss.xml"><span class="icon">feed</span></a>) - Syncopating with Symfony 
+</li><li><a class="ext-link" href="http://www.dcastello.com/category/symfony"><span class="icon">David Castelló</span></a> (<a class="ext-link" href="http://www.dcastello.com/category/symfony/feed"><span class="icon">feed</span></a>) - Entries on Symfony (Spanish)
+</li><li><a class="ext-link" href="http://www.dantleech.com/blog/tag/symfony"><span class="icon">Dan Leech</span></a> (<a class="ext-link" href="http://www.dantleech.com/blog/feed/rss2?tag=symfony"><span class="icon">feed</span></a>) - Random Symfony2 related entries (English)
+</li><li><a class="ext-link" href="http://blog.vworld.at/"><span class="icon">David's virtual world</span></a> (<a class="ext-link" href="http://blog.vworld.at/tag/symfony/feed/"><span class="icon">feed</span></a>) - an Austrian PHP developer
+</li><li><a class="ext-link" href="http://david-gueye.fr"><span class="icon">David Gueye Blog</span></a> - Posts about Symfony, PHP and more... (French)
+</li><li><a class="ext-link" href="http://davidscorner.de"><span class="icon">davidsCorner.de</span></a>  (<a class="ext-link" href="feed://davidscorner.de/category/symfony-framework/feed/"><span class="icon">feed</span></a>) - writes sometimes about Symfony (German)
+</li><li><a class="ext-link" href="http://rinik.net/blog"><span class="icon">dedicated. Reloaded.</span></a> - Vojto's blog on symfony, Rails and programming (Slovak, occasionaly English)
+</li><li><a class="ext-link" href="http://www.denderello.com/blog"><span class="icon">denderello's Blog</span></a> (<a class="ext-link" href="http://www.denderello.com/blog.atom"><span class="icon">feed</span></a>) (English)
+</li><li><a class="ext-link" href="http://www.designdisclosure.com"><span class="icon">designdisclosure.com Alistair Stead's Blog</span></a> (<a class="ext-link" href="feed://www.designdisclosure.com/category/symfony/feed/"><span class="icon">feed</span></a>) - a UK freelance developer
+</li><li><a class="ext-link" href="http://dev.esl.eu/blog/category/symfony/"><span class="icon">dev.esl.eu Blog</span></a> (<a class="ext-link" href="http://dev.esl.eu/blog/category/symfony/feed/"><span class="icon">feed</span></a>) - development blog of the Electronic Sports League with special articles about symfony (English)
+</li><li><a class="ext-link" href="http://blog.develop7.info/tagged/symfony/"><span class="icon">develop7's blog</span></a> (<a class="ext-link" href="http://blog.develop7.info/tagged/symfony/rss"><span class="icon">feed</span></a>) - symfony tips'n'tricks'n'gotchas (russian)
+</li><li><a class="ext-link" href="http://www.devexp.eu/"><span class="icon">Development Experience</span></a> (<a class="ext-link" href="http://feeds2.feedburner.com/devexp/WmQt"><span class="icon">feed</span></a>) - DEVelopment EXPerience, shared with the world!
+</li><li><a class="ext-link" href="http://devfactor.blogspot.com/"><span class="icon">devFactor - Developer's Blog</span></a> (<a class="ext-link" href="http://feeds.feedburner.com/devfactor"><span class="icon">feed</span></a>) - Symfony related stuff (English)
+</li><li><a class="ext-link" href="http://www.devorigin.fr/blog"><span class="icon">DevOrigin - Blog</span></a> (<a class="ext-link" href="http://www.devorigin.fr/blog/feed/symfony"><span class="icon">feed</span></a>) - Symfony blog (English)
+</li><li><a class="ext-link" href="http://www.devosphere.com/"><span class="icon">Devosphere - symfony,php,linux oriented technology blog and development services</span></a> (<a class="ext-link" href="http://www.devosphere.com/feed/lastposts"><span class="icon">feed</span></a>) - Turkey based developmant company
+</li><li><a class="ext-link" href="http://diem-project.org"><span class="icon">Diem project : Open Source Content Management Framework for symfony</span></a> (<a class="ext-link" href="http://diem-project.org/blog/rss"><span class="icon">feed</span></a>)
+</li><li><a class="ext-link" href="http://www.digitalbase.eu/blog/tag/symfony"><span class="icon">Digital Base Blog</span></a> (<a class="ext-link" href="http://www.digitalbase.eu/blog/tag/symfony/feed/"><span class="icon">feed</span></a>) - Belgian Based Webdesign Company
+</li><li><a class="ext-link" href="http://www.pinkster.eu/"><span class="icon">Don Pinkster</span></a> (<a class="ext-link" href="http://pinkster.eu/feeds/symfony.xml"><span class="icon">feed</span></a>) - Personal website of the developer Don Pinkster
+</li><li><a class="ext-link" href="http://eatmymonkeydust.com/category/symfony"><span class="icon">Eat My Monkeydust</span></a> (<a class="ext-link" href="http://eatmymonkeydust.com/category/symfony/feed"><span class="icon">feed</span></a>) Symfony developer working on large projects in Norway (English)
+</li><li><a class="ext-link" href="http://www.eemece2.com/blog/?cat=5"><span class="icon">eemece2 blog</span></a> (<a class="ext-link" href="http://www.eemece2.com/blog/?feed=rss2&amp;cat=5"><span class="icon">feed</span></a>) Blog by Eduardo Martinez Cobos, Web Developer (Spanish)
+</li><li><a class="ext-link" href="http://www.elao.org"><span class="icon">Elao</span></a> (<a class="ext-link" href="http://www.elao.org/feed/rss"><span class="icon">feed</span></a>) Elao Team Blog (French)
+</li><li><a class="ext-link" href="http://endelwar.aregar.it"><span class="icon">EndelWar's Blog</span></a> (<a class="ext-link" href="http://endelwar.aregar.it/category/php/symfony/feed"><span class="icon">feed</span></a>) PHP Developer &amp; <a class="missing wiki" href="/wiki/SysAdmin" rel="nofollow">SysAdmin?</a> (Italian)
+</li><li><a class="ext-link" href="http://www.entwicklungsgedanken.de"><span class="icon">Entwicklungsgedanken.de</span></a> (<a class="ext-link" href="http://www.entwicklungsgedanken.de/tag/symfony/feed"><span class="icon">feed</span></a>) Development thoughts of Eric Bartels (German/English)
+</li><li><a class="ext-link" href="http://erisds.co.uk/category/symfony"><span class="icon">ErisDS on Symfony</span></a> (<a class="ext-link" href="http://erisds.co.uk/category/symfony/feed"><span class="icon">feed</span></a>) Symfony Developer and Fan
+</li><li><a class="ext-link" href="http://www.estatica.it/letture.php?azione=argomento&amp;tipo=informatica"><span class="icon">Estatica on Symfony</span></a> (<a class="ext-link" href="http://www.estatica.it/feed/symfony.xml"><span class="icon">feed</span></a>) (Italian) Symfony articles by Fabrizio Pucci
+</li><li><a class="ext-link" href="http://blog.excilys.com/"><span class="icon">Excilys Blog</span></a> (<a class="ext-link" href="http://blog.excilys.com/category/symfony/feed/rss/"><span class="icon">feed</span></a>) (French)
+</li><li><a class="ext-link" href="http://www.experimental-symfony.com"><span class="icon">Experimental Symfony</span></a> (<a class="ext-link" href="http://www.experimental-symfony.com/sfSimpleBlog/postsForTagFeed/format/rss/tag/symfony"><span class="icon">feed</span></a>) (French)
+</li><li><a class="ext-link" href="http://ezzatron.com/"><span class="icon">Ezzatron</span></a> (<a class="ext-link" href="http://ezzatron.com/feed/rss/?tag=symfony"><span class="icon">feed</span></a>) Contains some useful symfony howtos
+</li><li><a class="ext-link" href="http://www.fellipeeduardo.com"><span class="icon">Fellipe Brito - Web Developer from Brazil</span></a> (English, Portuguese) Symfony articles by Fellipe Brito
+</li><li><a class="ext-link" href="http://fiit.pl/lists/blog.html"><span class="icon">Fiit - Symfony, sympal development blog</span></a> (<a class="ext-link" href="http://fiit.pl/lists/blog.rss"><span class="icon">feed</span></a>)( Polish, English )
+</li><li><a class="ext-link" href="http://www.fjnavarro.es/categorias/desarrollo-web/php/"><span class="icon">fjnavarro</span></a> (<a class="ext-link" href="http://www.fjnavarro.es/feed/"><span class="icon">feed</span></a>) (Spanish) - Web design and web Development with Symfony and Mac OS X
+</li><li><a class="ext-link" href="http://wordpress.4netmaroc.com/category/symfony/"><span class="icon">Fornet</span></a> (<a class="ext-link" href="http://wordpress.4netmaroc.com/category/symfony/feed/"><span class="icon">feed</span></a>) Blog of a webagency about Symfony (French)
+</li><li><a class="ext-link" href="http://blog.seric.at/tag/symfony"><span class="icon">Franziskus Domig</span></a> (<a class="ext-link" href="http://blog.seric.at/tag/symfony/feed"><span class="icon">feed</span></a>) (German/English) - Programming, PHP, Symfony, Linux, Ubuntu
+</li><li><a class="ext-link" href="http://www.fuenfpunktnull.de/index.php/tag/symfony/"><span class="icon">fuenfpunktnull.de</span></a> (<a class="ext-link" href="http://www.fuenfpunktnull.de/index.php/tag/symfony/feed/"><span class="icon">feed</span></a>) - Weblog about Web Development, Design and Marketing (German)
+</li><li><a class="ext-link" href="http://www.fullo.net/blog/tag/symfony/"><span class="icon">Fullo.net</span></a> (<a class="ext-link" href="http://www.fullo.net/blog/tag/symfony/feed"><span class="icon">feed</span></a>) (Italian) - PHP developer, Symfony user, geek.
+</li><li><a class="ext-link" href="http://www.funstaff.ch/category/symfony"><span class="icon">Funstaff.ch</span></a> (<a class="ext-link" href="http://www.funstaff.ch/category/symfony/feed"><span class="icon">feed</span></a>) (french) - PHP developer (irc: Garfield-fr).
+</li><li><a class="ext-link" href="http://blog.fxposter.org/tag/symfony/"><span class="icon">FX Poster</span></a> (<a class="ext-link" href="http://blog.fxposter.org/tag/symfony/feed/"><span class="icon">feed</span></a>) (Russian) - Stories about Symfony Framework
+</li><li><a class="ext-link" href="http://gesport-blog.serincas.com"><span class="icon">Gesport, a Sport training application made with Symfony</span></a> (<a class="ext-link" href="http://gesport-blog.serincas.com/feed/"><span class="icon">feed</span></a>) - Gesport developing blog(Spanish and english) 
+</li><li><a class="ext-link" href="http://gestadieu.blogspot.com"><span class="icon">gestadieu.blogspot.com</span></a> (<a class="ext-link" href="http://gestadieu.blogspot.com/feeds/posts/default/-/symfony"><span class="icon">feed</span></a>) - Gerald's blog (English) 
+</li><li><a class="ext-link" href="http://giorg.super-hanna.com/category/symfony/"><span class="icon">giOrg</span></a> (<a class="ext-link" href="http://giorg.super-hanna.com/category/symfony/feed"><span class="icon">feed</span></a>) (Italian)
+</li><li><a class="ext-link" href="http://www.glagla.org/weblog/tag/symfony/"><span class="icon">Glagla Dot Org</span></a> (<a class="ext-link" href="http://www.glagla.org/weblog/tag/symfony/feed/rss/"><span class="icon">feed</span></a>) Olivier Mansour's blog (French)
+</li><li><a class="ext-link" href="http://sf-project.blogspot.com/"><span class="icon">Green's Symfony Blog</span></a> (<a class="ext-link" href="http://sf-project.blogspot.com/feeds/posts/default"><span class="icon">feed</span></a>) (Russian)
+</li><li><a class="ext-link" href="http://habrahabr.ru/blogs/symfony/"><span class="icon">Habrablog about symfony</span></a> (<a class="ext-link" href="http://habrahabr.ru/rss/blogs/symfony/"><span class="icon">feed</span></a>) (Russian) 
+</li><li><a class="ext-link" href="http://hudson.su/tag/symfony/"><span class="icon">Hudson's words about symfony (Профессиональный дилетант о Symfony)</span></a> (<a class="ext-link" href="http://hudson.su/tag/symfony/feed/"><span class="icon">feed</span></a>) (Russian) 
+</li><li><a class="ext-link" href="http://blog.bearwoods.dk/tag/symfony"><span class="icon">Henrik Bjørnskov</span></a> (<a class="ext-link" href="http://blog.bearwoods.dk/rss.xml"><span class="icon">feed</span></a>) (English) 
+</li><li><a class="ext-link" href="http://hugohamon.com/en/blog/theme/symfony"><span class="icon">Hugo Hamon</span></a> (<a class="ext-link" href="http://hugohamon.com/en/rss/symfony.atom"><span class="icon">feed</span></a>) (English) - Symfony web developer - Sensio Labs Trainings Manager
+</li><li><a class="ext-link" href="http://symfonyru.blogspot.com"><span class="icon">http://symfonyru.blogspot.com</span></a> (<a class="ext-link" href="http://symfonyru.blogspot.com/feeds/posts/default?alt=rss"><span class="icon">feed</span></a>) - Russian, blog about symfony and doctrine.  
+</li><li><a class="ext-link" href="http://www.informathic.com/category/Framework/Symfony"><span class="icon">Informat'Hic</span></a> (<a class="ext-link" href="http://www.informathic.com/feed/category/Framework/Symfony/atom"><span class="icon">feed</span></a>) (French) - Developer at Sensio Labs
+</li><li><a class="ext-link" href="http://jerome.tamarelle.net/blog/indice/symfony/"><span class="icon">I share so I am</span></a> (<a class="ext-link" href="http://jerome.tamarelle.net/blog/indice/symfony/feed/"><span class="icon">feed</span></a>) - Développeur Français
+</li><li><a class="ext-link" href="http://tigor.com.ua/blog/tag/symfony/"><span class="icon">Igor Brovchenko Blog</span></a> (<a class="ext-link" href="http://tigor.com.ua/blog/category/symfony/atom/"><span class="icon">feed</span></a>) (Russian) - Symfony web developer
+</li><li><a class="ext-link" href="http://blog.salikhovilyas.ru/tag/symfony/"><span class="icon">Ilyas Salikhov</span></a> (<a class="ext-link" href="http://blog.salikhovilyas.ru/feed/tag/symfony/"><span class="icon">feed</span></a>) (Russian) - Notes about Symfony
+</li><li><a class="ext-link" href="http://www.incode.pl/?cat=3"><span class="icon">Incode</span></a> (<a class="ext-link" href="http://www.incode.pl/?feed=rss2"><span class="icon">feed</span></a>) (Polish) - Symfony in practice
+</li><li><a class="ext-link" href="http://www.charnad.com/blog/tag/symfony/"><span class="icon">In a maze of gyruses</span></a> (<a class="ext-link" href="http://feeds.feedburner.com/charnad/symfony"><span class="icon">feed</span></a>) (Russian) - Symfony notes and examples
+</li><li><a class="ext-link" href="http://www.thenetcircle.com/blog/category/symfony/"><span class="icon">Inside Out</span></a> (<a class="ext-link" href="http://www.thenetcircle.com/blog/category/symfony/feed/"><span class="icon">feed</span></a>) (English) - Symfony category  for the corporate blog of <a class="missing wiki" href="/wiki/TheNetCircle" rel="nofollow">TheNetCircle?</a>
+</li><li><a class="ext-link" href="http://www.issux.com/tag/symfony/"><span class="icon">ISSUX.com</span></a> (<a class="ext-link" href="http://www.issux.com/tag/symfony/feed/"><span class="icon">feed</span></a>) - Symfony experiments (Spanish)
+</li><li><a class="ext-link" href="http://blog.phpdeveloper.co.nz/"><span class="icon">James McGlinn's Blog</span></a> (<a class="ext-link" href="http://blog.phpdeveloper.co.nz/category/symfony/feed/atom"><span class="icon">feed</span></a>) - a New Zealand PHP developer &amp; Symfony user
+</li><li><a class="ext-link" href="http://jsltbh.blogspot.com/"><span class="icon">Jason Longshore</span></a> (<a class="ext-link" href="http://jsltbh.blogspot.com/feeds/posts/default"><span class="icon">feed</span></a>) - Symfony snippets and plugins
+</li><li><a class="ext-link" href="http://www.doupie.com/"><span class="icon">Jayson's Blog - more with symfony </span></a> (<a class="ext-link" href="http://www.doupie.com/feed"><span class="icon">feed</span></a>) - a Chinese Symfony User
+</li><li><a class="ext-link" href="http://http://www.jeffpipas.com/?tag=Symfony"><span class="icon">Jeff Pipas</span></a> (<a class="ext-link" href="http://www.jeffpipas.com/?tag=Symfony&amp;feed=rss2"><span class="icon">feed</span></a>) (English) - Jeff Pipas' Blog (English)
+</li><li><a class="ext-link" href="http://jeka.ru/tag/symfony/"><span class="icon">Jeka's Blog</span></a> (<a class="ext-link" href="http://jeka.ru/tag/symfony/feed/"><span class="icon">feed</span></a>) Jeka's blog, about web development (Russian)
+</li><li><a class="ext-link" href="http://blog.jetienne.com"><span class="icon">Jerome Etienne Blog</span></a> (<a class="ext-link" href="http://blog.jetienne.com/search/label/symfony"><span class="icon">feed</span></a>) - Jerome Etienne and symfony, (English)
+</li><li><a class="ext-link" href="http://pbtg.com/blogs/jim/tag/symfony"><span class="icon">Jim's Web Development Blog</span></a> (<a class="ext-link" href="feed://http://pbtg.com/blogs/jim/format/rss"><span class="icon">feed</span></a>) (English) - A Blog about all facets of web development, focusing on symfony.
+</li><li><a class="ext-link" href="http://jlcoady.net/"><span class="icon">JLCoady.net</span></a> (<a class="ext-link" href="http://jlcoady.net/symfony?feed=rss"><span class="icon">feed</span></a>) - Symfony tips and code examples with other articles on SEO, PHP, Ruby on Rails, ASP.net/C#, AJAX, Umbraco, and more
+</li><li><a class="ext-link" href="http://joaquinnunez.cl/blog/"><span class="icon">joaquinnunez.cl</span></a> (<a class="ext-link" href="http://joaquinnunez.cl/blog/tag/symfony/feed/"><span class="icon">feed</span></a>) - Joaquín Núñez Blog (Spanish)
+</li><li><a class="ext-link" href="http://jonasruth.wordpress.com"><span class="icon">Jonas Ruth Development Blog</span></a> (<a class="ext-link" href="http://jonasruth.wordpress.com/feed/"><span class="icon">feed</span></a>) - Symfony tips, news, articles and other stuff. (Portuguese (BR) / English)
+</li><li><a class="ext-link" href="http://jonathan.demoutiez.net"><span class="icon">Jonathan Démoutiez</span></a> (<a class="ext-link" href="http://jonathan.demoutiez.net/symfony.xml"><span class="icon">feed</span></a>) (french) - Jonathan Demoutiez's Blog
+</li><li><a class="ext-link" href="http://www.jnieto.org/"><span class="icon">Jonathan Nieto</span></a> (<a class="ext-link" href="http://www.jnieto.org/category/symfony/feed"><span class="icon">feed</span></a>) Jonathan Nieto's Blog (english|spanish)
+</li><li><a class="ext-link" href="http://www.jonbauer.com/blog/"><span class="icon">JonBauer.com</span></a> (<a class="ext-link" href="http://www.jonbauer.com/blog/index.php/archives/category/symfony/feed/"><span class="icon">feed</span></a>) - Jon Bauer's Blog
+</li><li><a class="ext-link" href="http://jonocode.wordpress.com/"><span class="icon">Jonocode</span></a> (<a class="ext-link" href="http://jonocode.wordpress.com/feed/"><span class="icon">feed</span></a>) - Jonathan Montgomery's Blog
+</li><li><a class="ext-link" href="http://seld.be/"><span class="icon">Jordi Boggiano</span></a> (<a class="ext-link" href="http://feeds.seld.be/php-blog-seld"><span class="icon">feed</span></a>) - Jordi Boggiano's Blog
+</li><li><a class="ext-link" href="http://www.journaweb.info"><span class="icon">JournaWeb.info</span></a> ([<a class="ext-link" href="http://feeds.feedburner.com/Journaweb/"><span class="icon">http://feeds.feedburner.com/Journaweb/</span></a> feed) - Antoine Hérault's Blog (French)
+</li><li><a class="ext-link" href="http://karlkatzke.com/category/php/symfony/"><span class="icon">Karl Katzke</span></a> (<a class="ext-link" href="http://karlkatzke.com/category/php/symfony/feed/"><span class="icon">feed</span></a>) - Karl Katzke's Blog
+</li><li><a class="ext-link" href="http://www.kennethvr.be"><span class="icon">Kenneth van Rumste</span></a> (<a class="ext-link" href="http://feeds.feedburner.com/Kennethvr"><span class="icon">feed</span></a>) - Kenneth van Rumste's Blog - references and experience
+</li><li><a class="ext-link" href="http://kerihenare.com"><span class="icon">Keri Henare</span></a> (<a class="ext-link" href="http://kerihenare.com/feed"><span class="icon">feed</span></a>) - Keri Henare's Blog
+</li><li><a class="ext-link" href="http://www.kirem.it"><span class="icon">Kiremit Blog</span></a> (<a class="ext-link" href="http://kirem.it/feed"><span class="icon">feed</span></a>) - Kempo's blog, about symfony and web application development, (Turkish)
+</li><li><a class="ext-link" href="http://it.kndb.jp"><span class="icon">Knowledge Database</span></a> (<a class="ext-link" href="http://it.kndb.jp/feed/tag/symfony"><span class="icon">- DISABLED because the feed returns non valid links andtoo many items</span></a>) - Symfony Tips
+</li><li><a class="ext-link" href="http://symfony.ibr-oss.de"><span class="icon">Konrad Riedel from Dresden, Germany</span></a> (<a class="ext-link" href="http://symfony.ibr-oss.de/blog/postsFeed/format/rss/"><span class="icon">feed</span></a>) - A Symfony Blog and Plugin-Demo Site 
+</li><li><a class="ext-link" href="http://kriswallsmith.net"><span class="icon">Kris Wallsmith</span></a> (<a class="ext-link" href="http://kriswallsmith.net/rss"><span class="icon">feed</span></a>) - Kris Wallsmith's blog about symfony and other stuff
+</li><li><a class="ext-link" href="http://animalija.sopca.com"><span class="icon">Krof Drakula</span></a> (Slovene)
+</li><li><a class="ext-link" href="http://blog.heavymind.net/"><span class="icon">Kubek Bartosz Development Blog</span></a> (<a class="ext-link" href="http://blog.heavymind.net/feed/atom/"><span class="icon">feed</span></a>) Symfony and Zend Framework regarding articles (Polish)
+</li><li><a class="ext-link" href="http://www.lafermeduweb.net"><span class="icon">La Ferme du Web</span></a> - (<a class="ext-link" href="http://feeds.lafermeduweb.net/LaFermeDuWeb/Symfony"><span class="icon">feed</span></a>) Jonathan Guillemain's blog: Web Developer and Symfony lover (French)
+</li><li><a class="ext-link" href="http://evoilliot.u7n.org/"><span class="icon">La petite pause technique</span></a> (<a class="ext-link" href="http://evoilliot.u7n.org/category/symfony/feed/"><span class="icon">feed</span></a>) - Blog sur PHP, Symfony et autres technos du Web passionnantes
+</li><li><a class="ext-link" href="http://dunglas.fr"><span class="icon">Kévin Dunglas</span></a> (<a class="ext-link" href="http://dunglas.fr/category/programmation/php/symfony-framework/feed"><span class="icon">feed</span></a>) - Symfony tips and code (English &amp; French)
+</li><li><a class="ext-link" href="http://larsolavtorvik.com/"><span class="icon">Lars Olav Torvik's blog</span></a> (<a class="ext-link" href="http://larsolavtorvik.com/?feed=rss2&amp;tag=symfony"><span class="icon">feed</span></a>) - Lars Olav Torvik's developer blog.
+</li><li><a class="ext-link" href="http://www.sfblog.fr/"><span class="icon">Le blog de pierrot</span></a> (<a class="ext-link" href="http://www.sfblog.fr/rss"><span class="icon">feed</span></a>) Symfony blog (French)
+</li><li><a class="ext-link" href="http://sebastien.porati.me/blog/"><span class="icon">Le blog de Sébastien Porati</span></a> (<a class="ext-link" href="http://sebastien.porati.me/blog/feed/"><span class="icon">feed</span></a>) Mon blog tout simplement! Blog about web and app development : PHP, Symfony, Titanium, Supervisor, Gearman, Hudson, PHPUnit, ...  (French)
+</li><li><a class="ext-link" href="http://www.leftontheweb.com/"><span class="icon">Left On The Web</span></a> (<a class="ext-link" href="http://www.leftontheweb.com/feed/rss/tag/symfony"><span class="icon">feed</span></a>) - Weblog of Stefan Koopmanschap
+</li><li>LetsCod's symfony tagged posts :  <a class="ext-link" href="http://www.letscod.com/en/blog/tag/symfony"><span class="icon">English</span></a> (<a class="ext-link" href="http://www.letscod.com/en/blog/postsForTagFeed/symfony"><span class="icon">feed</span></a>) | <a class="ext-link" href="http://www.letscod.com/fr/blog/tag/symfony"><span class="icon">French</span></a> (<a class="ext-link" href="http://www.letscod.com/fr/blog/postsForTagFeed/symfony"><span class="icon">feed</span></a>)
+</li><li><a class="ext-link" href="http://www.lexik.fr/sfblog/"><span class="icon">Lexik</span></a> (<a class="ext-link" href="http://www.lexik.fr/sfblog/feed/"><span class="icon">feed </span></a>) - Lexik developers Blog (French)
+</li><li><a class="ext-link" href="http://blog.liip.ch/open-source/symfony"><span class="icon">Liip Team blog</span></a> (<a class="ext-link" href="http://blog.liip.ch/open-source/symfony/rss.xml"><span class="icon">feed</span></a>)
+</li><li><a class="ext-link" href="http://www.liumin.name/category/symfony/"><span class="icon">Liumin</span></a> (<a class="ext-link" href="http://www.liumin.name/category/symfony/feed/atom/"><span class="icon">feed </span></a>) (Chinese)
+</li><li><a class="ext-link" href="http://blog.lucas-ts.com/category/symfony"><span class="icon">Lucas Stephanou Blog</span></a> (<a class="ext-link" href="http://blog.lucas-ts.com/feed/"><span class="icon">feed</span></a>) (both English and Portuguese)
+</li><li><a class="ext-link" href="http://pooteeweet.org/"><span class="icon">Lukas Kahwe Smith</span></a> (<a class="ext-link" href="http://pooteeweet.org/rss.xml?filters=symfony"><span class="icon">feed</span></a>) - (English)
+</li><li><a class="ext-link" href="http://lyra-cms.com/blog"><span class="icon">Lyra CMS Blog</span></a> (<a class="ext-link" href="http://feeds.feedburner.com/lyracms-blog"><span class="icon">feed</span></a>) - Updates about our symfony plugins and Lyra a CMS developed with symfony (English)
+</li><li><a class="ext-link" href="http://blog.marcw.net/"><span class="icon">Marc Weistroff blog</span></a> (<a class="ext-link" href="http://feeds.feedburner.com/marcw_blog"><span class="icon">feed</span></a>) (English) - Php, symfony, vim, etc...
+</li><li><a class="ext-link" href="http://www.markng.co.uk/blog/tag/symfony"><span class="icon">Mark Ng</span></a> (<a class="ext-link" href="http://feeds.feedburner.com/markng-symfony"><span class="icon">feed</span></a>) - blog by Mark Ng about symfony
+</li><li><a class="ext-link" href="http://www.martinbittner.com/index.php/category/symfony/"><span class="icon">Martin Bittner</span></a> (<a class="ext-link" href="http://www.martinbittner.com/index.php/category/symfony/feed/atom"><span class="icon">feed</span></a>) (French)
+</li><li><a class="ext-link" href="http://www.matthewbull.net/tag/symfony/"><span class="icon">Matthew Bull</span></a> (<a class="ext-link" href="http://www.matthewbull.net/tag/symfony/feed/"><span class="icon">feed</span></a>) - symfony, CMS, and webapps
+</li><li><a class="ext-link" href="http://www.maxoum.info/blog/tag/symfony/"><span class="icon">Maxoum</span></a> (<a class="ext-link" href="http://www.maxoum.info/blog/tag/symfony/feed/"><span class="icon">feed</span></a>) (French)
+</li><li><a class="ext-link" href="http://blog.hma-info.de/category/symfony/"><span class="icon">Medieval Programming</span></a> (<a class="ext-link" href="http://blog.hma-info.de/category/symfony/feed"><span class="icon">feed</span></a>) (English)
+</li><li><a class="ext-link" href="http://moshtaghi.ir/weblog/tag/symfony/"><span class="icon">Mehdi Moshtaghi's Personal blog - وبلاگ شخصی مهدی مشتاقی</span></a> (Persian - فارسی)
+</li><li><a class="ext-link" href="http://http://blog.melimato.com/tag/symfony/"><span class="icon">Melimato.com</span></a> (<a class="ext-link" href="http://blog.melimato.com/tag/symfony/feed/"><span class="icon">feed</span></a>) - Barcelona based Symfony developers 
+</li><li><a class="ext-link" href="http://http://www.symfolive.com"><span class="icon">symfolive.com</span></a>(<a class="ext-link" href="http://www.symfolive.com/feed"><span class="icon">feed</span></a>) -Blog des meilleurs tutoriaux vidéos sur l'actualité du framework Symfony
+</li><li><a class="ext-link" href="http://www.symfonic.fr"><span class="icon">symfonic.fr</span></a> (<a class="ext-link" href="http://www.symfonic.fr/feed/"><span class="icon">feed</span></a>) Parlons de trucs sur Symfony (French)
+</li><li><a class="ext-link" href="http://www.zellerda.com"><span class="icon">zellerda.com</span></a> (<a class="ext-link" href="http://www.zellerda.com/rss/articles"><span class="icon">feed</span></a>) - Juste une autre vue sur le monde 
+</li></ul><p>
+(English)
+</p>
+<ul><li><a class="ext-link" href="http://toni.uebernickel.info/tag/symfony"><span class="icon">havvgs life</span></a> (<a class="ext-link" href="http://toni.uebernickel.info/tag/symfony/feed/"><span class="icon">feed</span></a>) - a German PHP developer
+</li><li><a class="ext-link" href="http://symfony-hribo.blogspot.com/"><span class="icon">hribo - symfony blog</span></a> (<a class="ext-link" href="http://symfony-hribo.blogspot.com/feeds/posts/default"><span class="icon">feed</span></a>) - a Slovak PHP developer [PHP, Symfony, Linux, Ubuntu]
+</li><li><a class="ext-link" href="http://www.zalas.eu/"><span class="icon">Jakub Zalas</span></a> (<a class="ext-link" href="http://www.zalas.eu/blog/feed.rss"><span class="icon">feed</span></a>) (English)
+</li><li><a class="ext-link" href="http://www.zalas.pl/"><span class="icon">Jakub Zalas</span></a> (<a class="ext-link" href="http://www.zalas.pl/blog/feed.rss"><span class="icon">feed</span></a>) (Polish)
+</li><li><a class="ext-link" href="http://www.mellowmorning.com/?cat=1"><span class="icon">MellowMorning.com by Thierry Schellenbach</span></a> (<a class="ext-link" href="http://www.mellowmorning.com/category/symfony/feed/"><span class="icon">feed</span></a>) - a Dutch PHP developer and business student (English)
+</li><li><a class="ext-link" href="http://www.metulo.net"><span class="icon">metulo.net by Jérôme Texier</span></a> (<a class="ext-link" href="http://www.metulo.net/feed"><span class="icon">feed</span></a>) -  Geek thoughts of a symfony freelancer (English|French)
+</li><li><a class="ext-link" href="http://blog.micayael.com/category/symfony"><span class="icon">Micayael's blog</span></a> (<a class="ext-link" href="http://blog.micayael.com/category/symfony/feed/"><span class="icon">feed</span></a>) Blog about web development, PHP programming and Symfony Framework (Spanish)
+</li><li><a class="ext-link" href="http://michalmech.pl/index.php/category/symfony"><span class="icon">MichałMech.pl :: Blog</span></a> (<a class="ext-link" href="http://michalmech.pl/index.php/category/symfony/feed"><span class="icon">feed</span></a>) (Polish)
+</li><li><a class="ext-link" href="http://www.michaelnolan.co.uk/tag/symfony"><span class="icon">Michael Nolan's Blog</span></a> (<a class="ext-link" href="http://www.michaelnolan.co.uk/tag/symfony/feed/atom"><span class="icon">feed</span></a>)
+</li><li><a class="ext-link" href="http://mirmodynamics.com/category/Symfony"><span class="icon">Mirmodynamics</span></a> (<a class="ext-link" href="http://mirmodynamics.com/feed/category/Symfony/rss2"><span class="icon">feed</span></a>) (English)
+</li><li><a class="ext-link" href="http://mirthlab.com/"><span class="icon">MirthLab</span></a> (<a class="ext-link" href="http://blog.mirthlab.com/tag/symfony/feed"><span class="icon">feed</span></a>) - Mark Quezada's Web Development Blog on Symfony
+</li><li><a class="ext-link" href="http://www.miximum.fr/tag/symfony"><span class="icon">Miximum.fr</span></a> (<a class="ext-link" href="http://www.miximum.fr/tag/symfony/feed"><span class="icon">feed</span></a>) - Le blog d'un développeur
+</li><li><a class="ext-link" href="http://morethanseven.net"><span class="icon">morethanseven</span></a> (<a class="ext-link" href="http://morethanseven.net/posts/category/symfony/"><span class="icon">feed</span></a>) - Gareth Rushgrove's blog 
+</li><li><a class="ext-link" href="http://musicofcode.blogspot.com/"><span class="icon">Music of Code</span></a> (<a class="ext-link" href="http://musicofcode.blogspot.com/feeds/posts/default"><span class="icon">feed</span></a>) - Denis Gorbachev's from Moscow
+</li><li><a class="ext-link" href="http://blog.odhodki.si/"><span class="icon">My Dev Life!</span></a> (<a class="ext-link" href="http://blog.odhodki.si/feed/atom"><span class="icon">feed</span></a>) - a Slovenian PHP developer and student (in English)
+</li><li><a class="ext-link" href="http://www.narkozateam.com/symfony/"><span class="icon">My Symfony Lessons</span></a> (<a class="ext-link" href="http://www.narkozateam.com/symfony/feed/atom"><span class="icon">feed</span></a>)
+</li><li><a class="ext-link" href="http://n8v.enteuxis.org/tags/symfony"><span class="icon">n8v</span></a> (<a class="ext-link" href="http://n8v.enteuxis.org/tags/symfony/feed"><span class="icon">feed</span></a>) - Nathan Vonnahme's symfony posts
+</li><li><a class="ext-link" href="http://nacho-martin.com/category/symfony"><span class="icon">Nacho Martín</span></a> (<a class="ext-link" href="http://nacho-martin.com/category/symfony/feed"><span class="icon">feed</span></a>) - Nacho Martin's entries on symfony (Spanish)
+</li><li><a class="ext-link" href="http://nerdpress.org/tag/symfony-framework"><span class="icon">Nerdpress.org</span></a> (<a class="ext-link" href="http://nerdpress.org/tag/symfony-framework/feed/"><span class="icon">feed</span></a>) - Nerdpress.org spricht über Symfony  (German)
+</li><li><a class="ext-link" href="http://blog.nevalon.de/en/category/symfony"><span class="icon">Nevalon</span></a> (<a class="ext-link" href="http://blog.nevalon.de/en/category/symfony/feed"><span class="icon">feed</span></a>) - Gordon Franke symfony posts (English | German)
+</li><li><a class="ext-link" href="http://blog.nexubo.net"><span class="icon">Nexubo</span></a> (<a class="ext-link" href="http://blog.nexubo.net/feed/"><span class="icon">feed</span></a>) - Nexubo Blog (English)
+</li><li><a class="ext-link" href="http://feeds.feedburner.com/nicosomb-symfony"><span class="icon">Nicolas Loeuillet</span></a> (<a class="ext-link" href="http://feeds.feedburner.com/nicosomb-symfony"><span class="icon">feed</span></a>) Nicolas Loeuillet's blog : Web Developer (French) 
+</li><li><a class="ext-link" href="http://www.noelguilbert.com/?tag/symfony"><span class="icon">Noël Guilbert</span></a> (<a class="ext-link" href="http://www.noelguilbert.com/?feed/tag/symfony/atom"><span class="icon">feed</span></a>) - Noël Guilbert's Symfony posts (French)
+</li><li><a class="ext-link" href="http://www.objetweb.fr/blog/"><span class="icon">Objet Web</span></a> (<a class="ext-link" href="http://objetweb.fr/blog/index.php?feed/atom"><span class="icon">feed</span></a>) - A freelancer's blog on symfony &amp; co (French)
+</li><li><a class="ext-link" href="http://obvioushints.blogspot.com/"><span class="icon">Obvious Hints</span></a> (<a class="ext-link" href="http://obvioushints.blogspot.com/feeds/posts/default/-/symfony"><span class="icon">feed</span></a>) - Alvaro's Obvious Hints
+</li><li><a class="ext-link" href="http://www.onesmallstepforsam.com/"><span class="icon">onesmallstepforsam</span></a> (<a class="ext-link" href="http://www.onesmallstepforsam.com/feed/"><span class="icon">feed</span></a>) - onesmallstepforsam
+</li><li><a class="ext-link" href="http://http://opensource.vidao2.com//"><span class="icon">Open Source at VidaO2.com</span></a> (<a class="ext-link" href="http://opensource.vidao2.com/feed/"><span class="icon">feed</span></a>) - Open Source Projects for Symfony at VidaO2.com
+</li><li><a class="ext-link" href="http://www.onepie.org/category/symfony"><span class="icon">Onepie.org</span></a>  1个饼's blog (Chinese)
+</li><li><a class="ext-link" href="http://www.odolbeau.fr/"><span class="icon">Olivier Dolbeau</span></a> (<a class="ext-link" href="http://www.odolbeau.fr/rss"><span class="icon">feed</span></a>) - Blog d'un développeur Symfony (French)
+</li><li><a class="ext-link" href="http://blog.overnetcity.com/"><span class="icon">Olivier Balais</span></a> (<a class="ext-link" href="http://blog.overnetcity.com/feed"><span class="icon">feed</span></a>) - Blog d'un ingénieur / développeur symfony (French)
+</li><li><a class="ext-link" href="http://pablogodel.com/category/symfony/"><span class="icon">Pablo Godel</span></a> (<a class="ext-link" href="http://pablogodel.com/category/symfony/feed/"><span class="icon">feed</span></a>) - Posts from Pablo Godel about Symfony
+</li><li><a class="ext-link" href="http://www.mainardipaolo.org/category/symfony"><span class="icon">Paolo Mainardi</span></a> (<a class="ext-link" href="http://www.mainardipaolo.org/category/symfony/feed/atom/"><span class="icon">feed</span></a>) (Italian)
+</li><li><a class="ext-link" href="http://www.particul.es/blog/"><span class="icon">Particul.es</span></a> (<a class="ext-link" href="http://particul.es/blog/index.php?feed/tag/symfony/atom"><span class="icon">feed</span></a>) (French)
+</li><li><a class="ext-link" href="http://www.peix.org"><span class="icon">peix.org</span></a> (<a class="ext-link" href="http://www.peix.org/tag/symfony/feed/"><span class="icon">feed</span></a>) - personal blog of spanish web developer Miguel Ibero (Spanish)
+</li><li><a class="ext-link" href="http://phazeon.com/"><span class="icon">Phazeon.com</span></a> (<a class="ext-link" href="http://phazeon.com/feed/"><span class="icon">feed</span></a>) (English) - <a class="missing wiki" href="/wiki/PhazeonPhoenix" rel="nofollow">PhazeonPhoenix?</a>'s Development blog
+</li><li><a class="ext-link" href="http://php5blog.it/tag/symfony/"><span class="icon">php5blog.it</span></a> (<a class="ext-link" href="http://feeds.feedburner.com/php5blogit"><span class="icon">feed</span></a>) (Italian) - La finestra su PHP di gagblog.it
+</li><li><a class="ext-link" href="http://www.phpbsd.net/tag/symfony/"><span class="icon">PHPBSD.net - Symfony</span></a> (<a class="ext-link" href="http://www.phpbsd.net/tag/symfony/feed/"><span class="icon">feed</span></a>) (Spanish) - Symfony related content at PHPBSD.net
+</li><li><a class="ext-link" href="http://phpes.com/blog/category/symfony/"><span class="icon">PHPes - PHP en español</span></a> (<a class="ext-link" href="http://phpes.com/blog/category/symfony/feed/"><span class="icon">feed</span></a>) (Spanish) - PHP spanish blog
+</li><li><a class="ext-link" href="http://blog.phpleo.com/tag/symfony/"><span class="icon">phpleo.Blog - Symfony</span></a> (<a class="ext-link" href="http://feeds.feedburner.com/phpleo-blog-symfony"><span class="icon">feed</span></a>) (Spanish) - Symfony spanish blog
+</li><li><a class="ext-link" href="http://blog.thepimp.net/"><span class="icon">Pierre Joye</span></a> (<a class="ext-link" href="http://blog.thepimp.net/index.php/feed/tag/symfony/rss2"><span class="icon">feed</span></a>) - blog on PHP internals, PHP and Symfony
+</li><li><a class="ext-link" href="http://www.pmsipilot.org"><span class="icon">PMSIpilot.org</span></a> (<a class="ext-link" href="http://www.pmsipilot.org/tag/symfony/feed/rss/"><span class="icon">feed</span></a>) - PMSIpilot tech team blog
+</li><li><a class="ext-link" href="http://www.pookey.co.uk/blog/"><span class="icon">pookey.co.uk</span></a> (<a class="ext-link" href="http://pookey.co.uk/blog/feeds/index.rss2"><span class="icon">feed</span></a>) (English) - Pookey's blog
+</li><li><a class="ext-link" href="http://www.prendreuncafe.com/blog/"><span class="icon">Prendre un café</span></a> (<a class="ext-link" href="http://www.prendreuncafe.com/blog/tag/symfony/feed/atom"><span class="icon">feed</span></a>) (French)
+</li><li><a class="ext-link" href="http://propel.posterous.com/tag/symfony"><span class="icon">Propel</span></a> (<a class="ext-link" href="http://propel.posterous.com/rss.xml"><span class="icon">feed</span></a>) - The Official Propel ORM Blog
+</li><li><a class="ext-link" href="http://www.fizyk.net.pl/blog/tag/symfony"><span class="icon">Przypadki » Grzegorz Śliwiński</span></a> (<a class="ext-link" href="http://www.fizyk.net.pl/blog/tag/symfony.atom"><span class="icon">feed</span></a>) (Polish|English)
+</li><li><a class="ext-link" href="http://pugi-pogi.blogspot.com/"><span class="icon">Pugi-Ga-Pogi</span></a>(<a class="ext-link" href="http://pugi-pogi.blogspot.com/feeds/posts/default"><span class="icon">feed</span></a>) (Japan)
+</li><li><a class="ext-link" href="http://www.puentesdiaz.com.ar/blog/"><span class="icon">Puentes Diaz : Symfony desde Argentina</span></a> (<a class="ext-link" href="http://www.puentesdiaz.com.ar/blog/category/symfony/feed"><span class="icon">feed</span></a>) (Spanish)
+</li><li><a class="ext-link" href="http://www.quevidaesta.com/category/symfony/"><span class="icon">Qué Vida Esta : Marcos Labad</span></a> (<a class="ext-link" href="http://www.quevidaesta.com/category/symfony/feed/"><span class="icon">feed</span></a>) (Spanish)
+</li><li><a class="ext-link" href="http://rabaix.net/en/articles/tag/symfony"><span class="icon">Rabaix Thomas</span></a> (<a class="ext-link" href="http://rabaix.net/en/articles/tag/symfony/sf_format/atom"><span class="icon">feed</span></a>) - symfony stuff, I guess ... (English)
+</li><li><a class="ext-link" href="http://raphaelburnes.com/category/symfony"><span class="icon">Raphael Burnes</span></a> (<a class="ext-link" href="feed://raphaelburnes.com/category/symfony/feed/"><span class="icon">feed</span></a>) - SaaS with symfony ... (English)
+</li><li><a class="ext-link" href="http://blogs.mouali.fr/category/symfony"><span class="icon">Rabii MOUALI Blog</span></a> (<a class="ext-link" href="http://blogs.mouali.fr/category/symfony/feed"><span class="icon">feed</span></a>) Symfony Framework Blog (French) 
+</li><li><a class="ext-link" href="http://www.richsage.co.uk/category/symfony"><span class="icon">Rich Sage</span></a> (<a class="ext-link" href="http://www.richsage.co.uk/category/symfony/feed"><span class="icon">feed</span></a>) Rich Sage's blog with Symfony-related posts (English)
+</li><li><a class="ext-link" href="http://chris.sedlmayr.co.uk/"><span class="icon">Real World Development</span></a> (<a class="ext-link" href="http://chris.sedlmayr.co.uk/feed/"><span class="icon">feed</span></a>) (English) - Chris Sedlmayr's Blog about symfony, PHP and other web tech
+</li><li><a class="ext-link" href="http://recoursive.com/blog/archives/category/symfony"><span class="icon">Recoursive.com</span></a> (<a class="ext-link" href="http://recoursive.com/blog/archives/category/symfony/feed/atom"><span class="icon">feed</span></a>) - technology, stuff (English)
+</li><li><a class="ext-link" href="http://redotheoffice.com/"><span class="icon">RedoTheOffice.com</span></a> (<a class="ext-link" href="http://redotheoffice.com/?feed=rss2"><span class="icon">feed</span></a>) - bringing web 2.0 to the office (English)
+</li><li><a class="ext-link" href="http://redotheweb.com/?cat=5"><span class="icon">RedoTheWeb.com</span></a> (<a class="ext-link" href="http://redotheweb.com/category/symfony/feed/atom"><span class="icon">feed</span></a>) - Francois Zaninotto's blog
+</li><li><a class="ext-link" href="http://refineweb.co.uk/category/symfony/"><span class="icon">RefineWeb.co.uk</span></a> (<a class="ext-link" href="http://refineweb.co.uk/category/symfony/feed/"><span class="icon">feed</span></a>) - Jamie Hall's blog about symfony, development and other web stuff
+</li><li><a class="ext-link" href="http://www.robertspeer.com/blog"><span class="icon">Robert Speer's Blog</span></a> (<a class="ext-link" href="http://www.robertspeer.com/blog/?cat=5&amp;feed=rss2"><span class="icon">feed</span></a>) - Robert Speer's Web Development / Symfony 
+</li><li><a class="ext-link" href="http://www.robrosenbaum.com/"><span class="icon">Rob's Dev Blog</span></a> (<a class="ext-link" href="http://www.robrosenbaum.com/tags/symfony/feed/"><span class="icon">feed</span></a>) - Rob Rosenbaum's development blog
+</li><li><a class="ext-link" href="http://blog.ronnyristau.de/"><span class="icon">Ronny's Dev Blog</span></a> (<a class="ext-link" href="http://blog.ronnyristau.de/category/programming/php/symfony/feed/"><span class="icon">feed</span></a>) - Ronny's  Developement Blog
+</li><li><a class="ext-link" href="http://ruzz.onsymfony.com/"><span class="icon">ruzz on symfony</span></a> (<a class="ext-link" href="http://ruzz.onsymfony.com/rss"><span class="icon">feed</span></a>) - Canadian symfony developer ruzz discusses symfony related topics (and more).
+</li><li><a class="ext-link" href="http://s.ymfony.com/blog/"><span class="icon">s.ymfony.com</span></a> (<a class="ext-link" href="http://s.ymfony.com/blog/index.php?feed/tag/symfony/atom"><span class="icon">feed</span></a>) (French) - symfony events in south of France.
+</li><li><a class="ext-link" href="http://www.csphp.com/"><span class="icon">Sam Ma</span></a> (<a class="ext-link" href="http://www.csphp.com/?feed=rss2"><span class="icon">feed </span></a>) (both English and Chinese) - Sam Ma's Weblog
+</li><li><a class="ext-link" href="http://samuraicoder.net/tags/symfony/"><span class="icon">Samurai Coder</span></a> (<a class="ext-link" href="http://samuraicoder.net/tags/symfony/feed/"><span class="icon">rss feed</span></a>)(English) - Japanese Mac user discuses symfony development on Mac OS X
+</li><li><a class="ext-link" href="http://sandbox-ws.com/blog"><span class="icon">Sandbox Web Solutions | Blog</span></a> (<a class="ext-link" href="http://sandbox-ws.com/category/frameworks/symfony-frameworks/feed"><span class="icon">feed</span></a>) - symfony, web (English)
+</li><li><a class="ext-link" href="http://blog.sarabande.jp/"><span class="icon">Sarabande | Blog</span></a> (<a class="ext-link" href="http://blog.sarabande.jp/tagged/symfony/rss"><span class="icon">feed</span></a>) - (Japanese)
+</li><li><a class="ext-link" href="http://www.saynotoflash.com/"><span class="icon">Say No To flash</span></a> (<a class="ext-link" href="http://feeds.feedburner.com/SayNoToFlash"><span class="icon">feed</span></a>) - PHP, Symfony, Web Programming and Development
+</li><li><a class="ext-link" href="http://arpeggios.wordpress.com/"><span class="icon">Scales and Arpeggios</span></a> (<a class="ext-link" href="http://arpeggios.wordpress.com/feed/"><span class="icon">feed</span></a>)(English) - Symfony development blog
+</li><li><a class="ext-link" href="http://www.sensiolabs.com/blog/"><span class="icon">Sensio Labs</span></a> (<a class="ext-link" href="http://feeds.feedburner.com/sensio_labs"><span class="icon">feed</span></a>) (French)
+</li><li><a class="ext-link" href="http://blog.servergrove.com/category/symfony"><span class="icon">ServerGrove Symfony News</span></a> (<a class="ext-link" href="http://blog.servergrove.com/category/symfony/feed"><span class="icon">feed</span></a>) (English) - Servergrove Symfony News
+</li><li><a class="ext-link" href="http://shout.setfive.com/tag/symfony/"><span class="icon">Setfive Consulting</span></a> (<a class="ext-link" href="http://shout.setfive.com/tag/symfony/feed/"><span class="icon">feed</span></a>) Setfive Consulting's Blog  
+</li><li><a class="ext-link" href="http://sfbloggr.blogspot.com"><span class="icon">sfBloggr</span></a> (<a class="ext-link" href="http://sfbloggr.blogspot.com/feeds/posts/default/-/Symfony"><span class="icon">feed</span></a>) (German) - Web-Development with Symfony and Mac OS X
+</li><li><a class="ext-link" href="http://www.sfexception.com"><span class="icon">sfException</span></a> (English) - symfony feed aggregator
+</li><li><a class="ext-link" href="http://shiny.ma3x.net/"><span class="icon">shiny@/dev/random</span></a> (<a class="ext-link" href="http://shiny.ma3x.net/category/symfony/feed"><span class="icon">feed</span></a>) (English) - Linux, Web &amp; Random chatter
+</li><li><a class="ext-link" href="http://symfony.isgonna.be"><span class="icon">S.I.G.B.</span></a> (<a class="ext-link" href="http://feeds.feedburner.com/symfony_tips"><span class="icon">feed</span></a>) - Symfony tips &amp; news! 
+</li><li><a class="ext-link" href="http://symfonylab.pl/"><span class="icon">SymfonyLab.pl - Polish Symfony Community</span></a> (Polish)
+</li><li><a class="ext-link" href="http://symfonytricks.blogspot.com"><span class="icon">symfony tricks</span></a> (<a class="ext-link" href="http://symfonytricks.blogspot.com/feeds/posts/default"><span class="icon">feed</span></a>) - Symfony tips and tricks
+</li><li><a class="ext-link" href="http://sjohnr.blogspot.com/search/label/symfony"><span class="icon">sjohnr's rant pages</span></a> (<a class="ext-link" href="http://sjohnr.blogspot.com/feeds/posts/default/-/symfony"><span class="icon">feed</span></a>)
+</li><li><a class="ext-link" href="http://warambil.wordpress.com/"><span class="icon">Software development and productivity</span></a> (<a class="ext-link" href="http://feeds.warambil.wordpress.com/"><span class="icon">feed</span></a>) - Blog about programming - Symfony software examples - (step by step explanation with screenshots) - (english)
+</li><li><a class="ext-link" href="http://www.software-wahnsinn.de"><span class="icon">Software-Wahnsinn</span></a> (<a class="ext-link" href="http://www.software-wahnsinn.de/category/symfony/feed/"><span class="icon">feed</span></a>) (German) - A Blog by Ingo Busch from Germany, bloggs sometimes about Symfony.
+</li><li><a class="ext-link" href="http://spindrop.us/"><span class="icon">Spindrop</span></a> (<a class="ext-link" href="http://spindrop.us/tag/symfony/feed"><span class="icon">feed</span></a>) 
+</li><li><a class="ext-link" href="http://stereointeractive.com/blog/tag/symfony"><span class="icon">Stereo Interactive &amp; Design</span></a> (<a class="ext-link" href="http://feeds.feedburner.com/stereointeractive/symfony"><span class="icon">feed</span></a>) - Stereo Interactive &amp; Design
+</li><li><a class="ext-link" href="http://sviluppare-in-rete.blogspot.com"><span class="icon">Sviluppare in rete</span></a> (<a class="ext-link" href="http://sviluppare-in-rete.blogspot.com/feeds/posts/default/-/Symfony2"><span class="icon">feed</span></a>) (Italian) - Symfony related articles on a blog about PHP programming and web development.
+</li><li><a class="ext-link" href="http://www.sylvaindeloux.com/blog/tag/symfony"><span class="icon">Sylvain Deloux</span></a> (<a class="ext-link" href="http://feeds.feedburner.com/sylvaindeloux_symfony"><span class="icon">feed</span></a>) (French)
+</li><li><a class="ext-link" href="http://http://symfoneando.blogspot.com//"><span class="icon">Symfoneando</span></a> (<a class="ext-link" href="http://symfoneando.blogspot.com/feeds/posts/default"><span class="icon">feed</span></a>) (Spanish) - Hablando de Symfony y algo más
+</li><li><a class="ext-link" href="http://symfoniac.wordpress.com/"><span class="icon">Symfoniac</span></a> (<a class="ext-link" href="http://symfoniac.wordpress.com/feed/"><span class="icon">feed</span></a>)
+</li><li><a class="ext-link" href="http://www.symfonic.fr/en"><span class="icon">symfonic.fr</span></a> (<a class="ext-link" href="http://www.symfonic.fr/en/feed/"><span class="icon">feed</span></a>) Let's talk about Symfony stuff (English)
+</li><li><a class="ext-link" href="http://symfonians.net/blog"><span class="icon">Symfonians Weblog</span></a> (<a class="ext-link" href="http://feeds.feedburner.com/SymfoniansWeblog"><span class="icon">feed</span></a>)
+</li><li><a class="ext-link" href="http://symfonyblog.ru/"><span class="icon">Symfony Blog</span></a> (<a class="ext-link" href="http://feeds.feedburner.com/rus/symfonyblog/symfony"><span class="icon">feed</span></a>) (Russian) - symfony and web-developement tips
+</li><li><a class="ext-link" href="http://symfony-forge.com/latest_news"><span class="icon">Symfony Forge</span></a> (<a class="ext-link" href="http://symfony-forge.com/latest_news_feed"><span class="icon">feed</span></a>) - symfony-forge.com latest news
+</li><li><a class="ext-link" href="http://symfonyguide.wordpress.com/"><span class="icon">Symfony Guide</span></a> (<a class="ext-link" href="http://symfonyguide.wordpress.com/feed/"><span class="icon">feed</span></a>) - en français, aide sur Symfony suite à nos propres découvertes
+</li><li><a class="ext-link" href="http://symfony.davidvega.net"><span class="icon">Symfony por David Vega</span></a> (<a class="ext-link" href="http://feeds2.feedburner.com/SymfonyPorDavidVega"><span class="icon">feed</span></a>) - (Spanish) Symfony Tips in spanish
+</li><li><a class="ext-link" href="http://developer.flatratsvergleich.de/"><span class="icon">Symfony SEO</span></a> (<a class="ext-link" href="http://developer.flatratesvergleich.de/news/feed/"><span class="icon">feed</span></a>) - Symfony SEO and Affiliate articles
+</li><li><a class="ext-link" href="http://kannapiran1986.blogspot.com"><span class="icon">Symfony Posts</span></a>   - Kannapiran (India)
+</li><li><a class="ext-link" href="http://symforc.com/"><span class="icon">Symfony Resource Central</span></a> (<a class="ext-link" href="http://www.symforc.com/feed/rss2"><span class="icon">feed</span></a>) 
+</li><li><a class="ext-link" href="http://anopt.ru/"><span class="icon">Symfony Russian Central</span></a> (Russian{Русский}) 
+</li><li><a class="ext-link" href="http://symfony2easy.blogspot.com/"><span class="icon">Symfony 2 Tutorials</span></a> (English)(<a class="ext-link" href="http://symfony-world.blogspot.com/feeds/posts/default?alt=rss"><span class="icon">feed</span></a>)
+</li><li><a class="ext-link" href="http://symfony.spyrit.net"><span class="icon">Symfony SPYRIT</span></a> (<a class="ext-link" href="http://symfony.spyrit.net/plugins-rss.xml"><span class="icon">Lasts Plugins</span></a>) (<a class="ext-link" href="http://symfony.spyrit.net/realisations-rss.xml"><span class="icon">Lasts Realisations</span></a>) - Documentation For SPYRIT symfony's Plugins (French)
+</li><li><a class="ext-link" href="http://symfonystuff.info"><span class="icon">Symfony Stuff</span></a> (<a class="ext-link" href="http://symfonystuff.info/feed/"><span class="icon">feed</span></a>) - Just another Symfony blog
+</li><li><a class="ext-link" href="http://symfonytips.blogspot.com/"><span class="icon">Symfony Tips</span></a> (<a class="ext-link" href="http://symfonytips.blogspot.com/feeds/posts/default"><span class="icon">feed</span></a>) - Blog about Symfony Tips  and Tricks (Indian)
+</li><li><a class="ext-link" href="http://www.loalf.com/tag/symfony"><span class="icon">Symfony y Desarrollo Web. Otro programador de symfony con blog</span></a> (<a class="ext-link" href="http://www.loalf.com/tag/symfony/feed/rss/"><span class="icon">feed </span></a>) (Spanish)
+</li><li><a class="ext-link" href="http://www.symfony.es/"><span class="icon">Symfony.es</span></a> (<a class="ext-link" href="http://www.symfony.es/feed/"><span class="icon">feed</span></a>) (Spanish) - Symfony-centered spanish blog
+</li><li><a class="ext-link" href="http://www.symfony.it/"><span class="icon">Symfony.it</span></a> (<a class="ext-link" href="http://feeds.feedburner.com/symfony-it"><span class="icon">feed</span></a>) (Italian)
+</li><li><a class="ext-link" href="http://symfony.org.ua"><span class="icon">Symfony.org.ua</span></a> (<a class="ext-link" href="http://symfony.org.ua/feed/"><span class="icon">feed</span></a>) - Ukrainian Symfony Community, blog, forum on Russian
+</li><li><a class="ext-link" href="http://www.symfony.vn/"><span class="icon">Symfony.vn</span></a> (<a class="ext-link" href="http://feeds.feedburner.com/SymfonyVietnam"><span class="icon">feed</span></a>) (Vietnamese)
+</li><li><a class="ext-link" href="http://gomojp.blog77.fc2.com/"><span class="icon">symfonyはじめました</span></a> (<a class="ext-link" href="http://gomojp.blog77.fc2.com/?xml&amp;category=1"><span class="icon">feed</span></a>) (Japanese)
+</li><li><a class="ext-link" href="http://symfony.jobweb.jp/"><span class="icon">Symfonyで開発Blog</span></a> (<a class="ext-link" href="http://symfony.jobweb.jp/?feed=rss2"><span class="icon">feed</span></a>) (Japanese)
+</li><li><a class="ext-link" href="http://www.symfony-blog.co.uk"><span class="icon">Symfony-Blog.co.uk</span></a> (<a class="ext-link" href="http://feeds.feedburner.com/SymfonyBlog"><span class="icon">feed</span></a>) (English) - Freelancers: Rob Holmes and Barrie Jarman sharing their Symfony expertise.
+</li><li><a class="ext-link" href="http://www.symfonybr.com,"><span class="icon">SymfonyBR</span></a> (<a class="ext-link" href="http://feeds.feedburner.com/symfonybr"><span class="icon">feed</span></a>) - Symfony, um framework bizarro
+</li><li><a class="ext-link" href="http://www.symfonydev.co.za"><span class="icon">SymfonyDev.co.za</span></a> (<a class="ext-link" href="http://www.symfonydev.co.za/feed/"><span class="icon">feed</span></a>) - a Symfony framework blog
+</li><li><a class="ext-link" href="http://www.symfony-framework.com/"><span class="icon">Symfony-Framework.com</span></a> (<a class="ext-link" href="http://www.symfony-framework.com/feed"><span class="icon">feed</span></a>) (English) - Symfony-Framework Blog
+</li><li><a class="ext-link" href="http://www.symfony-framework.nl/"><span class="icon">Symfony-framework.nl</span></a> (<a class="ext-link" href="http://www.symfony-framework.nl/feed/rss"><span class="icon">feed</span></a>) (Dutch) - Dutch website advocating the use of symfony
+</li><li><a class="ext-link" href="http://symfonyhelp.blogspot.com/"><span class="icon">symfonyhelp.blogspot</span></a> (<a class="ext-link" href="http://symfonyhelp.blogspot.com/feeds/posts/default?alt=rss"><span class="icon">feed</span></a>) - symfonyhelp.blogspot.com - blog about symfony  (English)
+</li><li><a class="ext-link" href="http://www.SymfonyLab.com"><span class="icon">SymfonyLab</span></a> (<a class="ext-link" href="http://feeds.feedburner.com/SymfonyLab"><span class="icon">feed</span></a>) - <a class="missing wiki" href="/wiki/SymfonyLab" rel="nofollow">SymfonyLab?</a>.com - Ideas, tips and plugins for Symfony developers
+</li><li><a class="ext-link" href="http://symfonylab.blogspot.com/"><span class="icon">symfonylab.blogspot</span></a> (<a class="ext-link" href="http://symfonylab.blogspot.com/feeds/posts/default?alt=rss"><span class="icon">feed</span></a>) - symfonylab.blogspot.com - blog about symfony (Russian)
+</li><li><a class="ext-link" href="http://www.symfonynerds.com"><span class="icon">SymfonyNerds.com</span></a> (<a class="ext-link" href="http://feeds.feedburner.com/symfony"><span class="icon">feed</span></a>) - <a class="missing wiki" href="/wiki/SymfonyNerds" rel="nofollow">SymfonyNerds?</a>.com - Symfony development tips, tutorials, how-to's and news for Symfony PHP developers.
+</li><li><a class="ext-link" href="http://symfony-world.blogspot.com"><span class="icon">Symfony-world.blogspot</span></a> (<a class="ext-link" href="http://symfony-world.blogspot.com/feeds/posts/default?alt=rss"><span class="icon">feed</span></a>) - symfony-world.blogspot.com - tips n'tricks for Symfony PHP developers.
+</li><li><a class="ext-link" href="http://www.symfony-zone.com/wordpress"><span class="icon">Symfony-Zone</span></a> (<a class="ext-link" href="http://www.symfony-zone.com/wordpress/feed"><span class="icon">feed</span></a>) - Timo Haberkerns Blog about symfony
+</li><li><a class="ext-link" href="http://blog.symfotips.fr/"><span class="icon">Symfotips</span></a> (<a class="ext-link" href="http://blog.symfotips.fr/feed/"><span class="icon">feed</span></a>) - Blog about symfony's tips and news (French)
+</li><li><a class="ext-link" href="http://www.sympalphp.org"><span class="icon">Sympal CMF</span></a> (<a class="ext-link" href="http://www.sympalphp.org/blog.rss"><span class="icon">feed</span></a>) (English)
+</li><li><a class="ext-link" href="http://sf.khepin.com/"><span class="icon">Synofony</span></a> (<a class="ext-link" href="http://sf.khepin.com/feed/"><span class="icon">feed</span></a>) (English)
+</li><li><a class="ext-link" href="http://test.ical.ly"><span class="icon">test.ical.ly | getting PHP by the balls</span></a> (<a class="ext-link" href="http://test.ical.ly/feed/"><span class="icon">feed</span></a>) (English)
+</li><li><a class="ext-link" href="http://www.thatsquality.com"><span class="icon">Thatsquality</span></a> (<a class="ext-link" href="http://thatsquality.com/feeds/symfony"><span class="icon">feed</span></a>) (English)
+</li><li><a class="ext-link" href="http://symfony-cn.thecodecentral.com/"><span class="icon">The code central</span></a> (<a class="ext-link" href="http://symfony-cn.thecodecentral.com/feed.php"><span class="icon">feed </span></a>) (Chinese)
+</li><li><a class="ext-link" href="http://thefoundry.anywebcam.com/index.php/category/symfony/"><span class="icon">The Foundry</span></a> (<a class="ext-link" href="http://thefoundry.anywebcam.com/index.php/category/symfony/feed/atom"><span class="icon">feed</span></a>)
+</li><li><a class="ext-link" href="http://www.coolkeums.org/"><span class="icon">The geek blog</span></a> (<a class="ext-link" href="http://www.coolkeums.org/search.rss?expression=symfony"><span class="icon">feed</span></a>) (french &amp; english)
+</li><li><a class="ext-link" href="http://blog.thembid.com/index.php/category/technical/"><span class="icon">ThemBid</span></a> (<a class="ext-link" href="http://blog.thembid.com/index.php/category/technical/feed"><span class="icon">feed</span></a>) - blog on Symfony
+</li><li><a class="ext-link" href="http://www.theodo.fr/blog"><span class="icon">Theodo</span></a> (<a class="ext-link" href="http://www.theodo.fr/blog/feed/"><span class="icon">feed</span></a>) - Theodo development team sharing its symfony solutions to web development challenges (English)
+</li><li><a class="ext-link" href="http://timothybowler.com/category/programming/php/symfony/"><span class="icon">Timothy Bowler's blog</span></a> (<a class="ext-link" href="http://timothybowler.com/category/programming/php/symfony/"><span class="icon">feed</span></a>) (English)
+</li><li><a class="ext-link" href="http://vvv.tobiassjosten.net/"><span class="icon">Tobias Sjösten</span></a> (<a class="ext-link" href="http://vvv.tobiassjosten.net/symfony.atom"><span class="icon">feed</span></a>) (English)
+</li><li><a class="ext-link" href="http://totalusability.posterous.com/tag/symfony"><span class="icon">Total Usability</span></a> (<a class="ext-link" href="http://totalusability.posterous.com/rss.xml"><span class="icon">feed</span></a>) - A temporary blog focusing on usability and illustrated by a symfony application prototype
+</li><li><a class="ext-link" href="http://totalement.geek.oupas.fr/article/tag/symfony"><span class="icon">Totalement Geek</span></a> (<a class="ext-link" href="http://totalement.geek.oupas.fr/article/tag/symfony/feed"><span class="icon">feed</span></a>) (French)
+</li><li><a class="ext-link" href="http://www.tuprogramador.com/blog"><span class="icon">tuProgramador blog</span></a> (<a class="ext-link" href="http://www.tuprogramador.com/blog/rss"><span class="icon">feed</span></a>) - tuProgramador blog  - a blog about programming and symfony framework tips and news
+</li><li><a class="ext-link" href="http://www.tworzenie-web.pl/"><span class="icon">Tworzeniu Stron | Łukasz Adamczewski </span></a> (<a class="ext-link" href="http://tworzenie-web.pl/feed/rss/"><span class="icon">feed</span></a>) (Polish) - tworzenie web - blog about most recent programming techniques of web developing
+</li><li><a class="ext-link" href="http://wiki.type33.com/"><span class="icon">type33 wiki</span></a> (<a class="ext-link" href="http://wiki.type33.com/feed.php?mode=list&amp;ns=symfony"><span class="icon">feed</span></a>)
+</li><li><a class="ext-link" href="http://www.typeed.de/"><span class="icon">typeed</span></a> (<a class="ext-link" href="http://www.typeed.de/rss.xml"><span class="icon">feed</span></a>) - Blog about symfony, Drupal and content management (German)
+</li><li><a class="ext-link" href="http://romain.cambien.net/"><span class="icon">Un blog ? pourquoi faire ?</span></a> (<a class="ext-link" href="http://feeds.feedburner.com/rcambien"><span class="icon">feed</span></a>) (French)
+</li><li><a class="ext-link" href="http://blog.developpez.com/vivian-pennel/c2274/php/symfony/"><span class="icon">Vivian Pennel</span></a> (<a class="ext-link" href="http://blog.developpez.com/xmlsrv/rss2.php?blog=314&amp;cat=2274"><span class="icon">feed</span></a>) (French)
+</li><li><a class="ext-link" href="http://webmozarts.com"><span class="icon">Web Mozarts</span></a> (<a class="ext-link" href="http://webmozarts.com/feed/"><span class="icon">feed</span></a>) - Blog about symfony best practices and PHP development.
+</li><li><a class="ext-link" href="http://blogs.edgehill.ac.uk/webservices/tag/symfony"><span class="icon">Web Services</span></a> (<a class="ext-link" href="http://blogs.edgehill.ac.uk/webservices/tag/symfony/feed/atom/"><span class="icon">feed</span></a>) - Edge Hill University Web Services blog
+</li><li><a class="ext-link" href="http://andreiabohner.wordpress.com/"><span class="icon">WebDev</span></a> (<a class="ext-link" href="http://andreiabohner.wordpress.com/tag/symfony/feed/"><span class="icon">feed</span></a>) - Andréia Bohner's Blog (Portuguese)
+</li><li><a class="ext-link" href="http://jq11.blogspot.com/"><span class="icon">web development tips</span></a> (<a class="ext-link" href="http://feeds.feedburner.com/jq11?format=xml"><span class="icon">feed</span></a>) - (Russian) Web development notes and tips
+</li><li><a class="ext-link" href="http://webitoo.com/"><span class="icon">WebIToo</span></a> (<a class="ext-link" href="http://webitoo.com/feed/tag/symfony/rss2"><span class="icon">feed</span></a> Blog about internet &amp; information technologies.)
+</li><li><a class="ext-link" href="http://webpowered.tumblr.com"><span class="icon">WebPowered</span></a> (<a class="ext-link" href="http://webpowered.tumblr.com/rss"><span class="icon">feed</span></a>) - Blog about symfony tips and solutions, and PHP development
+</li><li><a class="ext-link" href="http://blog.webpulser.com/articles/category/symfony"><span class="icon">Webpulser</span></a> (<a class="ext-link" href="http://blog.webpulser.com/xml/atom/category/symfony/feed.xml"><span class="icon">feed</span></a>) (French) 
+</li><li><a class="ext-link" href="http://www.whiteoctober.co.uk/blog/tag/symfony/"><span class="icon">White October</span></a> (<a class="ext-link" href="http://www.whiteoctober.co.uk/blog/tag/symfony/feed/"><span class="icon">feed</span></a>) - White October - Oxford, UK - web agency using Symfony
+</li><li><a class="ext-link" href="http://jackyhung81.blogspot.com/"><span class="icon">Who's Jaaaaaaaacky</span></a> (<a class="ext-link" href="http://jackyhung81.blogspot.com/feeds/posts/default/-/symfony"><span class="icon">feed</span></a>) - Jacky Hung's Blog (English)
+</li><li><a class="ext-link" href="http://blog.sznapka.pl/category/symfony/"><span class="icon">Wojciech Sznapka</span></a> (<a class="ext-link" href="http://blog.sznapka.pl/category/symfony/feed/"><span class="icon">feed</span></a>) - Wojciech Sznapka blog on symfony, tips and advanced topics (English and Polish)
+</li><li><a class="ext-link" href="http://www.luthi.eu/blog"><span class="icon">Xavier Lüthi</span></a> (<a class="ext-link" href="http://www.luthi.eu/blog/categories/symfony/feed"><span class="icon">feed</span></a>) (French)
+</li><li><a class="ext-link" href="http://lacot.org/"><span class="icon">Xavier Lacot</span></a> (<a class="ext-link" href="http://lacot.org/syndication/blog/tag/symfony.atom"><span class="icon">feed</span></a>) (French)
+</li><li><a class="ext-link" href="http://www.xlab.pl/"><span class="icon">XSolve labolatory</span></a> (<a class="ext-link" href="http://www.xlab.pl/tag/symfony/feed/"><span class="icon">feed</span></a>)  xlab - weblog about Web Development, Programming and Symfony tips and tricks   (Polish|English)
+</li><li><a class="ext-link" href="http://symfony.sopca.com"><span class="icon">YASB - Yet Another Symfony Blog</span></a> (<a class="ext-link" href="http://symfony.sopca.com/feed/atom"><span class="icon">feed</span></a>) - Yet Another Symfony Blog
+</li><li><a class="ext-link" href="http://www.ze-technology.com/category/symfony/"><span class="icon">Ze Technology</span></a> (<a class="ext-link" href="http://www.ze-technology.com/category/symfony/feed/"><span class="icon">feed</span></a>) (French)
+</li><li><a class="ext-link" href="http://nibsirahsieu.com/"><span class="icon">Just Blog No More - Just another blog about symfony</span></a> (<a class="ext-link" href="http://nibsirahsieu.com/rss/posts"><span class="icon">feed</span></a>) (English)
+</li><li><a class="ext-link" href="http://pierre-minnieur.de/"><span class="icon">\\0xC0DEDBAD - Pierre Minnieur</span></a> (<a class="ext-link" href="http://pierre-minnieur.de/rss"><span class="icon">feed</span></a>) (English)
+</li><li>[Add yours in that list <strong>alphabetically</strong>]
+</li></ul></div>
+   </div>
+   
+  
+  <script type="text/javascript">
+   addHeadingLinks(document.getElementById("searchable"), "Link to this section");
+  </script>
+ 
+ 
+</div>
+
+<script type="text/javascript">searchHighlight()</script>
+<div id="altlinks"><h3>Download in other formats:</h3><ul><li class="first last"><a href="/wiki/SymfonyBloggers?format=txt">Plain Text</a></li></ul></div>
+
+</div>
+
+<div id="footer">
+ <hr />
+ <a id="tracpowered" href="http://trac.edgewall.com/"><img src="/chrome/common/trac_logo_mini.png" height="30" width="107"
+   alt="Trac Powered"/></a>
+ <p class="left">
+  Powered by <a href="/about"><strong>Trac
+</strong></a><br />
+  By <a href="http://www.edgewall.com/">Edgewall Software</a>.
+ </p>
+ <p class="right">
+  
+ </p>
+</div>
+
+<div style="padding-bottom: 30px"></div>
+
+<link rel="stylesheet" type="text/css" media="all" href="http://www.sensiolabs.com/network/sensiolabs.css" />
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-89393-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+
+<script type="text/javascript" src="http://www.symfony-project.org/js/sln_customize.js"></script>
+ </body>
+</html>
+

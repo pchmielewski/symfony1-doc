@@ -1,0 +1,25 @@
+#content1 table
+{
+  padding: 10px;
+  text-align: left;
+}
+
+#content1 td, #content1 th
+{
+  vertical-align: top;
+}
+
+#content1 table th
+{
+  font-style: italic;
+  border-bottom: 1px solid #ddd;
+  padding: 2px 5px;
+  background-color: #ddd;
+}
+
+#content1 table td
+{
+  border-bottom: 1px solid #ddd;
+  padding: 5px;
+  background-color: #eee;
+}

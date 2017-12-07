@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="Code Snippets" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony project" />
+<meta name="keywords" content="symfony, project" />
+<meta name="language" content="en" />
+    <title>Code Snippets</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link href="http://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
+
+    <script type="text/javascript">
+        (function(w, d, s) {
+            function go() {
+                var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
+                    if (d.getElementById(id)) {return;}
+                    js = d.createElement(s); js.src = url; js.id = id;
+                    fjs.parentNode.insertBefore(js, fjs);
+                };
+                load('https://connect.sensiolabs.com/sln.js?customize_url=/js/sln_customize.js', 'sln_bar');
+            }
+            if (w.addEventListener) { w.addEventListener("load", go, false); }
+            else if (w.attachEvent) { w.attachEvent("onload",go); }
+        } (window, document, 'script'));
+    </script>
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/snippets.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/highlight.css" />
+</head>
+  <body>
+    <div id="sln"></div>
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="http://symfony.com/"><img src="/images/symfony_logo.gif" alt="Symfony_logo" /></a></td>
+        <td id="navigation">
+<!--
+          <ul>
+            <li><a href="http://www.symfony-project.org/about">About</a></li>
+            <li><a href="http://www.symfony-project.org/installation">Installation</a></li>
+            <li><a href="http://www.symfony-project.org/doc">Documentation</a></li>
+            <li><a href="http://www.symfony-project.org/plugins/">Plugins</a></li>
+            <li><a href="http://www.symfony-project.org/community">Community</a></li>
+            <li><a href="http://www.symfony-project.org/blog/">Blog</a></li>
+            <li class="last"><a href="http://trac.symfony-project.org/timeline">Development</a></li>
+          </ul>
+//-->
+        </td>
+      </tr>
+      <tr>
+        <td id="topseparator" colspan="2"></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <h1 class="only">Code snippets for symfony 1.x</h1>
+        </td>
+      </tr>
+    </table>
+
+    <div id="bar">
+      <h2>Navigation</h2>
+      <ul>
+        <li><a href="/">latest snippets</a></li>
+        <li><a href="/snippets/order_by/popularity/1">popular snippets</a></li>
+        <li><a href="/tag">snippet tags</a></li>
+      </ul>
+          </div>
+
+    <div id="content1">
+      
+<h1>Password Strength validator</h1>
+
+<div class="snippet">
+  <p>This its a password strength validator, with ajax request for checking the password field.</p>
+
+<p>First create a validator in lib/validators/sfPasswordStrengthValidator.class.php</p>
+
+<pre class="php"><span class="kw2">&lt;?php</span>
+<span class="kw2">class</span> sfPasswordStrengthValidator <span class="kw2">extends</span> sfValidator
+<span class="br0">&#123;</span>
+    <span class="kw2">public</span> <span class="kw2">function</span> execute <span class="br0">&#40;</span>&amp;<span class="re0">$value</span>, &amp;<span class="re0">$error</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="re0">$weakness</span> = <span class="re0">$this</span>-&gt;<span class="me1">Password_Strength</span><span class="br0">&#40;</span><span class="re0">$value</span><span class="br0">&#41;</span>;
+&nbsp;
+        <span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$weakness</span>==<span class="nu0">1</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+            <span class="re0">$error</span> = <span class="re0">$this</span>-&gt;<span class="me1">getParameter</span><span class="br0">&#40;</span><span class="st0">'strength_error'</span><span class="br0">&#41;</span>;
+            <span class="kw1">return</span> <span class="kw2">false</span>;
+        <span class="br0">&#125;</span>
+&nbsp;
+        <span class="kw1">return</span> <span class="re0">$weakness</span>;
+    <span class="br0">&#125;</span>
+&nbsp;
+    <span class="kw2">public</span> <span class="kw2">function</span> initialize <span class="br0">&#40;</span><span class="re0">$context</span>, <span class="re0">$parameters</span> = <span class="kw2">null</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="co1">// Initialize parent</span>
+        parent::<span class="me2">initialize</span><span class="br0">&#40;</span><span class="re0">$context</span><span class="br0">&#41;</span>;
+&nbsp;
+        <span class="co1">// Set default parameters value</span>
+        <span class="re0">$this</span>-&gt;<span class="me1">setParameter</span><span class="br0">&#40;</span><span class="st0">'strength_error'</span>, <span class="st0">'Weak password'</span><span class="br0">&#41;</span>;
+&nbsp;
+        <span class="co1">// Set parameters</span>
+        <span class="re0">$this</span>-&gt;<span class="me1">getParameterHolder</span><span class="br0">&#40;</span><span class="br0">&#41;</span>-&gt;<span class="me1">add</span><span class="br0">&#40;</span><span class="re0">$parameters</span><span class="br0">&#41;</span>;
+&nbsp;
+        <span class="kw1">return</span> <span class="kw2">true</span>;
+    <span class="br0">&#125;</span>
+        <span class="co1">// Thanks for: Alix Axel Weblog</span>
+    <span class="co1">// URL: http://www.alixaxel.com/wordpress/wp-content/2007/06/Password_Strength.phps</span>
+    <span class="kw2">function</span> Password_Strength<span class="br0">&#40;</span><span class="re0">$password</span>, <span class="re0">$username</span> = <span class="kw2">null</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="kw1">if</span> <span class="br0">&#40;</span>!<a href="http://www.php.net/empty"><span class="kw3">empty</span></a><span class="br0">&#40;</span><span class="re0">$username</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+        <span class="br0">&#123;</span>
+            <span class="re0">$password</span> = <a href="http://www.php.net/str_replace"><span class="kw3">str_replace</span></a><span class="br0">&#40;</span><span class="re0">$username</span>, <span class="st0">''</span>, <span class="re0">$password</span><span class="br0">&#41;</span>;
+        <span class="br0">&#125;</span>
+&nbsp;
+        <span class="re0">$strength</span> = <span class="nu0">0</span>;
+        <span class="re0">$password_length</span> = <a href="http://www.php.net/strlen"><span class="kw3">strlen</span></a><span class="br0">&#40;</span><span class="re0">$password</span><span class="br0">&#41;</span>;
+&nbsp;
+        <span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$password_length</span> &lt; <span class="nu0">5</span><span class="br0">&#41;</span>
+        <span class="br0">&#123;</span>
+            <span class="kw1">return</span> <span class="re0">$strength</span>;
+        <span class="br0">&#125;</span>
+&nbsp;
+        <span class="kw1">else</span>
+        <span class="br0">&#123;</span>
+            <span class="re0">$strength</span> = <span class="re0">$password_length</span> * <span class="nu0">4</span>;
+        <span class="br0">&#125;</span>
+&nbsp;
+        <span class="kw1">for</span> <span class="br0">&#40;</span><span class="re0">$i</span> = <span class="nu0">2</span>; <span class="re0">$i</span> &lt;= <span class="nu0">4</span>; <span class="re0">$i</span>++<span class="br0">&#41;</span>
+        <span class="br0">&#123;</span>
+            <span class="re0">$temp</span> = str_split<span class="br0">&#40;</span><span class="re0">$password</span>, <span class="re0">$i</span><span class="br0">&#41;</span>;
+&nbsp;
+            <span class="re0">$strength</span> -= <span class="br0">&#40;</span><a href="http://www.php.net/ceil"><span class="kw3">ceil</span></a><span class="br0">&#40;</span><span class="re0">$password_length</span> / <span class="re0">$i</span><span class="br0">&#41;</span> - <a href="http://www.php.net/count"><span class="kw3">count</span></a><span class="br0">&#40;</span><a href="http://www.php.net/array_unique"><span class="kw3">array_unique</span></a><span class="br0">&#40;</span><span class="re0">$temp</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>;
+        <span class="br0">&#125;</span>
+&nbsp;
+        <a href="http://www.php.net/preg_match_all"><span class="kw3">preg_match_all</span></a><span class="br0">&#40;</span><span class="st0">'/[0-9]/'</span>, <span class="re0">$password</span>, <span class="re0">$numbers</span><span class="br0">&#41;</span>;
+&nbsp;
+        <span class="kw1">if</span> <span class="br0">&#40;</span>!<a href="http://www.php.net/empty"><span class="kw3">empty</span></a><span class="br0">&#40;</span><span class="re0">$numbers</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+        <span class="br0">&#123;</span>
+            <span class="re0">$numbers</span> = <a href="http://www.php.net/count"><span class="kw3">count</span></a><span class="br0">&#40;</span><span class="re0">$numbers</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#41;</span>;
+&nbsp;
+            <span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$numbers</span> &gt;= <span class="nu0">3</span><span class="br0">&#41;</span>
+            <span class="br0">&#123;</span>
+                <span class="re0">$strength</span> += <span class="nu0">5</span>;
+            <span class="br0">&#125;</span>
+        <span class="br0">&#125;</span>
+&nbsp;
+        <span class="kw1">else</span>
+        <span class="br0">&#123;</span>
+            <span class="re0">$numbers</span> = <span class="nu0">0</span>;
+        <span class="br0">&#125;</span>
+&nbsp;
+        <a href="http://www.php.net/preg_match_all"><span class="kw3">preg_match_all</span></a><span class="br0">&#40;</span><span class="st0">'/[|!@#$%&amp;*<span class="es0">\/</span>=?,;.:<span class="es0">\-</span>_+~^¨<span class="es0">\\</span><span class="es0">\]</span>/'</span>, <span class="re0">$password</span>, <span class="re0">$symbols</span><span class="br0">&#41;</span>;
+&nbsp;
+        <span class="kw1">if</span> <span class="br0">&#40;</span>!<a href="http://www.php.net/empty"><span class="kw3">empty</span></a><span class="br0">&#40;</span><span class="re0">$symbols</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+        <span class="br0">&#123;</span>
+            <span class="re0">$symbols</span> = <a href="http://www.php.net/count"><span class="kw3">count</span></a><span class="br0">&#40;</span><span class="re0">$symbols</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#41;</span>;
+&nbsp;
+            <span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$symbols</span> &gt;= <span class="nu0">2</span><span class="br0">&#41;</span>
+            <span class="br0">&#123;</span>
+                <span class="re0">$strength</span> += <span class="nu0">5</span>;
+            <span class="br0">&#125;</span>
+        <span class="br0">&#125;</span>
+&nbsp;
+        <span class="kw1">else</span>
+        <span class="br0">&#123;</span>
+            <span class="re0">$symbols</span> = <span class="nu0">0</span>;
+        <span class="br0">&#125;</span>
+&nbsp;
+        <a href="http://www.php.net/preg_match_all"><span class="kw3">preg_match_all</span></a><span class="br0">&#40;</span><span class="st0">'/[a-z]/'</span>, <span class="re0">$password</span>, <span class="re0">$lowercase_characters</span><span class="br0">&#41;</span>;
+        <a href="http://www.php.net/preg_match_all"><span class="kw3">preg_match_all</span></a><span class="br0">&#40;</span><span class="st0">'/[A-Z]/'</span>, <span class="re0">$password</span>, <span class="re0">$uppercase_characters</span><span class="br0">&#41;</span>;
+&nbsp;
+        <span class="kw1">if</span> <span class="br0">&#40;</span>!<a href="http://www.php.net/empty"><span class="kw3">empty</span></a><span class="br0">&#40;</span><span class="re0">$lowercase_characters</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+        <span class="br0">&#123;</span>
+            <span class="re0">$lowercase_characters</span> = <a href="http://www.php.net/count"><span class="kw3">count</span></a><span class="br0">&#40;</span><span class="re0">$lowercase_characters</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#41;</span>;
+        <span class="br0">&#125;</span>
+&nbsp;
+        <span class="kw1">else</span>
+        <span class="br0">&#123;</span>
+            <span class="re0">$lowercase_characters</span> = <span class="nu0">0</span>;
+        <span class="br0">&#125;</span>
+&nbsp;
+        <span class="kw1">if</span> <span class="br0">&#40;</span>!<a href="http://www.php.net/empty"><span class="kw3">empty</span></a><span class="br0">&#40;</span><span class="re0">$uppercase_characters</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+        <span class="br0">&#123;</span>
+            <span class="re0">$uppercase_characters</span> = <a href="http://www.php.net/count"><span class="kw3">count</span></a><span class="br0">&#40;</span><span class="re0">$uppercase_characters</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#41;</span>;
+        <span class="br0">&#125;</span>
+&nbsp;
+        <span class="kw1">else</span>
+        <span class="br0">&#123;</span>
+            <span class="re0">$uppercase_characters</span> = <span class="nu0">0</span>;
+        <span class="br0">&#125;</span>
+&nbsp;
+        <span class="kw1">if</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="re0">$lowercase_characters</span> &gt; <span class="nu0">0</span><span class="br0">&#41;</span> &amp;&amp; <span class="br0">&#40;</span><span class="re0">$uppercase_characters</span> &gt; <span class="nu0">0</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+        <span class="br0">&#123;</span>
+            <span class="re0">$strength</span> += <span class="nu0">10</span>;
+        <span class="br0">&#125;</span>
+&nbsp;
+        <span class="re0">$characters</span> = <span class="re0">$lowercase_characters</span> + <span class="re0">$uppercase_characters</span>;
+&nbsp;
+        <span class="kw1">if</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="re0">$numbers</span> &gt; <span class="nu0">0</span><span class="br0">&#41;</span> &amp;&amp; <span class="br0">&#40;</span><span class="re0">$symbols</span> &gt; <span class="nu0">0</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+        <span class="br0">&#123;</span>
+            <span class="re0">$strength</span> += <span class="nu0">15</span>;
+        <span class="br0">&#125;</span>
+&nbsp;
+        <span class="kw1">if</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="re0">$numbers</span> &gt; <span class="nu0">0</span><span class="br0">&#41;</span> &amp;&amp; <span class="br0">&#40;</span><span class="re0">$characters</span> &gt; <span class="nu0">0</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+        <span class="br0">&#123;</span>
+            <span class="re0">$strength</span> += <span class="nu0">15</span>;
+        <span class="br0">&#125;</span>
+&nbsp;
+        <span class="kw1">if</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="re0">$symbols</span> &gt; <span class="nu0">0</span><span class="br0">&#41;</span> &amp;&amp; <span class="br0">&#40;</span><span class="re0">$characters</span> &gt; <span class="nu0">0</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+        <span class="br0">&#123;</span>
+            <span class="re0">$strength</span> += <span class="nu0">15</span>;
+        <span class="br0">&#125;</span>
+&nbsp;
+        <span class="kw1">if</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="re0">$numbers</span> == <span class="nu0">0</span><span class="br0">&#41;</span> &amp;&amp; <span class="br0">&#40;</span><span class="re0">$symbols</span> == <span class="nu0">0</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+        <span class="br0">&#123;</span>
+            <span class="re0">$strength</span> -= <span class="nu0">10</span>;
+        <span class="br0">&#125;</span>
+&nbsp;
+        <span class="kw1">if</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="re0">$symbols</span> == <span class="nu0">0</span><span class="br0">&#41;</span> &amp;&amp; <span class="br0">&#40;</span><span class="re0">$characters</span> == <span class="nu0">0</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+        <span class="br0">&#123;</span>
+            <span class="re0">$strength</span> -= <span class="nu0">10</span>;
+        <span class="br0">&#125;</span>
+&nbsp;
+        <span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$strength</span> &lt; <span class="nu0">0</span><span class="br0">&#41;</span>
+        <span class="br0">&#123;</span>
+            <span class="re0">$strength</span> = <span class="nu0">0</span>;
+        <span class="br0">&#125;</span>
+&nbsp;
+        <span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$strength</span> &gt; <span class="nu0">100</span><span class="br0">&#41;</span>
+        <span class="br0">&#123;</span>
+            <span class="re0">$strength</span> = <span class="nu0">100</span>;
+        <span class="br0">&#125;</span>
+&nbsp;
+        <span class="kw1">return</span> <span class="re0">$strength</span>;
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+&nbsp;</pre>
+
+<p>Then in your view template use:</p>
+
+<pre class="php"><span class="kw2">&lt;?php</span> <a href="http://www.php.net/echo"><span class="kw3">echo</span></a> observe_field<span class="br0">&#40;</span><span class="st0">'password'</span>, <a href="http://www.php.net/array"><span class="kw3">array</span></a><span class="br0">&#40;</span>
+                          <span class="st0">'update'</span>   =&gt; <span class="st0">'passwordStatus'</span>,
+                          <span class="st0">'url'</span>      =&gt; <span class="st0">'sfGuardAuth/checkPasswordStrength'</span>,
+                          <span class="st0">'with'</span> =&gt; <span class="st0">&quot;'id='+encodeURIComponent($('password').value)&quot;</span>,
+                          <span class="st0">'loading'</span>=&gt;<span class="st0">&quot;Element.show('indicator_passwordstatus')&quot;</span>,
+                          <span class="st0">'complete'</span>=&gt;<span class="st0">&quot;Element.hide('indicator_passwordstatus');Element.show('passwordStatus');&quot;</span>,
+                      <span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="kw2">?&gt;</span>
+&nbsp;</pre>
+
+<p>That code will monitor changes at password input field, and submit the updated value to the defined route.</p>
+
+<p>Then add the following to your actions file:</p>
+
+<pre class="php"><span class="kw2">public</span> <span class="kw2">function</span> executeCheckPasswordStrength<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        <span class="re0">$password</span> = <span class="re0">$this</span>-&gt;<span class="me1">getRequestParameter</span><span class="br0">&#40;</span><span class="st0">'id'</span><span class="br0">&#41;</span>;
+        <span class="re0">$strengthValidator</span> = <span class="kw2">new</span> sfPasswordStrengthValidator<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+        <span class="re0">$strengthValidator</span>-&gt;<span class="me1">initialize</span><span class="br0">&#40;</span><span class="re0">$this</span>-&gt;<span class="me1">getContext</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>;
+        <span class="re0">$error</span>=<span class="st0">'none'</span>;
+        <span class="re0">$score</span> = <span class="re0">$strengthValidator</span>-&gt;<span class="me1">execute</span><span class="br0">&#40;</span><span class="re0">$password</span>,<span class="re0">$error</span><span class="br0">&#41;</span>;
+        <span class="kw1">if</span><span class="br0">&#40;</span>!<span class="re0">$score</span><span class="br0">&#41;</span>
+        <span class="kw1">return</span> <span class="re0">$this</span>-&gt;<span class="me1">renderText</span><span class="br0">&#40;</span><span class="st0">'too short'</span><span class="br0">&#41;</span>;
+        <span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$score</span> &lt; <span class="nu0">20</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+            <span class="kw1">return</span> <span class="re0">$this</span>-&gt;<span class="me1">renderText</span><span class="br0">&#40;</span><span class="st0">'not weak'</span><span class="br0">&#41;</span>;
+        <span class="br0">&#125;</span> <span class="kw1">else</span> <span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$score</span> &lt; <span class="nu0">50</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+            <span class="kw1">return</span> <span class="re0">$this</span>-&gt;<span class="me1">renderText</span><span class="br0">&#40;</span><span class="st0">'relevant'</span><span class="br0">&#41;</span>;
+        <span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+            <span class="kw1">return</span> <span class="re0">$this</span>-&gt;<span class="me1">renderText</span><span class="br0">&#40;</span><span class="st0">'strong'</span><span class="br0">&#41;</span>;
+        <span class="br0">&#125;</span>
+&nbsp;
+        <span class="kw1">return</span> <span class="kw2">true</span>;
+    <span class="br0">&#125;</span>
+&nbsp;</pre>
+
+<p>Cheers</p>
+</div>
+
+<div class="snippet_details">
+  by <a href="/snippets/from/mysyfy/order_by/date">Lucas Peres</a> 
+  on 2007-10-05,
+  tagged
+      <a href="/snippets/tagged/validation/order_by/date">validation</a>&nbsp;
+      <a href="/snippets/tagged/validator/order_by/date">validator</a>&nbsp;
+    
+    <span style="white-space:nowrap;"><div class="rate rated" id="vote_235_1"><img src="/images/spacer.gif" width="10" height="10" /></div><div class="rate rated" id="vote_235_2"><img src="/images/spacer.gif" width="10" height="10" /></div><div class="rate rated" id="vote_235_3"><img src="/images/spacer.gif" width="10" height="10" /></div><div class="rate " id="vote_235_4"><img src="/images/spacer.gif" width="10" height="10" /></div><div class="rate " id="vote_235_5"><img src="/images/spacer.gif" width="10" height="10" /></div></span>
+
+  </div>
+
+<div id="comments">
+
+  </div>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="http://symfony.com/"><img src="/images/symfony_button.gif" alt="Symfony_button" /></a>
+    </div>
+
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      var pageTracker = _gat._getTracker("UA-89393-1");
+      pageTracker._initData();
+      pageTracker._trackPageview();
+    </script>
+  </body>
+</html>
